@@ -28,15 +28,6 @@ struct File_Header {
     File_Type file_type;
 };
 
-template <typename T>
-struct CMS_Hash_Map
-{
-    // Count-Min Sketch Hash Map
-    size_t nfuns = 0;
-
-    virtual bool insert(const T*) = 0;
-    virtual bool search(const T*, size_t *) = 0;
-};
 
 template<typename T>
 T * generate_random_data(size_t sz, const std::function<void(void *)> &random_allocator = {});
