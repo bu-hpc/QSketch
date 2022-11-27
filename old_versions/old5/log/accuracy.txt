@@ -1,0 +1,32 @@
+size_t insert_keys_size = 1024 * 1024;
+size_t search_keys_size = 1024;
+
+run 1:
+
+gpu : 2096672
+max: 2  ave: 0.182617
+maxp: 300%  avep: 118.262%
+cpu : 2096672
+max: 2  ave: 0.291016
+maxp: 300%  avep: 129.102%
+
+
+run 2:
+gpu : 2096672
+max: 2  ave: 0.180664
+maxp: 300%  avep: 118.066%
+cpu : 2096672
+max: 1  ave: 0.0878906
+maxp: 200%  avep: 108.789%
+
+
+
+insert_keys_size =  8 * 1024 * 1024;
+search_keys_size = 1024;
+
+gpu : 2096672
+max: 11 ave: 6.13672
+maxp: 1200% avep: 713.672%
+cpu : 2096672
+max: 8  ave: 6.81348
+maxp: 900%  avep: 781.348%

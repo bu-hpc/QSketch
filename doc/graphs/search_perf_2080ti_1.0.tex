@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale = 0.48]
+    \label{fig:search_perf_sketch_2080ti_1}
+    \begin{semilogxaxis}[
+        % title={Search Performance},
+        xlabel={Work Load},
+        ylabel={Search Performance (M operations/s)},
+        legend pos=north east,
+        xmajorgrids=true,
+        ymajorgrids=true,
+    ]
+        \addplot table[x = WorkLoad, y = ThreadSearch] {data/qsketch/perf_2080ti_1.0.dat};
+        \addlegendentry{Thread Search}
+        \addplot table[x = WorkLoad, y = WarpSearch] {data/qsketch/perf_2080ti_1.0.dat};
+        \addlegendentry{Warp Search}
+        \addplot table[x = WorkLoad, y = Sub_WarpSearch] {data/qsketch/perf_2080ti_1.0.dat};
+        \addlegendentry{Sub\_Warp Search}
+        \addplot table[x = WorkLoad, y = LevelSearch] {data/qsketch/perf_2080ti_1.0.dat};
+        \addlegendentry{Level Search}
+    \end{semilogxaxis}
+\end{tikzpicture}

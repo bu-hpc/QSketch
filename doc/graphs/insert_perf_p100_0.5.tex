@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale = 0.48]
+    \label{fig:insert_perf_sketch_p100_0.5}
+    \begin{semilogxaxis}[
+        % title={Insert Performance(WLF = 0.5)},
+        xlabel={Work Load},
+        ylabel={Insert Performance (M operations/s)},
+        legend pos=north east,
+        xmajorgrids=true,
+        ymajorgrids=true,
+    ]
+        \addplot table[x = WorkLoad, y = ThreadInsert] {data/qsketch/perf_p100_0.5.dat};
+        \addlegendentry{Thread Insert}
+        \addplot table[x = WorkLoad, y = WarpInsert] {data/qsketch/perf_p100_0.5.dat};
+        \addlegendentry{Warp Insert}
+        \addplot table[x = WorkLoad, y = Sub_WarpInsert] {data/qsketch/perf_p100_0.5.dat};
+        \addlegendentry{Sub\_Warp Insert}
+        \addplot table[x = WorkLoad, y = LevelInsert] {data/qsketch/perf_p100_0.5.dat};
+        \addlegendentry{Level Insert}
+    \end{semilogxaxis}
+\end{tikzpicture}

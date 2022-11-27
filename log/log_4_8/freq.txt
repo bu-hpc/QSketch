@@ -1,0 +1,31 @@
+Bug1 :
+curand:
+curandCreateGenerator(&gen, CURAND_RNG_PSEUDO_DEFAULT)
+250 error elemnts in 1M insertion
+
+std::uniform_int_distribution:
+correct.
+
+Bug2 : 
+
+Slabhash
+performance level 4
+
+clock freq:     1300 ~ 1900
+memory freq:    14000
+
+Sketch
+performance level 3
+clock freq:     1300 ~ 1900
+memory freq:    13600
+
+
+Bug3 :
+
+hashmask bit
+1 <- 1/32
+0 <- 31/32
+
+For example
+n is the number of 1 in the hashmask.
+P(n == 6) = 0.1

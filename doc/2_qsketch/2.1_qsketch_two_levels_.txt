@@ -1,0 +1,73 @@
+two levels
+
+The accuracy of sketch is limited by the size of hash tables. But a larger hash table will use larger memory while the device memory is usually smaller than the host memory. Some sketches supports to use unsigned character as count variable.However, the maximum value of unsigned character is 255, and it is easy to overflow even the input data is uniform distribution.
+[to do:  prove]
+
+// But this kind of overflow won’t happen frequently, because the input data is uniform distribution.
+// And if one count variable is going to overflow, the nearby variables are also likely to overflow. 
+
+/*
+low_frequency_table: [7 x uint, uint]...
+*/
+
+
+The qsketch_v3 uses two hash tables to handle the integer overflow problem. The first hash table is low_frequency_table, which can store a large number of different elements. And the second hash table is high_frequency_table, which is much smaller than low_frequency_table. If one count variable is going to overflow While perform insertion, it will request an available bucket(high_bucket) in the high_frequency_table and insert the element to the newly allocated bucket. It will also store the index of the new bucket to the last 32-bits of low_bucket(high_bucket_index). The following insertion will first load the low_bucket and check if high_bucket_index is pointed to a valid high_bucket. If so, it will load the high_bucket and finish the insertion. 
+For searching, it will add the result of high_bucket and low_bucket together and it won't modify anything. 
+
+The time complexity is still O(1) and the performance is closed to the qsketch_v2, which only has one hash table. Because the overflow won’t happen frequently and the high_frequency_table will be relative small and the accesses of high_frequency_table are well cached.
+
+[todo : show the performance ]
+The accuracy is greatly improved because it can use much more count variables.
+[todo : show the accuracy]
+
+
+high_bucket_index:
+Each bucket will not use the last 32-bits, and convert it to a 32-bit unsigned integer(high_bucket_index), which is the next level index, 0 ~ 1023 are reserved and 1024 ~ 2 ^ 32 - 1 are indices. 
+The 32-bit unsigned integer are enough, it can support a 2 TB high_frequency_table.
+ 
+atomic_allocate:
+
+atomic_allocate_v1(uint *high_bucket_index, uint *global_index):
+    uint id = 0;
+    uint old = atomicCAS(high_bucket_index, 0, 1);
+    if (old == 0) 
+        id = atomicAdd(global_index, 1);
+        *high_bucket_index = id;
+    else
+        while (id <= 1)
+            id = max(id, __ldcv(high_bucket_index));
+            __threadfence_block();// weak ordered
+    return id;
+
+atomic_allocate_v2(uint *high_bucket_index, uint *global_index):
+    uint id = 0;
+    uint old = atomicCAS(high_bucket_index, 0, 1);
+    if (old == 0) 
+        id = atomicAdd(global_index, 1);
+        *high_bucket_index = id;
+    else
+        while (id <= 1)
+            id = *high_bucket_index;
+    return id;
+
+
+The whole high_frequency_table will be allocated in the constructor of sketch. When it needs to allocate a new high_bucket, several threads may try to upgrade the low_bucket at the same time, the first thread will read (old == 0) and it will finish the real allocation and other threads are waiting in a busy loop. The busy loop won't wait for a long time.
+
+q1.
+why __ldcv()
+__ldcv() will force the thread to load data from global memory.
+yes
+why __threadfence_block()
+
+
+A lock free allocate, it can efficiently handle the request of high_bucket. [todo: show the performance].
+Multiple low_buckets can connect to the same high_bucket, so when it runs out of the high_frequency_table, it can reuse the buckets on the front of table.
+
+q2.
+compare the performance
+qsketch vs SlabHash ...
+No
+
+1. everything in main
+2. background, related work 
+3. contribution

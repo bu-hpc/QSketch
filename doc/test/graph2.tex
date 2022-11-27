@@ -1,0 +1,187 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+
+
+\begin{document}
+
+% \begin{tikzpicture}
+%     \pgfplotsset{small}
+%     \matrix {
+%         \begin{semilogxaxis}
+%         % \begin{axis}
+%         [
+%             % title={Insert Performance},
+%             xlabel={work load},
+%             ylabel={Insert Performance (M operations/s)},
+%             % xtick = {32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728},
+%             % legend pos=north east,
+%             % xmajorgrids=true,
+%             % ymajorgrids=true,
+%             % grid style=dashed,
+%         ]
+        
+%             \addplot table[x = workload, y = threadinsert] {../data/perf_thread_vs_warp.dat};
+%             \addlegendentry{Thread Insert};
+%             % \addplot table[x = workload, y = warpinsert] {../data/perf_thread_vs_warp.dat};
+%             % \addlegendentry{Warp Insert};
+%         \end{semilogxaxis}
+%         % \end{axis}
+%         &
+%         % differently large labels are aligned automatically:
+%         \begin{axis}[ylabel={$f(x)=x^2$},ylabel style={font=\Huge}]
+%             \addplot {x^2};
+%         \end{axis}
+%         \\
+%         % %
+%         % \begin{axis}[xlabel=$x$,xlabel style={font=\Huge}]
+%         %     \addplot {x^3};
+%         % \end{axis}
+%         % &
+%         % \begin{axis}
+%         %     \addplot {x^4};
+%         % \end{axis}
+%         % \\
+%         };
+%     % \addlegendentry{Thread Insert};
+% \end{tikzpicture}
+
+% \begin{tikzpicture}
+%     \pgfplotsset{small}
+%     \matrix {
+%         \begin{axis}
+%             \addplot {x};
+%         \end{axis}
+%         &
+%         % differently large labels are aligned automatically:
+%         \begin{axis}[ylabel={$f(x)=x^2$},ylabel style={font=\Huge}]
+%             \addplot {x^2};
+%         \end{axis}
+%         \\
+%         %
+%         \begin{axis}[xlabel=$x$,xlabel style={font=\Huge}]
+%             \addplot {x^3};
+%         \end{axis}
+%         &
+%         \begin{axis}
+%             \addplot {x^4};
+%         \end{axis}
+%         \\
+%         };
+% \end{tikzpicture}
+
+% \begin{tikzpicture}
+%   \begin{groupplot}[group style={group size=2 by 2},height=3cm,width=3cm]
+%     \nextgroupplot[title=One]
+%     % \addplot coordinates {(0,0) (1,1) (2,2)};
+%     \addplot table[x = workload, y = threadinsert] {../data/perf_thread_vs_warp.dat};
+%     % \begin{semilogxaxis}[
+%     %     title={Insert Performance},
+%     %     xlabel={work load},
+%     %     ylabel={Insert Performance (M operations/s)},
+%     %     % xtick = {32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728},
+%     %     legend pos=north east,
+%     %     xmajorgrids=true,
+%     %     ymajorgrids=true,
+%     %     % grid style=dashed,
+%     % ]
+    
+%     %     \addplot table[x = workload, y = threadinsert] {../data/perf_thread_vs_warp.dat};
+%     %     \addlegendentry{Thread Insert}
+%     %     \addplot table[x = workload, y = warpinsert] {../data/perf_thread_vs_warp.dat};
+%     %     \addlegendentry{Warp Insert}
+%     % \end{semilogxaxis}
+%     \nextgroupplot[title=Two]
+%     \addplot coordinates {(0,2) (1,1) (2,0)};
+%     \nextgroupplot[title=Three]
+%     \addplot coordinates {(0,2) (1,1) (2,1)};
+%     \nextgroupplot[title=Four]
+%     \addplot coordinates {(0,2) (1,1) (1,0)};
+%   \end{groupplot}
+
+% \end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{semilogxaxis}[
+    title={Insert Performance},
+    xlabel={work load},
+    ylabel={Insert Performance (M operations/s)},
+    % xtick = {32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728},
+    legend pos=north east,
+    xmajorgrids=true,
+    ymajorgrids=true,
+    % grid style=dashed,
+]
+
+\addplot table[x = workload, y = threadinsert] {../data/perf_thread_vs_warp.dat};
+\addlegendentry{Thread Insert}
+\addplot table[x = workload, y = warpinsert] {../data/perf_thread_vs_warp.dat};
+\addlegendentry{Warp Insert}
+\end{semilogxaxis}
+\end{tikzpicture}
+% ~
+
+\begin{tikzpicture}
+\begin{semilogxaxis}[
+    title={Search Performance},
+    xlabel={work load},
+    ylabel={Search Performance (M operations/s)},
+    % xtick = {32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728},
+    legend pos=north east,
+    xmajorgrids=true,
+    ymajorgrids=true,
+    % grid style=dashed,
+]
+
+\addplot table[x = workload, y = threadsearch] {../data/perf_thread_vs_warp.dat};
+\addlegendentry{Thread Search}
+\addplot table[x = workload, y = warpsearch] {../data/perf_thread_vs_warp.dat};
+\addlegendentry{Warp Search}
+\end{semilogxaxis}
+% \end{groupplot}
+\end{tikzpicture}
+\pagebreak
+
+\begin{tikzpicture}
+\begin{semilogxaxis}[
+    title={Insert Performance},
+    xlabel={Work Load},
+    ylabel={Insert Performance (M operations/s)},
+    % xtick = {32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728},
+    legend pos=north east,
+    xmajorgrids=true,
+    ymajorgrids=true,
+    % grid style=dashed,
+]
+
+\addplot table[x = workload, y = threadinsert] {../data/perf_thread_vs_warp_r.dat};
+\addlegendentry{Thread Insert}
+\addplot table[x = workload, y = warpinsert] {../data/perf_thread_vs_warp_r.dat};
+\addlegendentry{Warp Insert}
+\end{semilogxaxis}
+\end{tikzpicture}
+% ~
+
+\begin{tikzpicture}
+\begin{semilogxaxis}[
+    title={Search Performance},
+    xlabel={Work Load},
+    ylabel={Search Performance (M operations/s)},
+    % xtick = {32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728},
+    legend pos=north east,
+    xmajorgrids=true,
+    ymajorgrids=true,
+    % grid style=dashed,
+]
+
+\addplot table[x = workload, y = threadsearch] {../data/perf_thread_vs_warp_r.dat};
+\addlegendentry{Thread Search}
+\addplot table[x = workload, y = warpsearch] {../data/perf_thread_vs_warp_r.dat};
+\addlegendentry{Warp Search}
+\end{semilogxaxis}
+% \end{groupplot}
+\end{tikzpicture}
+
+\end{document}

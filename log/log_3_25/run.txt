@@ -1,0 +1,190 @@
+GPUGraphicsClockOffset-0
+
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0.0) assigned value 0.
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0[gpu:0]) assigned value 0.
+
+GPUGraphicsClockOffset-0
+insert perf: 874.245603 Mops/s
+search perf: 1.450365 Gops/s
+GPUGraphicsClockOffset-100
+insert perf: 864.887831 Mops/s
+search perf: 1.377221 Gops/s
+GPUGraphicsClockOffset-200
+insert perf: 835.868185 Mops/s
+search perf: 1.321231 Gops/s
+GPUGraphicsClockOffset-300
+insert perf: 838.888281 Mops/s
+search perf: 1.255283 Gops/s
+GPUGraphicsClockOffset-400
+insert perf: 818.098418 Mops/s
+search perf: 1.194102 Gops/s
+GPUGraphicsClockOffset-500
+insert perf: 780.112438 Mops/s
+search perf: 1.125510 Gops/s
+GPUGraphicsClockOffset-600
+insert perf: 771.256857 Mops/s
+search perf: 1.064615 Gops/s
+GPUGraphicsClockOffset-700
+insert perf: 726.596485 Mops/s
+search perf: 925.751919 Mops/s
+GPUGraphicsClockOffset-800
+insert perf: 667.223200 Mops/s
+search perf: 938.401452 Mops/s
+GPUGraphicsClockOffset-900
+insert perf: 622.102158 Mops/s
+search perf: 872.987328 Mops/s
+GPUGraphicsClockOffset-1000
+insert perf: 548.387185 Mops/s
+search perf: 793.535542 Mops/s
+GPUGraphicsClockOffset-500
+
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0.0) assigned value -500.
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0[gpu:0]) assigned value -500.
+
+GPUGraphicsClockOffset-0
+insert perf: 880.874885 Mops/s
+search perf: 1.447270 Gops/s
+GPUGraphicsClockOffset-100
+insert perf: 862.015275 Mops/s
+search perf: 1.378134 Gops/s
+GPUGraphicsClockOffset-200
+insert perf: 852.938184 Mops/s
+search perf: 1.322320 Gops/s
+GPUGraphicsClockOffset-300
+insert perf: 841.947963 Mops/s
+search perf: 1.262848 Gops/s
+GPUGraphicsClockOffset-400
+insert perf: 822.665842 Mops/s
+search perf: 1.197278 Gops/s
+GPUGraphicsClockOffset-500
+insert perf: 793.508540 Mops/s
+search perf: 1.126068 Gops/s
+GPUGraphicsClockOffset-600
+insert perf: 773.316268 Mops/s
+search perf: 1.064812 Gops/s
+GPUGraphicsClockOffset-700
+insert perf: 737.347687 Mops/s
+search perf: 1015.195445 Mops/s
+GPUGraphicsClockOffset-800
+insert perf: 669.205150 Mops/s
+search perf: 934.751538 Mops/s
+GPUGraphicsClockOffset-900
+insert perf: 616.659672 Mops/s
+search perf: 725.645171 Mops/s
+GPUGraphicsClockOffset-1000
+insert perf: 548.813684 Mops/s
+search perf: 793.592219 Mops/s
+GPUGraphicsClockOffset-1000
+
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0.0) assigned value -1000.
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0[gpu:0]) assigned value -1000.
+
+GPUGraphicsClockOffset-0
+insert perf: 905.711185 Mops/s
+search perf: 1.451788 Gops/s
+GPUGraphicsClockOffset-100
+insert perf: 893.911798 Mops/s
+search perf: 1.389863 Gops/s
+GPUGraphicsClockOffset-200
+insert perf: 877.058058 Mops/s
+search perf: 1.322804 Gops/s
+GPUGraphicsClockOffset-300
+insert perf: 843.311065 Mops/s
+search perf: 1.265205 Gops/s
+GPUGraphicsClockOffset-400
+insert perf: 838.205754 Mops/s
+search perf: 1.197352 Gops/s
+GPUGraphicsClockOffset-500
+insert perf: 811.236025 Mops/s
+search perf: 1.127016 Gops/s
+GPUGraphicsClockOffset-600
+insert perf: 777.422447 Mops/s
+search perf: 1.065393 Gops/s
+GPUGraphicsClockOffset-700
+insert perf: 741.612659 Mops/s
+search perf: 1016.122821 Mops/s
+GPUGraphicsClockOffset-800
+insert perf: 686.946567 Mops/s
+search perf: 938.224485 Mops/s
+GPUGraphicsClockOffset-900
+insert perf: 617.868035 Mops/s
+search perf: 873.413553 Mops/s
+GPUGraphicsClockOffset-1000
+insert perf: 554.725348 Mops/s
+search perf: 793.704967 Mops/s
+GPUGraphicsClockOffset-1500
+
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0.0) assigned value -1500.
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0[gpu:0]) assigned value -1500.
+
+GPUGraphicsClockOffset-0
+insert perf: 873.229018 Mops/s
+search perf: 1.436540 Gops/s
+GPUGraphicsClockOffset-100
+insert perf: 855.013589 Mops/s
+search perf: 1.379031 Gops/s
+GPUGraphicsClockOffset-200
+insert perf: 841.808033 Mops/s
+search perf: 1.315055 Gops/s
+GPUGraphicsClockOffset-300
+insert perf: 837.901413 Mops/s
+search perf: 1.256381 Gops/s
+GPUGraphicsClockOffset-400
+insert perf: 818.462881 Mops/s
+search perf: 1.190085 Gops/s
+GPUGraphicsClockOffset-500
+insert perf: 777.411181 Mops/s
+search perf: 1.121606 Gops/s
+GPUGraphicsClockOffset-600
+insert perf: 758.856894 Mops/s
+search perf: 1.055490 Gops/s
+GPUGraphicsClockOffset-700
+insert perf: 731.993001 Mops/s
+search perf: 1011.661421 Mops/s
+GPUGraphicsClockOffset-800
+insert perf: 674.100805 Mops/s
+search perf: 935.031225 Mops/s
+GPUGraphicsClockOffset-900
+insert perf: 616.793169 Mops/s
+search perf: 869.237930 Mops/s
+GPUGraphicsClockOffset-1000
+insert perf: 542.606455 Mops/s
+search perf: 791.644666 Mops/s
+GPUGraphicsClockOffset-2000
+
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0.0) assigned value -2000.
+  Attribute 'GPUMemoryTransferRateOffset' (amd:0[gpu:0]) assigned value -2000.
+
+GPUGraphicsClockOffset-0
+insert perf: 820.117040 Mops/s
+search perf: 1.424034 Gops/s
+GPUGraphicsClockOffset-100
+insert perf: 833.683752 Mops/s
+search perf: 1.365894 Gops/s
+GPUGraphicsClockOffset-200
+insert perf: 824.224722 Mops/s
+search perf: 1.302966 Gops/s
+GPUGraphicsClockOffset-300
+insert perf: 811.439265 Mops/s
+search perf: 1.247681 Gops/s
+GPUGraphicsClockOffset-400
+insert perf: 785.639333 Mops/s
+search perf: 1.183121 Gops/s
+GPUGraphicsClockOffset-500
+insert perf: 774.047864 Mops/s
+search perf: 1.108304 Gops/s
+GPUGraphicsClockOffset-600
+insert perf: 736.588127 Mops/s
+search perf: 1.054850 Gops/s
+GPUGraphicsClockOffset-700
+insert perf: 719.112658 Mops/s
+search perf: 1003.418647 Mops/s
+GPUGraphicsClockOffset-800
+insert perf: 659.997097 Mops/s
+search perf: 930.290539 Mops/s
+GPUGraphicsClockOffset-900
+insert perf: 604.055967 Mops/s
+search perf: 866.834312 Mops/s
+GPUGraphicsClockOffset-1000
+insert perf: 532.608453 Mops/s
+search perf: 788.541545 Mops/s

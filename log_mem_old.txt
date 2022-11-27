@@ -1,0 +1,754 @@
+warm
+Sketch_GPU
+memory_usage: 31.999992 MB
+Sketch_GPU_Thread
+seed: 
+710603542, 2494043558, 608962660, 
+Thread: 
+table_sz: 32768, 32749
+Sketch_GPU
+memory_usage: 0.374783 MB
+Sketch_GPU_Thread
+seed: 
+1154894224, 3788758965, 419252356, 
+2848.68,1415.31
+table_sz: 65536, 65521
+Sketch_GPU
+memory_usage: 0.749828 MB
+Sketch_GPU_Thread
+seed: 
+1249945675, 2982032138, 3727805840, 
+4629.63,2646.06
+table_sz: 131072, 131071
+Sketch_GPU
+memory_usage: 1.499989 MB
+Sketch_GPU_Thread
+seed: 
+2045082311, 3778829944, 3724729947, 
+6316.32,3600.23
+table_sz: 262144, 262139
+Sketch_GPU
+memory_usage: 2.999943 MB
+Sketch_GPU_Thread
+seed: 
+1697651566, 2210667776, 3663500316, 
+9160.86,5390.25
+table_sz: 524288, 524287
+Sketch_GPU
+memory_usage: 5.999989 MB
+Sketch_GPU_Thread
+seed: 
+3637081991, 1123179168, 3107842037, 
+1149.13,3506.31
+table_sz: 1048576, 1048573
+Sketch_GPU
+memory_usage: 11.999966 MB
+Sketch_GPU_Thread
+seed: 
+1238818913, 3706431130, 1341884464, 
+573.001,1871.54
+table_sz: 2097152, 2097143
+Sketch_GPU
+memory_usage: 23.999897 MB
+Sketch_GPU_Thread
+seed: 
+726360978, 3700878686, 3595242497, 
+457.641,1317.77
+table_sz: 4194304, 4194301
+Sketch_GPU
+memory_usage: 47.999966 MB
+Sketch_GPU_Thread
+seed: 
+9645122, 2178087418, 3173374730, 
+412.518,1098.26
+table_sz: 8388608, 8388593
+Sketch_GPU
+memory_usage: 95.999828 MB
+Sketch_GPU_Thread
+seed: 
+139919648, 33694865, 595696532, 
+390.746,927.49
+table_sz: 16777216, 16777213
+Sketch_GPU
+memory_usage: 191.999966 MB
+Sketch_GPU_Thread
+seed: 
+480681680, 1282021736, 3231752869, 
+390.038,740.81
+table_sz: 33554432, 33554393
+Sketch_GPU
+memory_usage: 383.999554 MB
+Sketch_GPU_Thread
+seed: 
+2511451746, 3927040520, 2321273447, 
+384.512,451.752
+table_sz: 67108864, 67108859
+Sketch_GPU
+memory_usage: 767.999943 MB
+Sketch_GPU_Thread
+seed: 
+54505327, 2481632099, 899969041, 
+323.025,405.78
+table_sz: 134217728, 134217689
+Sketch_GPU
+memory_usage: 1535.999554 MB
+Sketch_GPU_Thread
+seed: 
+2255859616, 819630385, 448217482, 
+239.025,278.845
+----------------------------------------
+Warp: 
+table_sz: 3072, 2039
+Sketch_GPU
+memory_usage: 0.248901 MB
+Sketch_GPU_Warp
+32
+seed: 
+2484092005, 
+generate_hashmask
+1021, 32, 3, 0
+1182.82,754.466
+table_sz: 6144, 4093
+Sketch_GPU
+memory_usage: 0.499634 MB
+Sketch_GPU_Warp
+32
+seed: 
+2176175844, 
+generate_hashmask
+1021, 32, 3, 0
+1432.17,997.128
+table_sz: 12288, 8191
+Sketch_GPU
+memory_usage: 0.999878 MB
+Sketch_GPU_Warp
+32
+seed: 
+2709879072, 
+generate_hashmask
+1021, 32, 3, 0
+1584.89,1128.77
+table_sz: 24576, 16381
+Sketch_GPU
+memory_usage: 1.999634 MB
+Sketch_GPU_Warp
+32
+seed: 
+3001910970, 
+generate_hashmask
+1021, 32, 3, 0
+1691.37,1172.72
+table_sz: 49152, 32749
+Sketch_GPU
+memory_usage: 3.997681 MB
+Sketch_GPU_Warp
+32
+seed: 
+704470116, 
+generate_hashmask
+1021, 32, 3, 0
+1761.31,1141.66
+table_sz: 98304, 65521
+Sketch_GPU
+memory_usage: 7.998169 MB
+Sketch_GPU_Warp
+32
+seed: 
+4019229850, 
+generate_hashmask
+1021, 32, 3, 0
+1806.43,1113.12
+table_sz: 196608, 131071
+Sketch_GPU
+memory_usage: 15.999878 MB
+Sketch_GPU_Warp
+32
+seed: 
+2988900857, 
+generate_hashmask
+1021, 32, 3, 0
+1499.96,1108.9
+table_sz: 393216, 262139
+Sketch_GPU
+memory_usage: 31.999390 MB
+Sketch_GPU_Warp
+32
+seed: 
+1805028313, 
+generate_hashmask
+1021, 32, 3, 0
+1340.44,1132.5
+table_sz: 786432, 524287
+Sketch_GPU
+memory_usage: 63.999878 MB
+Sketch_GPU_Warp
+32
+seed: 
+1896251923, 
+generate_hashmask
+1021, 32, 3, 0
+1314.16,1066.31
+table_sz: 1572864, 1048573
+Sketch_GPU
+memory_usage: 127.999634 MB
+Sketch_GPU_Warp
+32
+seed: 
+1383074816, 
+generate_hashmask
+1021, 32, 3, 0
+1181.99,958.762
+table_sz: 3145728, 2097143
+Sketch_GPU
+memory_usage: 255.998901 MB
+Sketch_GPU_Warp
+32
+seed: 
+2433435336, 
+generate_hashmask
+1021, 32, 3, 0
+962.566,796.213
+table_sz: 6291456, 4194301
+Sketch_GPU
+memory_usage: 511.999634 MB
+Sketch_GPU_Warp
+32
+seed: 
+2297522555, 
+generate_hashmask
+1021, 32, 3, 0
+626.132,550.713
+table_sz: 12582912, 8388593
+Sketch_GPU
+memory_usage: 1023.998169 MB
+Sketch_GPU_Warp
+32
+seed: 
+483771799, 
+generate_hashmask
+1021, 32, 3, 0
+368.826,341.426
+----------------------------------------
+Sub_Warp: 
+table_sz: 12288, 8191
+Sketch_GPU
+memory_usage: 0.249969 MB
+Sketch_GPU_Warp
+8
+seed: 
+872952967, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+2488.06,764.432
+table_sz: 24576, 16381
+Sketch_GPU
+memory_usage: 0.499908 MB
+Sketch_GPU_Warp
+8
+seed: 
+928130389, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+3806.33,1329.79
+table_sz: 49152, 32749
+Sketch_GPU
+memory_usage: 0.999420 MB
+Sketch_GPU_Warp
+8
+seed: 
+2914161733, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+4873.29,1774.56
+table_sz: 98304, 65521
+Sketch_GPU
+memory_usage: 1.999542 MB
+Sketch_GPU_Warp
+8
+seed: 
+1678932730, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+5910.17,2702.12
+table_sz: 196608, 131071
+Sketch_GPU
+memory_usage: 3.999969 MB
+Sketch_GPU_Warp
+8
+seed: 
+2373177440, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+5077.17,2641.59
+table_sz: 393216, 262139
+Sketch_GPU
+memory_usage: 7.999847 MB
+Sketch_GPU_Warp
+8
+seed: 
+3136183838, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+2060.59,2612.88
+table_sz: 786432, 524287
+Sketch_GPU
+memory_usage: 15.999969 MB
+Sketch_GPU_Warp
+8
+seed: 
+1059868305, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+1532.87,2716.06
+table_sz: 1572864, 1048573
+Sketch_GPU
+memory_usage: 31.999908 MB
+Sketch_GPU_Warp
+8
+seed: 
+1953635851, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+1396.28,2563.91
+table_sz: 3145728, 2097143
+Sketch_GPU
+memory_usage: 63.999725 MB
+Sketch_GPU_Warp
+8
+seed: 
+3847281624, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+1292.44,2208.17
+table_sz: 6291456, 4194301
+Sketch_GPU
+memory_usage: 127.999908 MB
+Sketch_GPU_Warp
+8
+seed: 
+679348620, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+1201.19,1367.94
+table_sz: 12582912, 8388593
+Sketch_GPU
+memory_usage: 255.999542 MB
+Sketch_GPU_Warp
+8
+seed: 
+2294180499, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+877.546,728.993
+table_sz: 25165824, 16777213
+Sketch_GPU
+memory_usage: 511.999908 MB
+Sketch_GPU_Warp
+8
+seed: 
+1226606584, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+567.129,501.14
+table_sz: 50331648, 33554393
+Sketch_GPU
+memory_usage: 1023.998810 MB
+Sketch_GPU_Warp
+8
+seed: 
+1223574935, 
+generate_hashmask
+1021, 8, 3, 0
+Sketch_GPU_Sub_Warp_8
+331.94,309.558
+----------------------------------------
+Sub_Warp_Level: 
+table_sz: 12288, 8191
+Sketch_GPU
+memory_usage: 0.374969 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+1239781835, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+1178.8,732.88
+table_sz: 24576, 16381
+Sketch_GPU
+memory_usage: 0.624908 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+1752232333, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+1902.59,1273.43
+table_sz: 49152, 32749
+Sketch_GPU
+memory_usage: 1.124420 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+2997371608, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+2570.96,1926.63
+table_sz: 98304, 65521
+Sketch_GPU
+memory_usage: 2.124542 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+3631359030, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+3063.73,2261.22
+table_sz: 196608, 131071
+Sketch_GPU
+memory_usage: 4.124969 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+4061861067, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+3090.23,2597.67
+table_sz: 393216, 262139
+Sketch_GPU
+memory_usage: 8.124847 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+3499451238, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+1949.78,2558.62
+table_sz: 786432, 524287
+Sketch_GPU
+memory_usage: 16.124969 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+1903245243, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+next_level_id: 1025
+1622.27,2664.96
+table_sz: 1572864, 1048573
+Sketch_GPU
+memory_usage: 32.124908 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+3346258310, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+1360.31,2574.94
+table_sz: 3145728, 2097143
+Sketch_GPU
+memory_usage: 64.124725 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+1684974287, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+1234.81,2192.34
+table_sz: 6291456, 4194301
+Sketch_GPU
+memory_usage: 128.124908 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+1696702333, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+1092.37,1352.44
+table_sz: 12582912, 8388593
+Sketch_GPU
+memory_usage: 256.124542 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+43314533, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+637.027,719.594
+table_sz: 25165824, 16777213
+Sketch_GPU
+memory_usage: 512.124908 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+2737295608, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+455.453,494.66
+table_sz: 50331648, 33554393
+Sketch_GPU
+memory_usage: 1024.123810 MB
+Sketch_GPU_Sub_Warp_Level8
+seed: 
+1936732218, 
+generate_hashmask
+1021, 32, 3, 4
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+next_level_id: 1025
+289.908,305.302

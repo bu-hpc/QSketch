@@ -1,0 +1,24 @@
+% The whole high\_frequency\_table will be allocated in the constructor of sketch. When it needs to allocate a new high\_bucket, several threads may try to upgrade the low\_bucket at the same time, the first thread will read $(old == 0)$ and it will finish the real allocation and other threads are waiting in a busy loop. The busy loop won't wait for a long time.
+% A lock free allocate, it can efficiently handle the request of high\_bucket. [todo: show the performance].
+% Multiple low\_buckets can connect to the same high\_bucket, so when it runs out of the high\_frequency\_table, it can reuse the buckets on the front of table.
+
+% it will add the result of high\_bucket and low\_bucket together and it won't modify anything. 
+% While calculating the hash masks, there must be 4-bit empty space, for alignment
+
+% The time complexity is still O(1) and the performance is closed to the qsketch\_v2, which only has one hash table. Because the overflow won’t happen frequently and the high\_frequency\_table will be relative small and the accesses of high\_frequency\_table are well cached.
+
+% high\_bucket\_index:
+% Each bucket will not use the last 32-bits, and convert it to a 32-bit unsigned integer(high\_bucket\_index), which is the next level index, $0 \sim 1023$ are reserved and 
+% $1024 \sim 2 ^ {32} - 1$
+% are indices. 
+% The 32-bit unsigned integer are enough, it can support a 2 TB high\_frequency\_table.
+
+% The requesting operation will also store the index of the new bucket to the high\_bucket\_index of corresponding low\_bucket(high\_bucket\_index).
+% However, the average global memory access is still
+% and insert the element to the newly allocated bucket.
+
+
+% If the old value is greater than high\_bucket\_index\_start(the default value is 1024), this value is guaranteed to point to a valid high\_bucket. And it will load the high\_bucket and finish the insertion. 
+% CUDA doesn't support atomic functions for byte, so 4 increment bytes are combined to a 4-byte integer and the 4 atomic adding are finished together. 
+% Each unsigned byte in low\_bucket is expended to 4-byte or 8-byte unsigned integers in high\_bucket.
+% The following insertion will first load the low\_bucket and check if high\_bucket\_index is pointed to a valid high\_bucket. If so, it will load the high\_bucket and finish the insertion. 

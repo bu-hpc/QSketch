@@ -1,0 +1,25 @@
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 973.094677 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 973.328577 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 882.976210 Mops/s
+
+
+
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 874.949629 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 875.423502 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 778.595623 Mops/s

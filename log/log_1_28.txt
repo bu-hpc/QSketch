@@ -1,0 +1,41 @@
+mem_id_host: 0
+max: 4294967295 ave: 1.05515
+maxp: 1300% avep: 205.394%
+max: 8  ave: 0.0843544
+maxp: 900%  avep: 108.433%
+
+mem_id_host: 0
+insert perf: 509.666851 Mops/s
+mem_id_host: 0
+search perf time: 0.00102626
+search perf: 974.409094 Mops/s
+insert perf: 1.034996 Gops/s
+search perf time: 0.00127212
+search perf: 786.087509 Mops/s
+
+
+insert perf: 673.330393 Mops/s
+search perf time: 0.00102454
+search perf: 976.043977 Mops/s
+insert perf: 1.034928 Gops/s
+search perf time: 0.00127223
+search perf: 786.024485 Mops/s
+
+
+insert perf: 1.498294 Gops/s
+search perf time: 0.00147252
+search perf: 679.109769 Mops/s
+insert perf: 1.035027 Gops/s
+search perf time: 0.00127165
+search perf: 786.382992 Mops/s
+
+insert perf: 1.410604 Gops/s
+search perf time: 0.0014955
+search perf: 668.671343 Mops/s
+max: 6  ave: 0.10773
+maxp: 700%  avep: 110.772%
+insert perf: 1.033594 Gops/s
+search perf time: 0.00127247
+search perf: 785.871292 Mops/s
+max: 8  ave: 0.0826712
+maxp: 900%  avep: 108.267%

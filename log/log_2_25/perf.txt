@@ -1,0 +1,63 @@
+without_preload:
+
+insert perf 1: 692.226915 Mops/s
+insert perf 2: 780.720574 Mops/s
+search perf: 1.021852 Gops/s
+
+max: 7  ave: 0.109938
+maxp: 800%  avep: 110.992%
+max: 127    ave: 0.0416317
+maxp: 12800%    avep: 100.395%
+----------------------------------
+
+
+with_preload:
+insert perf 1: 762.420013 Mops/s
+insert perf 2: 830.890515 Mops/s
+search perf time: 0.000954248
+search perf: 1.023384 Gops/s
+
+max: 6  ave: 0.112141
+maxp: 700%  avep: 111.213%
+max: 127    ave: 0.0534096
+maxp: 12800%    avep: 100.308%
+
+
+
+SlabHash:
+===============================================================================================
+Table size experiment:
+    Table's expected chain length is fixed, and total number of elements is variable
+    Expected chain length = 0.60
+
+    1.00 of 1048576 queries exist in the data structure
+===============================================================================================
+(num keys, num buckets, load factor)    build rate(M/s)     search rate(M/s)    search rate bulk(M/s)
+===============================================================================================
+(1048576, 116509, 0.55)                 1569.123            3008.447                2991.419
+
+
+1. max_count is the bottleneck.
+
+
+2. memory bandwidth.
+
+32 uint -> 1024 bit
+
+IF the device memory bandwidth is 512 bit. 
+
+SlabHash :
+
+---- ---- ---- --x- | ---- ---- ---- ----       : 1 operation
+
+
+Skecth :
+
+a.
+---- ---- ---- --x- | ---- ---x ---- ----       : 2 operations
+
+a.
+---- ---- -x-- --x- | ---- ---- ---- ----       : 1 operation
+
+
+It is possible that each bucket only has half warp_size(16) uints, and it will always need only one operation.

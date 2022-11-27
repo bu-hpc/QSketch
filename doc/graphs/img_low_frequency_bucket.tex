@@ -1,0 +1,19 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[
+      start chain=1 going right,start chain=2 going below,node distance=-0.15mm
+    %   scale = 0.6
+    ]
+    \node [on chain=2] at (2.7, 0) {Sub Warp Bucket(32-Byte)};
+    \node [on chain=1] at (-1.5,-.4) {\ldots};  
+    \foreach \x in {1,2,...,32} {
+        \x, \node [draw,on chain=1] {};
+        
+    } 
+    \node [name=r,on chain=1] {\ldots}; 
+    \draw [name=b,white,decorate, decoration = {calligraphic brace, raise = 2pt, amplitude = 4pt,mirror}] (5.4,-0.5) --  (6.3,-0.5);
+    \node at (6.0,-0.9) {high\_frequency\_index};
+\end{tikzpicture}
+    \caption{low\_frequency\_bucket}
+    \label{fig:low_frequency_bucket}
+\end{figure}

@@ -1,0 +1,38 @@
+TSMM paper:
+
+algorithm:
+
+for i from 0 to n
+    result <-   load(i)
+                cal(i, result)
+
+before overlap:
+    load(0) cal(0) load(1) cal(1) load(2) cal(2) ... load(n - 1) cal(n - 1)
+
+after overlap:
+    load(0) load(1) cal(0) load(2) cal(1) cal(2) ... load(n - 1) cal(n - 2) cal(n - 1)
+
+overlap 
+    load(0) cal(0)  cal(1)  cal(2)  ...  cal(n - 2) cal(n - 1)
+            load(1) load(2) load(3) ...  load(n - 2)
+
+
+
+Sketch:
+
+
+algorithm:
+
+for i from 0 to n
+    result_0 <-     load1(i)
+    result_1 <-     cal1(i, result_0)
+    result_2 <-     load2(i, result_1)
+                    cal2(i, result_2)
+
+
+
+before overlap:
+    load1(0) cal1(0) load2(0) cal2(0) load1(1) cal1(1) load2(1) cal2(1) load1(2) cal1(2) load2(2) cal2(2) ... load1(n - 1) cal1(n - 1) load2(n - 1) cal2(n - 1)
+
+after overlap:
+    load1(0) load1(1) cal1(0) load2(0) load2(1) cal2(0)  cal1(1)  cal2(1) load1(2) cal1(2) load2(2) cal2(2) ... load1(n - 1) cal1(n - 1) load2(n - 1) cal2(n - 1)

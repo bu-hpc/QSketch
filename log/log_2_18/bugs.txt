@@ -1,0 +1,99 @@
+1. the dead loop
+    
+bug code:
+
+Count_T hth_val;
+while ((hth_val = hash_table_high[old_id * 128 + 124]) != 0) {}
+// It may not load data from memory. It is possible that the busy loop is always running while "hash_table_high[old_id * 128 + 124]"
+has already changed.
+
+Solution 1:
+volatile Count_T *hth_old_ready = hash_table_high + old_id * 128 + 124;
+while (*hth_old_ready != 0) {}
+
+Solution 2:
+// B.11. Load Functions Using Cache Hints. It needs cuda11
+while (__ldcv(hash_table_high + old_id * 128 + 124) != 0) {}
+
+2. error results
+
+2.1
+The possibility is about 1/20.
+
+if (tid == 0)
+    atomicAdd(hth + 124, 1);
+insert(...)
+__threadfence(); //
+if (tid == 0)
+    atomicSub(hth + 124, 1);
+
+/*
+if there is no threadfence().
+It is possible that 
+
+if (tid == 0)
+    atomicAdd(hth + 124, 1);
+if (tid == 0)
+    atomicSub(hth + 124, 1);
+insert(...)
+
+*/
+
+
+2.2
+
+race condition 1. The possibility is about 1/300.
+
+old_id = atomicMax(htl + 31, new_id);// old_id may be greater than new_id, 
+
+race condition 2. The possibility is less than 1/5000. 
+It may happen when 
+a, there are 3 or more warps allocating for the same bucket. 
+b, the middle warp(warp_1) finishs at first.
+c, the last warp(warp_2) finished within the gap of two atomicOps() in warp_0.
+
+warp_0 :
+new_id = atomicAdd(mem_id, 1);
+// warp_2 
+old_id = atomicMax(htl + 31, new_id); 
+
+
+2.3
+
+a new memory allocation method.
+
+
+unsigned int id = 0;
+if (tid == 0) {
+    unsigned int old = atomicCAS(htl + 31, 0, 1);
+    int trace = 0;
+    if (old == 0) {
+        id = atomicAdd(mem_id, 1);
+        htl[31] = id;
+    } else {
+
+        /*
+
+        while (id <= 1) {
+            id = __ldcv(htl + 31);
+        }
+
+        // id sometimes equals 1;
+
+            /*
+                id = 1;
+                id = 2; // this finished at first
+
+            */
+
+
+        */
+
+        while (id <= 1) {
+            id = __ldcv(htl + 31);
+            __threadfence();
+        }
+    }
+}
+
+2.3 version runs on spiedie 20000 times without bug.

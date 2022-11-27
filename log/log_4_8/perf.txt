@@ -1,0 +1,155 @@
+1. perf small data size
+
+size_t insert_keys_size = 1024 * 1024;
+size_t search_keys_size = 1024 * 1024;
+size_t n = 65521;
+
+without_preload
+insert perf: 872.772466 Mops/s
+search perf: 1.045375 Gops/s
+----------------------------------
+preload
+insert perf: 952.205021 Mops/s
+search perf: 1.126598 Gops/s
+----------------------------------
+without_preload pre_cal
+insert perf: 1.079930 Gops/s
+search perf: 1.167798 Gops/s
+----------------------------------
+preload pre_cal
+insert perf: 1.126080 Gops/s
+search perf: 1.256671 Gops/s
+
+
+SlabHash
+
+(num keys, num buckets, load factor)    build rate(M/s)     search rate(M/s)    search rate bulk(M/s)
+
+(1048576, 116509, 0.55)                 1578.344            2992.511            2960.875
+
+
+2. perf medium data size
+
+size_t insert_keys_size = 32 * 1024 * 1024;
+size_t search_keys_size = 32 * 1024 * 1024;
+size_t n = 131071;
+
+test 1
+without_preload
+insert perf: 773.333676 Mops/s
+search perf: 841.541076 Mops/s
+----------------------------------
+preload
+insert perf: 804.990964 Mops/s
+search perf: 950.573279 Mops/s
+----------------------------------
+without_preload pre_cal
+insert perf: 823.969096 Mops/s
+search perf: 899.371311 Mops/s
+----------------------------------
+preload pre_cal
+insert perf: 823.664138 Mops/s
+search perf: 987.247752 Mops/s
+----------------------------------
+
+
+test 2
+without_preload
+insert perf: 726.714313 Mops/s
+search perf: 832.509539 Mops/s
+----------------------------------
+preload
+insert perf: 815.786925 Mops/s
+search perf: 957.281980 Mops/s
+----------------------------------
+without_preload pre_cal
+insert perf: 828.396436 Mops/s
+search perf: 918.093441 Mops/s
+----------------------------------
+preload pre_cal
+insert perf: 784.948341 Mops/s
+search perf: 1012.231169 Mops/s
+----------------------------------
+
+
+test 3
+without_preload
+insert perf: 696.389484 Mops/s
+search perf: 836.824898 Mops/s
+----------------------------------
+preload
+insert perf: 936.177010 Mops/s
+search perf: 953.572094 Mops/s
+----------------------------------
+without_preload pre_cal
+insert perf: 804.569694 Mops/s
+search perf: 903.921531 Mops/s
+----------------------------------
+preload pre_cal
+insert perf: 889.378195 Mops/s
+search perf: 1002.329947 Mops/s
+----------------------------------
+
+(num keys, num buckets, load factor)    build rate(M/s)     search rate(M/s)search rate bulk(M/s)
+===============================================================================================
+(33554432, 3728271, 0.55)             1110.382      2482.0482468.242
+
+
+3. large data size
+
+test 1
+without_preload
+insert perf: 631.627175 Mops/s
+search perf: 1.017397 Gops/s
+----------------------------------
+preload
+insert perf: 699.758528 Mops/s
+search perf: 1.319086 Gops/s
+----------------------------------
+without_preload pre_cal
+insert perf: 687.827826 Mops/s
+search perf: 1.106701 Gops/s
+----------------------------------
+preload pre_cal
+insert perf: 693.357075 Mops/s
+search perf: 1.425673 Gops/s
+----------------------------------
+
+test 2
+without_preload
+insert perf: 652.970142 Mops/s
+search perf: 1.031526 Gops/s
+----------------------------------
+preload
+insert perf: 712.455975 Mops/s
+search perf: 1.326444 Gops/s
+----------------------------------
+without_preload pre_cal
+insert perf: 706.217841 Mops/s
+search perf: 1.215691 Gops/s
+----------------------------------
+preload pre_cal
+insert perf: 721.972363 Mops/s
+search perf: 1.352336 Gops/s
+
+test 3
+without_preload
+insert perf: 667.127857 Mops/s
+search perf: 1.156524 Gops/s
+----------------------------------
+preload
+insert perf: 716.533723 Mops/s
+search perf: 1.260303 Gops/s
+----------------------------------
+without_preload pre_cal
+insert perf: 692.999883 Mops/s
+search perf: 1.118460 Gops/s
+----------------------------------
+preload pre_cal
+insert perf: 730.423700 Mops/s
+search perf: 1.330771 Gops/s
+----------------------------------
+
+(num keys, num buckets, load factor)    build rate(M/s)     search rate(M/s)search rate bulk(M/s)
+===============================================================================================
+(134217728, 14913081, 0.55)           1124.949      2578.0262571.900

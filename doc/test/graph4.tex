@@ -1,0 +1,100 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+% my packages
+
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.17} 
+% \usepackage{hyperref}
+% \usepackage{cleveref}
+% \usepackage{caption}
+% \usepackage{subcaption}
+% \usepackage[caption=false]{subcaption}
+% \captionsetup{style=base}
+% \usepackage[caption=false, ...]{subfig}
+\usepackage[caption=false]{subfig}
+
+
+% debug
+\pagestyle{plain}
+
+% 1. label of graph
+% 2. picture
+% 3. ref
+% 4. perf on spiedie
+% 5. host supported sketch
+
+% the batches sync
+
+\title{gpupaper}
+\author{kchiu }
+\date{May 2021}
+
+\begin{document}
+\begin{figure}
+     \centering
+     \subfloat[a\label{1a}]
+     {
+           \resizebox{0.48\columnwidth}{!}{
+           \begin{tikzpicture}%[scale=0.48]
+            \label{fig:thread_perf_m_0.5}
+            \begin{semilogxaxis}[
+                title={Insert Performance for Different m},
+                xlabel={Work Load},
+                ylabel={Insert Performance (M operations/s)},
+                legend pos=north east,
+                xmajorgrids=true,
+                ymajorgrids=true,
+            ]
+                \addplot table[x = WorkLoad, y = m1_insert] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 1}
+                \addplot table[x = WorkLoad, y = m2_insert] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 2}
+                \addplot table[x = WorkLoad, y = m3_insert] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 3}
+            \end{semilogxaxis}
+        \end{tikzpicture}
+            }
+     }
+     ~
+     \hfill
+     \subfloat[b\label{1b}]
+     {
+        \resizebox{0.48\columnwidth}{!}{
+        \begin{tikzpicture}%[scale=0.48]
+            \begin{semilogxaxis}[
+                title={Search Performance for Different m},
+                xlabel={Work Load},
+                ylabel={Search Performance (M operations/s)},
+                legend pos=north east,
+                xmajorgrids=true,
+                ymajorgrids=true,
+            ]
+                \addplot table[x = WorkLoad, y = m1_search] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 1}
+                \addplot table[x = WorkLoad, y = m2_search] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 2}
+                \addplot table[x = WorkLoad, y = m3_search] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 3}
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        }
+     }
+        \caption{Three simple graphs}
+        \label{fig:graphs}
+\end{figure}
+
+Figure \ref{fig:graphs} shows that
+\end{document}

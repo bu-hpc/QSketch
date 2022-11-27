@@ -1,0 +1,73 @@
+1. search with preload
+old_version
+insert perf: 812.743261 Mops/s
+search perf: 1.161044 Gops/s
+----------------------------------
+without_preload
+insert perf: 865.072371 Mops/s
+search perf: 1.271539 Gops/s
+----------------------------------
+preload
+insert perf: 878.137745 Mops/s
+search perf: 1.472952 Gops/s
+
+2. spiedie 
+old_version
+insert perf: 627.464677 Mops/s
+search perf: 707.758162 Mops/s
+----------------------------------
+without_preload
+insert perf: 627.227383 Mops/s
+search perf: 718.631897 Mops/s
+----------------------------------
+preload
+insert perf: 628.081688 Mops/s
+search perf: 715.089168 Mops/s
+
+
+
+
+
+
+2.1 SlabHash: 
+
+GPU hardware: GeForce RTX 2080 Ti
+===============================================================================================
+Table size experiment:
+    Table's expected chain length is fixed, and total number of elements is variable
+    Expected chain length = 0.60
+
+    1.00 of 134217728 queries exist in the data structure
+===============================================================================================
+(num keys, num buckets, load factor)    build rate(M/s)     search rate(M/s)search rate bulk(M/s)
+===============================================================================================
+(134217728, 14913081, 0.55)           1105.489              2582.2832574.481
+
+
+
+
+GPU hardware: Tesla P100-PCIE-12GB
+===============================================================================================
+Table size experiment:
+    Table's expected chain length is fixed, and total number of elements is variable
+    Expected chain length = 0.60
+
+    1.00 of 134217728 queries exist in the data structure
+===============================================================================================
+(num keys, num buckets, load factor)    build rate(M/s)     search rate(M/s)search rate bulk(M/s)
+===============================================================================================
+(134217728, 14913081, 0.55)           1167.784              2647.7762687.402
+
+
+2080 TI
+Single-Precision Performance            13.4 TFLOPs
+Memory Capacity                         11 GB
+Memory Bandwidth                        616 GB/s
+MEMORY BUS WIDTH                        352 bits
+
+
+Tesla P100
+Single-Precision Performance            9.3 teraFLOPS   
+CoWoS HBM2 Stacked Memory Capacity      12 GB
+CoWoS HBM2 Stacked Memory Bandwidth     549 GB/s
+MEMORY BUS WIDTH                        3072 bits

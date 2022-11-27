@@ -1,0 +1,100 @@
+max: 6	ave: 0.112706
+maxp: 700%	avep: 111.27%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0565376
+maxp: 6500%	avep: 100.593%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.112666
+maxp: 700%	avep: 111.264%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.07374
+maxp: 6500%	avep: 100.62%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.112755
+maxp: 700%	avep: 111.275%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0509233
+maxp: 6500%	avep: 100.546%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.11258
+maxp: 700%	avep: 111.256%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 101	ave: 0.0578394
+maxp: 10200%	avep: 100.558%
+greater_counts: 0
+----------------------------------
+max: 7	ave: 0.112057
+maxp: 800%	avep: 111.204%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 66	ave: 0.0534096
+maxp: 6700%	avep: 100.558%
+greater_counts: 0
+----------------------------------
+max: 7	ave: 0.112272
+maxp: 800%	avep: 111.226%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0687704
+maxp: 6500%	avep: 100.55%
+greater_counts: 0
+----------------------------------
+max: 7	ave: 0.112605
+maxp: 800%	avep: 111.259%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 116	ave: 0.0651951
+maxp: 11700%	avep: 100.539%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.112619
+maxp: 700%	avep: 111.26%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0691128
+maxp: 6500%	avep: 100.546%
+greater_counts: 0
+----------------------------------
+max: 7	ave: 0.112006
+maxp: 800%	avep: 111.2%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.06001
+maxp: 6500%	avep: 100.572%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.111454
+maxp: 700%	avep: 111.144%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 65	ave: 0.0318365
+maxp: 6600%	avep: 100.458%
+greater_counts: 0
+----------------------------------

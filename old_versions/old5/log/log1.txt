@@ -1,0 +1,40 @@
+n: 65521, m: 1, seed_sz: 2
+1.872041 Gops/s
+1.664631 Gops/s
+1.927642 Gops/s
+n: 65521, m: 2, seed_sz: 2
+1.409956 Gops/s
+1.692195 Gops/s
+1.773085 Gops/s
+n: 65521, m: 4, seed_sz: 2
+901.909438 Mops/s
+1.228856 Gops/s
+1.600631 Gops/s
+n: 65521, m: 8, seed_sz: 2
+542.629345 Mops/s
+672.610771 Mops/s
+1.272302 Gops/s
+n: 65521, m: 16, seed_sz: 2
+215.743522 Mops/s
+355.641095 Mops/s
+951.023239 Mops/s
+n: 65521, m: 1, seed_sz: 8
+1.629352 Gops/s
+1.477864 Gops/s
+1.807730 Gops/s
+n: 65521, m: 2, seed_sz: 8
+1.117137 Gops/s
+1.345356 Gops/s
+1.593133 Gops/s
+n: 65521, m: 4, seed_sz: 8
+703.822862 Mops/s
+983.846821 Mops/s
+1.462043 Gops/s
+n: 65521, m: 8, seed_sz: 8
+404.368390 Mops/s
+556.968246 Mops/s
+1.199024 Gops/s
+n: 65521, m: 16, seed_sz: 8
+211.705575 Mops/s
+310.420008 Mops/s
+810.992525 Mops/s

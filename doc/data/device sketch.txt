@@ -1,0 +1,4 @@
+thread insert perf:
+insert keys size 128 * 1024 * 1024;
+m = 1 insert perf: 634.052763 Mops/s
+m = 3 insert perf: 290.424657 Mops/s

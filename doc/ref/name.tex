@@ -1,0 +1,31 @@
+
+% Each thread block has shared memory visible to all threads of the block and with the same lifetime as the block. All threads have access to the same global memory.
+% A warp executes one common instruction at a time, so full efficiency is realized when all 32 threads of a warp agree on their execution path. If threads of a warp diverge via a data-dependent conditional branch, the warp executes each branch path taken, disabling threads that are not on that path. Branch divergence occurs only within a warp; different warps execute independently regardless of whether they are executing common or disjoint code paths.
+% The threads are grouped into warps, each warp contains 32 threads and executes instructions  SIMT units
+
+
+% Graphics Processing Unit (GPU): GPUs are massively parallel processors with thousands of parallel active threads. Threads are grouped into SIMD units of width 32—a warp—and each warp executes instructions in lockstep. As a result, any branch statements that cause threads to run different instructions are serialized (branch divergence). A group of threads (multiple warps) are called a thread block and are scheduled to be run on different streaming processors (SMs) on the GPU. The memory hierarchy of GPUs is organized into a large global memory accessible by all threads within the device (e.g., 12 GB on the Tesla K40c), smaller but faster shared memory for each thread block (48 KB per SM on the Tesla K40c), and local registers for each thread in the thread block (64 KB per SM on the Tesla K40c). Maximizing achieved memory bandwidth requires accessing consecutive memory indices within a warp (coalesced access). NVIDIA GPUs support a set of warp-wide instructions (e.g., shuffles and ballots) so that all threads within a warp can communicate with each other.
+% The Graphics Processing Unit (GPU)1 provides much higher instruction throughput and memory bandwidth than the CPU within a similar price and power envelope. Many applications leverage these higher capabilities to run faster on the GPU than on the CPU (see GPU Applications). Other computing devices, like FPGAs, are also very energy efficient, but offer much less programming flexibility than GPUs.
+
+%This difference in capabilities between the GPU and the CPU exists because they are designed with different goals in mind. While the CPU is designed to excel at executing a sequence of operations, called a thread, as fast as possible and can execute a few tens of these threads in parallel, the GPU is designed to excel at executing thousands of them in parallel (amortizing the slower single-thread performance to achieve greater throughput).
+
+%The GPU is specialized for highly parallel computations and therefore designed such that more transistors are devoted to data processing rather than data caching and flow control. The schematic Figure 1 shows an example distribution of chip resources for a CPU versus a GPU.
+%Devoting more transistors to data processing, e.g., floating-point computations, is beneficial for highly parallel computations; the GPU can hide memory access latencies with computation, instead of relying on large data caches and complex flow control to avoid long memory access latencies, both of which are expensive in terms of transistors.
+
+%In general, an application has a mix of parallel parts and sequential parts, so systems are designed with a mix of GPUs and CPUs in order to maximize overall performance. Applications with a high degree of parallelism can exploit this massively parallel nature of the GPU to achieve higher performance than on the CPU.
+
+
+%For devices of compute capability 6.0 or higher, the requirements can be summarized quite easily: the concurrent accesses of the threads of a warp will coalesce into a number of transactions equal to the number of 32-byte transactions necessary to service all of the threads of the warp.
+%
+%If from any of the four 32-byte segments only a subset of the words are requested (e.g. if several threads had accessed the same word or if some threads did not participate in the access), the full segment is fetched anyway. Furthermore, if accesses by the threads of the warp had been permuted within or accross the four segments, still only four 32-byte transactions would have been performed
+
+%Every clock cycle (billions per second), data is transferred along a memory bus to and from the on-card memory. The width of this interface, normally defined as "384-bit" or similar, is the physical count of bits that can fit down the bus per clock cycle. A device with a 384-bit memory interface would be able to transfer 384 bits of data per clock cycle (there are 8 bits in a Byte).
+
+
+%And if w count variables are larger than 32-byte, it will need several memory accesses.
+%However, it may also need more than one memory access even if the size of bucket is equal to 32-byte, because the physical addresses of an array may not be continuous. For example, 32 4-byte unsigned integers may need one or two memory accesses on a GPU with 1024-bit bus width. 
+%And if w count variables are larger than the memory bus width, it will need several memory accesses. However, it may also need more than one memory access even if the size of bucket is equal to the memory bus width, because the physical addresses of an array may not be continuous. For example, 32 4-byte unsigned integers may need one or two memory accesses on a GPU with 1024-bit bus width.
+
+%
+
+%

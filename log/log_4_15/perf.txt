@@ -1,0 +1,191 @@
+1. 
+size_t insert_keys_sz = 1024 * 1024;
+size_t search_keys_sz = 1024 * 1024;
+size_t n = 65521;
+
+mul_add
+
+without_preload
+insert perf: 870.110739 Mops/s
+search perf: 1.043741 Gops/s
+----------------------------------
+preload
+insert perf: 951.466638 Mops/s
+search perf: 1.125984 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 1.076224 Gops/s
+search perf: 1.162343 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 1.124635 Gops/s
+search perf: 1.099972 Gops/s
+----------------------------------
+
+
+xor
+
+without_preload
+insert perf: 868.780293 Mops/s
+search perf: 968.197613 Mops/s
+----------------------------------
+preload
+insert perf: 943.531525 Mops/s
+search perf: 1.130860 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 1.077126 Gops/s
+search perf: 1.016980 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 1.153462 Gops/s
+search perf: 1.248217 Gops/s
+----------------------------------
+
+
+fast
+
+without_preload
+insert perf: 963.301117 Mops/s
+search perf: 1.179986 Gops/s
+----------------------------------
+preload
+insert perf: 1.039995 Gops/s
+search perf: 1.316505 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 1.252284 Gops/s
+search perf: 1.375607 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 1.353622 Gops/s
+search perf: 1.517429 Gops/s
+----------------------------------
+
+
+2
+
+mul_add
+
+size_t insert_keys_sz = 32 * 1024 * 1024;
+size_t search_keys_sz = 32 * 1024 * 1024;
+size_t n = 2097143;
+
+without_preload
+insert perf: 746.230771 Mops/s
+search perf: 950.927307 Mops/s
+----------------------------------
+preload
+insert perf: 801.102477 Mops/s
+search perf: 1.021966 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 699.348076 Mops/s
+search perf: 1.029472 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 734.453024 Mops/s
+search perf: 1.179785 Gops/s
+----------------------------------
+
+xor
+
+without_preload
+insert perf: 743.498518 Mops/s
+search perf: 937.072095 Mops/s
+----------------------------------
+preload
+insert perf: 818.541311 Mops/s
+search perf: 1.080328 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 682.331564 Mops/s
+search perf: 1.033959 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 830.665879 Mops/s
+search perf: 1.158467 Gops/s
+----------------------------------
+
+fast
+
+without_preload
+insert perf: 759.097097 Mops/s
+search perf: 1.064434 Gops/s
+----------------------------------
+preload
+insert perf: 775.113039 Mops/s
+search perf: 1.260832 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 744.679284 Mops/s
+search perf: 1.154666 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 841.035024 Mops/s
+search perf: 1.389529 Gops/s
+----------------------------------
+
+
+3
+
+size_t insert_keys_sz = 128 * 1024 * 1024;
+size_t search_keys_sz = 128 * 1024 * 1024;
+size_t n = 8388593;
+
+mul_add
+
+without_preload
+insert perf: 667.451889 Mops/s
+search perf: 1.154773 Gops/s
+----------------------------------
+preload
+insert perf: 711.514038 Mops/s
+search perf: 1.463796 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 670.959595 Mops/s
+search perf: 1.337332 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 713.771838 Mops/s
+search perf: 1.559714 Gops/s
+----------------------------------
+
+xor
+
+without_preload
+insert perf: 666.427974 Mops/s
+search perf: 1.228957 Gops/s
+----------------------------------
+preload
+insert perf: 698.450424 Mops/s
+search perf: 1.296110 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 690.801590 Mops/s
+search perf: 1.319832 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 751.523105 Mops/s
+search perf: 1.502149 Gops/s
+----------------------------------
+
+fast
+
+without_preload
+insert perf: 680.121348 Mops/s
+search perf: 1.262418 Gops/s
+----------------------------------
+preload
+insert perf: 739.597271 Mops/s
+search perf: 1.506854 Gops/s
+----------------------------------
+without_preload host_pre_cal
+insert perf: 687.396095 Mops/s
+search perf: 1.325083 Gops/s
+----------------------------------
+preload host_pre_cal
+insert perf: 745.215597 Mops/s
+search perf: 1.720096 Gops/s
+----------------------------------

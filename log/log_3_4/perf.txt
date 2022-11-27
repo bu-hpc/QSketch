@@ -1,0 +1,81 @@
+    
+    // size_t insert_keys_size = 134217728;
+work_load_per_warp: 2048
+insert perf: 1003.795311 Mops/s
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 1.154243 Gops/s
+
+
+Table size experiment:
+    Table's expected chain length is fixed, and total number of elements is variable
+    Expected chain length = 0.60
+
+    1.00 of 134217728 queries exist in the data structure
+===============================================================================================
+(num keys, num buckets, load factor)    build rate(M/s)     search rate(M/s)search rate bulk(M/s)
+===============================================================================================
+(134217728, 14913081, 0.55)           1120.938      2583.3822575.332
+
+
+
+size_t n = 7456549;
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 697.865507 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 701.854854 Mops/s
+work_load_per_warp: 2048
+insert perf: 631.899846 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 766.892705 Mops/s
+work_load_per_warp: 2048
+insert perf: 705.357424 Mops/s
+
+
+
+
+size_t search_keys_size = 1024 * 1024;
+size_t insert_keys_size = 134217728;
+size_t n = 257731;
+
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 789.470078 Mops/s
+work_load_per_warp: 2048
+insert perf: 648.065827 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 2048
+insert perf: 878.396811 Mops/s
+work_load_per_warp: 2048
+insert perf: 727.692234 Mops/s
+
+
+
+
+
+
+size_t insert_keys_size = 1024 * 1024;
+seed_total_sz: 129
+work_load_per_warp: 16
+insert perf: 740.384259 Mops/s
+work_load_per_warp: 16
+insert perf: 858.740605 Mops/s
+----------------------------------
+seed_total_sz: 129
+work_load_per_warp: 16
+insert perf: 834.740567 Mops/s
+work_load_per_warp: 16
+insert perf: 928.105255 Mops/s
+
+
+
+
+
+
+

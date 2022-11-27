@@ -1,0 +1,1024 @@
+1
+mem_id_host: 0
+max: 1	ave: 0.09375
+maxp: 200%	avep: 109.375%
+2
+mem_id_host: 0
+max: 1	ave: 0.21875
+maxp: 200%	avep: 121.875%
+3
+mem_id_host: 0
+max: 1	ave: 0.21875
+maxp: 200%	avep: 121.875%
+4
+mem_id_host: 0
+max: 2	ave: 0.4375
+maxp: 300%	avep: 143.75%
+5
+mem_id_host: 0
+max: 4	ave: 0.625
+maxp: 500%	avep: 162.5%
+6
+mem_id_host: 0
+max: 3	ave: 0.71875
+maxp: 400%	avep: 171.875%
+7
+mem_id_host: 0
+max: 3	ave: 1.21875
+maxp: 400%	avep: 221.875%
+8
+mem_id_host: 0
+max: 4	ave: 1.5625
+maxp: 500%	avep: 256.25%
+9
+mem_id_host: 0
+max: 4	ave: 1.9375
+maxp: 500%	avep: 293.75%
+10
+mem_id_host: 0
+max: 5	ave: 1.90625
+maxp: 600%	avep: 290.625%
+11
+mem_id_host: 0
+max: 8	ave: 2.53125
+maxp: 900%	avep: 353.125%
+12
+mem_id_host: 0
+max: 5	ave: 2.375
+maxp: 600%	avep: 337.5%
+13
+mem_id_host: 0
+max: 8	ave: 3.4375
+maxp: 900%	avep: 443.75%
+14
+mem_id_host: 0
+max: 7	ave: 2.46875
+maxp: 800%	avep: 346.875%
+15
+mem_id_host: 0
+max: 6	ave: 3.375
+maxp: 700%	avep: 437.5%
+16
+mem_id_host: 0
+max: 9	ave: 3.15625
+maxp: 1000%	avep: 415.625%
+17
+mem_id_host: 0
+max: 7	ave: 3.09375
+maxp: 800%	avep: 409.375%
+18
+mem_id_host: 0
+max: 9	ave: 4.65625
+maxp: 1000%	avep: 565.625%
+19
+mem_id_host: 0
+max: 11	ave: 4.4375
+maxp: 1200%	avep: 543.75%
+20
+mem_id_host: 0
+max: 11	ave: 5.25
+maxp: 1200%	avep: 625%
+21
+mem_id_host: 0
+max: 10	ave: 5.3125
+maxp: 1100%	avep: 631.25%
+22
+mem_id_host: 0
+max: 11	ave: 5.5
+maxp: 1200%	avep: 650%
+23
+mem_id_host: 0
+max: 12	ave: 6.65625
+maxp: 1300%	avep: 765.625%
+24
+mem_id_host: 0
+max: 13	ave: 6.53125
+maxp: 1400%	avep: 753.125%
+25
+mem_id_host: 0
+max: 12	ave: 6.625
+maxp: 1300%	avep: 762.5%
+26
+mem_id_host: 0
+max: 14	ave: 6.25
+maxp: 1500%	avep: 725%
+27
+mem_id_host: 0
+max: 16	ave: 7.75
+maxp: 1700%	avep: 875%
+28
+mem_id_host: 0
+max: 11	ave: 7
+maxp: 1200%	avep: 800%
+29
+mem_id_host: 0
+max: 15	ave: 7.75
+maxp: 1600%	avep: 875%
+30
+mem_id_host: 0
+max: 13	ave: 6.75
+maxp: 1400%	avep: 775%
+31
+mem_id_host: 0
+max: 19	ave: 9.53125
+maxp: 2000%	avep: 1053.12%
+32
+mem_id_host: 0
+max: 17	ave: 9.03125
+maxp: 1800%	avep: 1003.12%
+33
+mem_id_host: 0
+max: 14	ave: 8.5
+maxp: 1500%	avep: 950%
+34
+mem_id_host: 1
+max: 16	ave: 8.84375
+maxp: 1700%	avep: 984.375%
+35
+mem_id_host: 2
+max: 15	ave: 8.3125
+maxp: 1600%	avep: 931.25%
+36
+mem_id_host: 0
+max: 15	ave: 9.21875
+maxp: 1600%	avep: 1021.88%
+37
+mem_id_host: 0
+max: 17	ave: 8.375
+maxp: 1800%	avep: 937.5%
+38
+mem_id_host: 0
+max: 15	ave: 8.96875
+maxp: 1600%	avep: 996.875%
+39
+mem_id_host: 3
+max: 18	ave: 10.4688
+maxp: 1900%	avep: 1146.88%
+40
+mem_id_host: 7
+max: 4294967295	ave: 9.84375
+maxp: 1700%	avep: 1084.38%
+41
+mem_id_host: 0
+max: 18	ave: 11.5625
+maxp: 1900%	avep: 1256.25%
+42
+mem_id_host: 0
+max: 18	ave: 11.1875
+maxp: 1900%	avep: 1218.75%
+43
+mem_id_host: 4
+max: 21	ave: 12.5625
+maxp: 2200%	avep: 1356.25%
+44
+mem_id_host: 11
+max: 4294967295	ave: 8.90625
+maxp: 1900%	avep: 990.625%
+45
+mem_id_host: 3
+max: 4294967295	ave: 10.2812
+maxp: 2300%	avep: 1128.12%
+46
+mem_id_host: 8
+max: 23	ave: 11.4375
+maxp: 2400%	avep: 1243.75%
+47
+mem_id_host: 28
+max: 4294967295	ave: 11.2812
+maxp: 2600%	avep: 1228.12%
+48
+mem_id_host: 29
+max: 4294967295	ave: 9.5
+maxp: 2100%	avep: 1050%
+49
+mem_id_host: 25
+max: 4294967295	ave: 14
+maxp: 2400%	avep: 1500%
+50
+mem_id_host: 38
+max: 4294967295	ave: 10.9062
+maxp: 2800%	avep: 1190.62%
+51
+mem_id_host: 37
+max: 24	ave: 14.5625
+maxp: 2500%	avep: 1556.25%
+52
+mem_id_host: 54
+max: 29	ave: 12.75
+maxp: 3000%	avep: 1375%
+53
+mem_id_host: 59
+max: 4294967295	ave: 15.4062
+maxp: 2300%	avep: 1640.62%
+54
+mem_id_host: 88
+max: 29	ave: 14.6562
+maxp: 3000%	avep: 1565.62%
+55
+mem_id_host: 101
+max: 25	ave: 11.875
+maxp: 2600%	avep: 1287.5%
+56
+mem_id_host: 103
+max: 30	ave: 13.1875
+maxp: 3100%	avep: 1418.75%
+57
+mem_id_host: 128
+max: 4294967295	ave: 13.125
+maxp: 2700%	avep: 1412.5%
+58
+mem_id_host: 113
+max: 24	ave: 14.625
+maxp: 2500%	avep: 1562.5%
+59
+mem_id_host: 123
+max: 23	ave: 13.5625
+maxp: 2400%	avep: 1456.25%
+60
+mem_id_host: 134
+max: 4294967295	ave: 13.7812
+maxp: 2800%	avep: 1478.12%
+61
+mem_id_host: 160
+max: 92	ave: 15.7188
+maxp: 9300%	avep: 1671.88%
+62
+mem_id_host: 145
+max: 31	ave: 13.5938
+maxp: 3200%	avep: 1459.38%
+63
+mem_id_host: 135
+max: 24	ave: 11.5312
+maxp: 2500%	avep: 1253.12%
+64
+mem_id_host: 165
+max: 188	ave: 20.125
+maxp: 18900%	avep: 2112.5%
+65
+mem_id_host: 170
+max: 23	ave: 13.0625
+maxp: 2400%	avep: 1406.25%
+66
+mem_id_host: 175
+max: 30	ave: 14.7812
+maxp: 3100%	avep: 1578.12%
+67
+mem_id_host: 162
+max: 28	ave: 13.0625
+maxp: 2900%	avep: 1406.25%
+68
+mem_id_host: 177
+max: 25	ave: 15.0625
+maxp: 2600%	avep: 1606.25%
+69
+mem_id_host: 171
+max: 24	ave: 14.8438
+maxp: 2500%	avep: 1584.38%
+70
+mem_id_host: 182
+max: 30	ave: 14.375
+maxp: 3100%	avep: 1537.5%
+71
+mem_id_host: 173
+max: 25	ave: 13.6562
+maxp: 2600%	avep: 1465.62%
+72
+mem_id_host: 189
+max: 29	ave: 14.6875
+maxp: 3000%	avep: 1568.75%
+73
+mem_id_host: 197
+max: 452	ave: 27.9062
+maxp: 45300%	avep: 2890.62%
+74
+mem_id_host: 172
+max: 25	ave: 16.0938
+maxp: 2600%	avep: 1709.38%
+75
+mem_id_host: 166
+max: 24	ave: 13.0938
+maxp: 2500%	avep: 1409.38%
+76
+mem_id_host: 188
+max: 4294967295	ave: 15.0312
+maxp: 3200%	avep: 1603.12%
+77
+mem_id_host: 193
+max: 464	ave: 29.125
+maxp: 46500%	avep: 3012.5%
+78
+mem_id_host: 164
+max: 23	ave: 13.8438
+maxp: 2400%	avep: 1484.38%
+79
+mem_id_host: 187
+max: 24	ave: 13.9375
+maxp: 2500%	avep: 1493.75%
+80
+mem_id_host: 186
+max: 26	ave: 16
+maxp: 2700%	avep: 1700%
+81
+mem_id_host: 205
+max: 4294967295	ave: 14.5625
+maxp: 2600%	avep: 1556.25%
+82
+mem_id_host: 166
+max: 25	ave: 15.75
+maxp: 2600%	avep: 1675%
+83
+mem_id_host: 178
+max: 24	ave: 14.5
+maxp: 2500%	avep: 1550%
+84
+mem_id_host: 188
+max: 25	ave: 13.3125
+maxp: 2600%	avep: 1431.25%
+85
+mem_id_host: 183
+max: 29	ave: 17.4688
+maxp: 3000%	avep: 1846.88%
+86
+mem_id_host: 161
+max: 24	ave: 13.3125
+maxp: 2500%	avep: 1431.25%
+87
+mem_id_host: 181
+max: 29	ave: 15.6875
+maxp: 3000%	avep: 1668.75%
+88
+mem_id_host: 165
+max: 28	ave: 13.4375
+maxp: 2900%	avep: 1443.75%
+89
+mem_id_host: 183
+max: 4294967295	ave: 12.125
+maxp: 2800%	avep: 1312.5%
+90
+mem_id_host: 155
+max: 31	ave: 13.5938
+maxp: 3200%	avep: 1459.38%
+91
+mem_id_host: 177
+max: 28	ave: 16.0625
+maxp: 2900%	avep: 1706.25%
+92
+mem_id_host: 176
+max: 4294967295	ave: 16.2188
+maxp: 3000%	avep: 1721.88%
+93
+mem_id_host: 190
+max: 28	ave: 14.125
+maxp: 2900%	avep: 1512.5%
+94
+mem_id_host: 186
+max: 31	ave: 15.1875
+maxp: 3200%	avep: 1618.75%
+95
+mem_id_host: 198
+max: 24	ave: 14.5
+maxp: 2500%	avep: 1550%
+96
+mem_id_host: 162
+max: 24	ave: 14.0938
+maxp: 2500%	avep: 1509.38%
+97
+mem_id_host: 165
+max: 25	ave: 13.4062
+maxp: 2600%	avep: 1440.62%
+98
+mem_id_host: 159
+max: 24	ave: 12.5
+maxp: 2500%	avep: 1350%
+99
+mem_id_host: 179
+max: 23	ave: 13.125
+maxp: 2400%	avep: 1412.5%
+100
+mem_id_host: 192
+max: 27	ave: 14.1875
+maxp: 2800%	avep: 1518.75%
+101
+mem_id_host: 168
+max: 27	ave: 14.5938
+maxp: 2800%	avep: 1559.38%
+102
+mem_id_host: 177
+max: 1193	ave: 48.3438
+maxp: 119400%	avep: 4934.38%
+103
+mem_id_host: 186
+max: 22	ave: 14.0312
+maxp: 2300%	avep: 1503.12%
+104
+mem_id_host: 197
+max: 680	ave: 38.0625
+maxp: 68100%	avep: 3906.25%
+105
+mem_id_host: 197
+max: 29	ave: 15.4062
+maxp: 3000%	avep: 1640.62%
+106
+mem_id_host: 183
+max: 1487	ave: 60.0312
+maxp: 148800%	avep: 6103.12%
+107
+mem_id_host: 188
+max: 26	ave: 14.5312
+maxp: 2700%	avep: 1553.12%
+108
+mem_id_host: 172
+max: 25	ave: 14.875
+maxp: 2600%	avep: 1587.5%
+109
+mem_id_host: 184
+max: 25	ave: 15.4688
+maxp: 2600%	avep: 1646.88%
+110
+mem_id_host: 172
+max: 27	ave: 14.9062
+maxp: 2800%	avep: 1590.62%
+111
+mem_id_host: 172
+max: 24	ave: 14.3438
+maxp: 2500%	avep: 1534.38%
+112
+mem_id_host: 169
+max: 26	ave: 15.2188
+maxp: 2700%	avep: 1621.88%
+113
+mem_id_host: 169
+max: 4294967295	ave: 12.7188
+maxp: 2300%	avep: 1371.88%
+114
+mem_id_host: 169
+max: 25	ave: 12.7812
+maxp: 2600%	avep: 1378.12%
+115
+mem_id_host: 185
+max: 29	ave: 15.2812
+maxp: 3000%	avep: 1628.12%
+116
+mem_id_host: 172
+max: 4294967295	ave: 60.25
+maxp: 147500%	avep: 6125%
+117
+mem_id_host: 195
+max: 23	ave: 15.5625
+maxp: 2400%	avep: 1656.25%
+118
+mem_id_host: 169
+max: 22	ave: 12.8125
+maxp: 2300%	avep: 1381.25%
+119
+mem_id_host: 161
+max: 632	ave: 30.6875
+maxp: 63300%	avep: 3168.75%
+120
+mem_id_host: 165
+max: 29	ave: 15.0938
+maxp: 3000%	avep: 1609.38%
+121
+mem_id_host: 176
+max: 915	ave: 42.5
+maxp: 91600%	avep: 4350%
+122
+mem_id_host: 169
+max: 28	ave: 15.9062
+maxp: 2900%	avep: 1690.62%
+123
+mem_id_host: 167
+max: 24	ave: 14.25
+maxp: 2500%	avep: 1525%
+124
+mem_id_host: 183
+max: 31	ave: 14.8438
+maxp: 3200%	avep: 1584.38%
+125
+mem_id_host: 180
+max: 28	ave: 14.375
+maxp: 2900%	avep: 1537.5%
+126
+mem_id_host: 153
+max: 28	ave: 15.4062
+maxp: 2900%	avep: 1640.62%
+127
+mem_id_host: 194
+max: 22	ave: 15.7188
+maxp: 2300%	avep: 1671.88%
+128
+mem_id_host: 176
+max: 4294967295	ave: 13.7812
+maxp: 3400%	avep: 1478.12%
+129
+mem_id_host: 174
+max: 27	ave: 14.2812
+maxp: 2800%	avep: 1528.12%
+130
+mem_id_host: 184
+max: 1115	ave: 48.2188
+maxp: 111600%	avep: 4921.88%
+131
+mem_id_host: 198
+max: 1879	ave: 71.3438
+maxp: 188000%	avep: 7234.38%
+132
+mem_id_host: 188
+max: 1620	ave: 63.5312
+maxp: 162100%	avep: 6453.12%
+133
+mem_id_host: 206
+max: 4294967295	ave: 12.7812
+maxp: 2500%	avep: 1378.12%
+134
+mem_id_host: 182
+max: 35	ave: 13.9688
+maxp: 3600%	avep: 1496.88%
+135
+mem_id_host: 185
+max: 23	ave: 13.875
+maxp: 2400%	avep: 1487.5%
+136
+mem_id_host: 190
+max: 25	ave: 14.3125
+maxp: 2600%	avep: 1531.25%
+137
+mem_id_host: 176
+max: 27	ave: 13.875
+maxp: 2800%	avep: 1487.5%
+138
+mem_id_host: 170
+max: 26	ave: 14.0938
+maxp: 2700%	avep: 1509.38%
+139
+mem_id_host: 196
+max: 27	ave: 15.1562
+maxp: 2800%	avep: 1615.62%
+140
+mem_id_host: 200
+max: 28	ave: 14.5938
+maxp: 2900%	avep: 1559.38%
+141
+mem_id_host: 188
+max: 26	ave: 13.0938
+maxp: 2700%	avep: 1409.38%
+142
+mem_id_host: 179
+max: 25	ave: 14.875
+maxp: 2600%	avep: 1587.5%
+143
+mem_id_host: 176
+max: 23	ave: 16.3438
+maxp: 2400%	avep: 1734.38%
+144
+mem_id_host: 188
+max: 33	ave: 15.9375
+maxp: 3400%	avep: 1693.75%
+145
+mem_id_host: 166
+max: 25	ave: 17.0312
+maxp: 2600%	avep: 1803.12%
+146
+mem_id_host: 174
+max: 26	ave: 12.4688
+maxp: 2700%	avep: 1346.88%
+147
+mem_id_host: 184
+max: 28	ave: 14.5938
+maxp: 2900%	avep: 1559.38%
+148
+mem_id_host: 197
+max: 25	ave: 14.3125
+maxp: 2600%	avep: 1531.25%
+149
+mem_id_host: 194
+max: 4294967295	ave: 125.562
+maxp: 236300%	avep: 12656.2%
+150
+mem_id_host: 185
+max: 26	ave: 14.7812
+maxp: 2700%	avep: 1578.12%
+151
+mem_id_host: 177
+max: 24	ave: 14.9375
+maxp: 2500%	avep: 1593.75%
+152
+mem_id_host: 183
+max: 27	ave: 13.375
+maxp: 2800%	avep: 1437.5%
+153
+mem_id_host: 198
+max: 4294967295	ave: 15.125
+maxp: 2500%	avep: 1612.5%
+154
+mem_id_host: 171
+max: 28	ave: 14.4688
+maxp: 2900%	avep: 1546.88%
+155
+mem_id_host: 195
+max: 30	ave: 16.0938
+maxp: 3100%	avep: 1709.38%
+156
+mem_id_host: 195
+max: 32	ave: 15.25
+maxp: 3300%	avep: 1625%
+157
+mem_id_host: 196
+max: 2649	ave: 96.7188
+maxp: 265000%	avep: 9771.88%
+158
+mem_id_host: 192
+max: 26	ave: 15.7188
+maxp: 2700%	avep: 1671.88%
+159
+mem_id_host: 197
+max: 29	ave: 16.0625
+maxp: 3000%	avep: 1706.25%
+160
+mem_id_host: 178
+max: 26	ave: 14.2188
+maxp: 2700%	avep: 1521.88%
+161
+mem_id_host: 183
+max: 28	ave: 16.875
+maxp: 2900%	avep: 1787.5%
+162
+mem_id_host: 188
+max: 28	ave: 16.0938
+maxp: 2900%	avep: 1709.38%
+163
+mem_id_host: 190
+max: 26	ave: 14.375
+maxp: 2700%	avep: 1537.5%
+164
+mem_id_host: 194
+max: 26	ave: 13.875
+maxp: 2700%	avep: 1487.5%
+165
+mem_id_host: 181
+max: 24	ave: 14.5938
+maxp: 2500%	avep: 1559.38%
+166
+mem_id_host: 185
+max: 2892	ave: 103.406
+maxp: 289300%	avep: 10440.6%
+167
+mem_id_host: 192
+max: 25	ave: 16.3125
+maxp: 2600%	avep: 1731.25%
+168
+mem_id_host: 208
+max: 25	ave: 12.875
+maxp: 2600%	avep: 1387.5%
+169
+mem_id_host: 193
+max: 21	ave: 13.5938
+maxp: 2200%	avep: 1459.38%
+170
+mem_id_host: 199
+max: 2103	ave: 79.5625
+maxp: 210400%	avep: 8056.25%
+171
+mem_id_host: 192
+max: 845	ave: 41.1562
+maxp: 84600%	avep: 4215.62%
+172
+mem_id_host: 170
+max: 24	ave: 14.7188
+maxp: 2500%	avep: 1571.88%
+173
+mem_id_host: 184
+max: 23	ave: 12.6562
+maxp: 2400%	avep: 1365.62%
+174
+mem_id_host: 192
+max: 25	ave: 14.5312
+maxp: 2600%	avep: 1553.12%
+175
+mem_id_host: 185
+max: 25	ave: 13.3438
+maxp: 2600%	avep: 1434.38%
+176
+mem_id_host: 189
+max: 25	ave: 15.3125
+maxp: 2600%	avep: 1631.25%
+177
+mem_id_host: 181
+max: 4294967295	ave: 13.375
+maxp: 2800%	avep: 1437.5%
+178
+mem_id_host: 210
+max: 24	ave: 15.5938
+maxp: 2500%	avep: 1659.38%
+179
+mem_id_host: 192
+max: 25	ave: 15.5
+maxp: 2600%	avep: 1650%
+180
+mem_id_host: 180
+max: 28	ave: 15.5938
+maxp: 2900%	avep: 1659.38%
+181
+mem_id_host: 191
+max: 26	ave: 14.8125
+maxp: 2700%	avep: 1581.25%
+182
+mem_id_host: 189
+max: 24	ave: 13.3125
+maxp: 2500%	avep: 1431.25%
+183
+mem_id_host: 165
+max: 26	ave: 14.7188
+maxp: 2700%	avep: 1571.88%
+184
+mem_id_host: 176
+max: 3228	ave: 113.719
+maxp: 322900%	avep: 11471.9%
+185
+mem_id_host: 178
+max: 24	ave: 14.625
+maxp: 2500%	avep: 1562.5%
+186
+mem_id_host: 177
+max: 4294967295	ave: 13.2188
+maxp: 3600%	avep: 1421.88%
+187
+mem_id_host: 203
+max: 25	ave: 15.0312
+maxp: 2600%	avep: 1603.12%
+188
+mem_id_host: 164
+max: 27	ave: 15.5938
+maxp: 2800%	avep: 1659.38%
+189
+mem_id_host: 164
+max: 27	ave: 13.7812
+maxp: 2800%	avep: 1478.12%
+190
+mem_id_host: 165
+max: 27	ave: 15.375
+maxp: 2800%	avep: 1637.5%
+191
+mem_id_host: 184
+max: 31	ave: 16.625
+maxp: 3200%	avep: 1762.5%
+192
+mem_id_host: 187
+max: 24	ave: 15.4062
+maxp: 2500%	avep: 1640.62%
+193
+mem_id_host: 201
+max: 28	ave: 14.6562
+maxp: 2900%	avep: 1565.62%
+194
+mem_id_host: 222
+max: 25	ave: 14.6875
+maxp: 2600%	avep: 1568.75%
+195
+mem_id_host: 194
+max: 4294967295	ave: 14.5312
+maxp: 2500%	avep: 1553.12%
+196
+mem_id_host: 175
+max: 1150	ave: 49.5
+maxp: 115100%	avep: 5050%
+197
+mem_id_host: 222
+max: 32	ave: 14.6875
+maxp: 3300%	avep: 1568.75%
+198
+mem_id_host: 209
+max: 27	ave: 15.75
+maxp: 2800%	avep: 1675%
+199
+mem_id_host: 209
+max: 4294967295	ave: 14.9375
+maxp: 3100%	avep: 1593.75%
+200
+mem_id_host: 198
+max: 26	ave: 15.5625
+maxp: 2700%	avep: 1656.25%
+201
+mem_id_host: 222
+max: 23	ave: 13.875
+maxp: 2400%	avep: 1487.5%
+202
+mem_id_host: 221
+max: 30	ave: 12.3125
+maxp: 3100%	avep: 1331.25%
+203
+mem_id_host: 208
+max: 29	ave: 15.625
+maxp: 3000%	avep: 1662.5%
+204
+mem_id_host: 202
+max: 26	ave: 13.3438
+maxp: 2700%	avep: 1434.38%
+205
+mem_id_host: 217
+max: 27	ave: 16.2812
+maxp: 2800%	avep: 1728.12%
+206
+mem_id_host: 197
+max: 24	ave: 14.4688
+maxp: 2500%	avep: 1546.88%
+207
+mem_id_host: 210
+max: 31	ave: 13.8125
+maxp: 3200%	avep: 1481.25%
+208
+mem_id_host: 197
+max: 24	ave: 14.4062
+maxp: 2500%	avep: 1540.62%
+209
+mem_id_host: 180
+max: 4014	ave: 137.75
+maxp: 401500%	avep: 13875%
+210
+mem_id_host: 186
+max: 26	ave: 11.75
+maxp: 2700%	avep: 1275%
+211
+mem_id_host: 206
+max: 29	ave: 15.4062
+maxp: 3000%	avep: 1640.62%
+212
+mem_id_host: 207
+max: 29	ave: 13.7188
+maxp: 3000%	avep: 1471.88%
+213
+mem_id_host: 170
+max: 29	ave: 15.3438
+maxp: 3000%	avep: 1634.38%
+214
+mem_id_host: 200
+max: 27	ave: 15.5625
+maxp: 2800%	avep: 1656.25%
+215
+mem_id_host: 190
+max: 27	ave: 15.6562
+maxp: 2800%	avep: 1665.62%
+216
+mem_id_host: 207
+max: 26	ave: 14.6875
+maxp: 2700%	avep: 1568.75%
+217
+mem_id_host: 199
+max: 27	ave: 13.0312
+maxp: 2800%	avep: 1403.12%
+218
+mem_id_host: 210
+max: 24	ave: 15.125
+maxp: 2500%	avep: 1612.5%
+219
+mem_id_host: 209
+max: 448	ave: 26.2188
+maxp: 44900%	avep: 2721.88%
+220
+mem_id_host: 196
+max: 26	ave: 14.375
+maxp: 2700%	avep: 1537.5%
+221
+mem_id_host: 203
+max: 26	ave: 16.0938
+maxp: 2700%	avep: 1709.38%
+222
+mem_id_host: 200
+max: 23	ave: 14.625
+maxp: 2400%	avep: 1562.5%
+223
+mem_id_host: 187
+max: 4294967295	ave: 12.7812
+maxp: 2800%	avep: 1378.12%
+224
+mem_id_host: 189
+max: 25	ave: 14.7812
+maxp: 2600%	avep: 1578.12%
+225
+mem_id_host: 219
+max: 25	ave: 14.4062
+maxp: 2600%	avep: 1540.62%
+226
+mem_id_host: 196
+max: 25	ave: 13.9688
+maxp: 2600%	avep: 1496.88%
+227
+mem_id_host: 197
+max: 31	ave: 14.25
+maxp: 3200%	avep: 1525%
+228
+mem_id_host: 198
+max: 29	ave: 14.3125
+maxp: 3000%	avep: 1531.25%
+229
+mem_id_host: 195
+max: 27	ave: 15.4688
+maxp: 2800%	avep: 1646.88%
+230
+mem_id_host: 185
+max: 4584	ave: 156
+maxp: 458500%	avep: 15700%
+231
+mem_id_host: 209
+max: 3960	ave: 136.5
+maxp: 396100%	avep: 13750%
+232
+mem_id_host: 190
+max: 26	ave: 14.5938
+maxp: 2700%	avep: 1559.38%
+233
+mem_id_host: 188
+max: 4294967295	ave: 13.1875
+maxp: 3200%	avep: 1418.75%
+234
+mem_id_host: 187
+max: 30	ave: 13.1875
+maxp: 3100%	avep: 1418.75%
+235
+mem_id_host: 214
+max: 32	ave: 12.4375
+maxp: 3300%	avep: 1343.75%
+236
+mem_id_host: 185
+max: 25	ave: 16
+maxp: 2600%	avep: 1700%
+237
+mem_id_host: 199
+max: 25	ave: 14.6875
+maxp: 2600%	avep: 1568.75%
+238
+mem_id_host: 198
+max: 26	ave: 13.75
+maxp: 2700%	avep: 1475%
+239
+mem_id_host: 209
+max: 31	ave: 12.8438
+maxp: 3200%	avep: 1384.38%
+240
+mem_id_host: 206
+max: 24	ave: 14.625
+maxp: 2500%	avep: 1562.5%
+241
+mem_id_host: 209
+max: 4294967295	ave: 159.75
+maxp: 462600%	avep: 16075%
+242
+mem_id_host: 195
+max: 24	ave: 13.6562
+maxp: 2500%	avep: 1465.62%
+243
+mem_id_host: 206
+max: 27	ave: 15.4062
+maxp: 2800%	avep: 1640.62%
+244
+mem_id_host: 210
+max: 24	ave: 11.375
+maxp: 2500%	avep: 1237.5%
+245
+mem_id_host: 219
+max: 29	ave: 16.375
+maxp: 3000%	avep: 1737.5%
+246
+mem_id_host: 178
+max: 27	ave: 13.6562
+maxp: 2800%	avep: 1465.62%
+247
+mem_id_host: 212
+max: 3278	ave: 116.969
+maxp: 327900%	avep: 11796.9%
+248
+mem_id_host: 211
+max: 25	ave: 14.9375
+maxp: 2600%	avep: 1593.75%
+249
+mem_id_host: 193
+max: 25	ave: 14.5625
+maxp: 2600%	avep: 1556.25%
+250
+mem_id_host: 199
+max: 29	ave: 14.8125
+maxp: 3000%	avep: 1581.25%
+251
+mem_id_host: 191
+max: 25	ave: 13.5625
+maxp: 2600%	avep: 1456.25%
+252
+mem_id_host: 209
+max: 26	ave: 13.75
+maxp: 2700%	avep: 1475%
+253
+mem_id_host: 181
+max: 28	ave: 14.2812
+maxp: 2900%	avep: 1528.12%
+254
+mem_id_host: 210
+max: 24	ave: 14.2188
+maxp: 2500%	avep: 1521.88%
+255
+mem_id_host: 202
+max: 25	ave: 14.1562
+maxp: 2600%	avep: 1515.62%
+256
+mem_id_host: 201
+max: 5131	ave: 176.031
+maxp: 513200%	avep: 17703.1%

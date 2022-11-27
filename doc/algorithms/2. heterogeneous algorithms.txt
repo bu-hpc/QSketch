@@ -1,0 +1,49 @@
+2. Heterogeneous sketch
+
+heterogeneous sketch algorithm:
+
+a, naive implementation, sketch_thread
+integer table[n * m];
+parallel_insert(keys):
+    parallel_for_each(key : keys)
+        for i = 1 : m    
+            id = hash(i, key) % n;
+            atomic_add(table[i * n + id], 1);
+parallel_search(keys, counts):
+    parallel_for_each(key : keys, count : counts)
+        result = MAX_INTEGER;
+        for i = 1 : m
+            id = hash(i, key) % n;
+            result = min(result, table[i * n + id]);
+        count = result;
+
+
+b, sketch_warp
+
+integer table[p * warp_size];
+hash_mask m_table[H];
+
+warp_insert(key):
+    hv = hash(key);
+    id = hv % p;
+    hash_mask hm = m_table[hv % H];
+    if hm.get(thread_index)
+        atomic_add(table[id * warp_size + thread_index], 1);
+
+parallel_warp_insert(keys):
+    parallel_for_each(key : keys)
+        warp_insert(key);
+
+warp_search(key, count):
+    result = MAX_INTEGER;
+    hv = hash(key);
+    id = hv % p;
+    hash_mask hm = m_table[hv % H];
+    if hm.get(thread_index)
+        result = min(result, table[id * warp_size + thread_index]);
+    result = warp_min(result);
+    if thread_index == 0
+        count = result;
+parallel_warp_search(keys, counts):
+    parallel_warp_for_each(key : keys, count : counts)
+        warp_search(key, count);

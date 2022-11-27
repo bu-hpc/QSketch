@@ -1,0 +1,303 @@
+/*
+random numbers from 0 ~ 2 ^ 32
+*/
+i: 0
+max: 6	ave: 0.109941
+maxp: 700%	avep: 110.992%
+i: 1
+max: 5	ave: 0.110053
+maxp: 600%	avep: 111.004%
+i: 2
+max: 6	ave: 0.10976
+maxp: 700%	avep: 110.974%
+i: 3
+max: 6	ave: 0.10897
+maxp: 700%	avep: 110.896%
+i: 4
+max: 6	ave: 0.108964
+maxp: 700%	avep: 110.895%
+i: 5
+max: 6	ave: 0.109219
+maxp: 700%	avep: 110.921%
+i: 6
+max: 6	ave: 0.108958
+maxp: 700%	avep: 110.895%
+i: 7
+max: 7	ave: 0.109609
+maxp: 800%	avep: 110.959%
+i: 8
+max: 7	ave: 0.109382
+maxp: 800%	avep: 110.937%
+i: 9
+max: 6	ave: 0.10921
+maxp: 700%	avep: 110.92%
+i: 10
+max: 6	ave: 0.109239
+maxp: 700%	avep: 110.922%
+i: 11
+max: 7	ave: 0.109776
+maxp: 800%	avep: 110.976%
+i: 12
+max: 6	ave: 0.109012
+maxp: 700%	avep: 110.9%
+i: 13
+max: 6	ave: 0.109483
+maxp: 700%	avep: 110.947%
+i: 14
+max: 6	ave: 0.109642
+maxp: 700%	avep: 110.963%
+i: 15
+max: 6	ave: 0.109201
+maxp: 700%	avep: 110.919%
+i: 16
+max: 6	ave: 0.109261
+maxp: 700%	avep: 110.925%
+i: 17
+max: 6	ave: 0.109501
+maxp: 700%	avep: 110.948%
+i: 18
+max: 7	ave: 0.109005
+maxp: 800%	avep: 110.899%
+i: 19
+max: 7	ave: 0.109712
+maxp: 800%	avep: 110.97%
+i: 20
+max: 7	ave: 0.110003
+maxp: 800%	avep: 110.999%
+i: 21
+max: 6	ave: 0.109298
+maxp: 700%	avep: 110.928%
+i: 22
+max: 6	ave: 0.109354
+maxp: 700%	avep: 110.933%
+i: 23
+max: 6	ave: 0.109142
+maxp: 700%	avep: 110.912%
+i: 24
+max: 7	ave: 0.110137
+maxp: 800%	avep: 111.012%
+i: 25
+max: 6	ave: 0.109317
+maxp: 700%	avep: 110.931%
+i: 26
+max: 6	ave: 0.109303
+maxp: 700%	avep: 110.929%
+i: 27
+max: 6	ave: 0.109493
+maxp: 700%	avep: 110.947%
+i: 28
+max: 6	ave: 0.109747
+maxp: 700%	avep: 110.973%
+i: 29
+max: 7	ave: 0.10873
+maxp: 800%	avep: 110.872%
+i: 30
+max: 7	ave: 0.110196
+maxp: 800%	avep: 111.017%
+i: 31
+max: 6	ave: 0.109807
+maxp: 700%	avep: 110.979%
+i: 32
+max: 7	ave: 0.109304
+maxp: 800%	avep: 110.929%
+i: 33
+max: 6	ave: 0.1095
+maxp: 700%	avep: 110.948%
+i: 34
+max: 6	ave: 0.109459
+maxp: 700%	avep: 110.945%
+i: 35
+max: 6	ave: 0.109582
+maxp: 700%	avep: 110.956%
+i: 36
+max: 6	ave: 0.10948
+maxp: 700%	avep: 110.947%
+i: 37
+max: 6	ave: 0.109628
+maxp: 700%	avep: 110.962%
+i: 38
+max: 6	ave: 0.10989
+maxp: 700%	avep: 110.988%
+i: 39
+max: 6	ave: 0.109463
+maxp: 700%	avep: 110.945%
+i: 40
+max: 6	ave: 0.109769
+maxp: 700%	avep: 110.976%
+i: 41
+max: 7	ave: 0.109664
+maxp: 800%	avep: 110.965%
+i: 42
+max: 6	ave: 0.109574
+maxp: 700%	avep: 110.956%
+i: 43
+max: 6	ave: 0.109135
+maxp: 700%	avep: 110.912%
+i: 44
+max: 6	ave: 0.109456
+maxp: 700%	avep: 110.944%
+i: 45
+max: 6	ave: 0.109005
+maxp: 700%	avep: 110.898%
+i: 46
+max: 6	ave: 0.109373
+maxp: 700%	avep: 110.936%
+i: 47
+max: 7	ave: 0.109022
+maxp: 800%	avep: 110.901%
+i: 48
+max: 6	ave: 0.109484
+maxp: 700%	avep: 110.947%
+i: 49
+max: 6	ave: 0.109024
+maxp: 700%	avep: 110.901%
+i: 50
+max: 6	ave: 0.108981
+maxp: 700%	avep: 110.897%
+i: 51
+max: 6	ave: 0.109044
+maxp: 700%	avep: 110.903%
+i: 52
+max: 6	ave: 0.109268
+maxp: 700%	avep: 110.925%
+i: 53
+max: 7	ave: 0.109811
+maxp: 800%	avep: 110.98%
+i: 54
+max: 6	ave: 0.109248
+maxp: 700%	avep: 110.924%
+i: 55
+max: 6	ave: 0.108863
+maxp: 700%	avep: 110.885%
+i: 56
+max: 5	ave: 0.110107
+maxp: 600%	avep: 111.009%
+i: 57
+max: 6	ave: 0.109749
+maxp: 700%	avep: 110.974%
+i: 58
+max: 7	ave: 0.10898
+maxp: 800%	avep: 110.896%
+i: 59
+max: 6	ave: 0.109472
+maxp: 700%	avep: 110.946%
+i: 60
+max: 6	ave: 0.110075
+maxp: 700%	avep: 111.006%
+i: 61
+max: 6	ave: 0.109331
+maxp: 700%	avep: 110.931%
+i: 62
+max: 6	ave: 0.109068
+maxp: 700%	avep: 110.906%
+i: 63
+max: 6	ave: 0.110172
+maxp: 700%	avep: 111.015%
+i: 64
+max: 6	ave: 0.109368
+maxp: 700%	avep: 110.935%
+i: 65
+max: 6	ave: 0.109843
+maxp: 700%	avep: 110.983%
+i: 66
+max: 6	ave: 0.109958
+maxp: 700%	avep: 110.994%
+i: 67
+max: 6	ave: 0.10974
+maxp: 700%	avep: 110.973%
+i: 68
+max: 6	ave: 0.109887
+maxp: 700%	avep: 110.988%
+i: 69
+max: 7	ave: 0.109335
+maxp: 800%	avep: 110.932%
+i: 70
+max: 6	ave: 0.109909
+maxp: 700%	avep: 110.989%
+i: 71
+max: 7	ave: 0.110338
+maxp: 800%	avep: 111.033%
+i: 72
+max: 6	ave: 0.109886
+maxp: 700%	avep: 110.987%
+i: 73
+max: 6	ave: 0.109479
+maxp: 700%	avep: 110.946%
+i: 74
+max: 7	ave: 0.109406
+maxp: 800%	avep: 110.939%
+i: 75
+max: 6	ave: 0.109071
+maxp: 700%	avep: 110.906%
+i: 76
+max: 7	ave: 0.109405
+maxp: 800%	avep: 110.94%
+i: 77
+max: 7	ave: 0.109393
+maxp: 800%	avep: 110.938%
+i: 78
+max: 7	ave: 0.109695
+maxp: 800%	avep: 110.968%
+i: 79
+max: 6	ave: 0.108839
+maxp: 700%	avep: 110.882%
+i: 80
+max: 6	ave: 0.109787
+maxp: 700%	avep: 110.978%
+i: 81
+max: 7	ave: 0.109601
+maxp: 800%	avep: 110.959%
+i: 82
+max: 6	ave: 0.110577
+maxp: 700%	avep: 111.056%
+i: 83
+max: 6	ave: 0.109317
+maxp: 700%	avep: 110.931%
+i: 84
+max: 6	ave: 0.10902
+maxp: 700%	avep: 110.901%
+i: 85
+max: 7	ave: 0.109392
+maxp: 800%	avep: 110.938%
+i: 86
+max: 6	ave: 0.109032
+maxp: 700%	avep: 110.902%
+i: 87
+max: 6	ave: 0.109985
+maxp: 700%	avep: 110.997%
+i: 88
+max: 6	ave: 0.109142
+maxp: 700%	avep: 110.913%
+i: 89
+max: 6	ave: 0.10944
+maxp: 700%	avep: 110.942%
+i: 90
+max: 6	ave: 0.109348
+maxp: 700%	avep: 110.933%
+i: 91
+max: 6	ave: 0.109455
+maxp: 700%	avep: 110.944%
+i: 92
+max: 6	ave: 0.10984
+maxp: 700%	avep: 110.983%
+i: 93
+max: 7	ave: 0.109912
+maxp: 800%	avep: 110.989%
+i: 94
+max: 7	ave: 0.109339
+maxp: 800%	avep: 110.933%
+i: 95
+max: 7	ave: 0.11016
+maxp: 800%	avep: 111.015%
+i: 96
+max: 6	ave: 0.109365
+maxp: 700%	avep: 110.935%
+i: 97
+max: 6	ave: 0.109092
+maxp: 700%	avep: 110.908%
+i: 98
+max: 6	ave: 0.10929
+maxp: 700%	avep: 110.928%
+i: 99
+max: 7	ave: 0.109524
+maxp: 800%	avep: 110.95%

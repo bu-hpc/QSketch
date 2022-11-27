@@ -1,0 +1,127 @@
+for (size_t i = b; i < e; ++i) {
+        Key_T v = keys[i];
+
+        Hashed_T hv = hash(seed + tid * s_sz, s_sz, v);
+        if (tid == 0) {
+            htl = hash_table_low + (hv % n_low) * WARP_SIZE;
+            htl_31 = htl[31];
+        }
+        
+        unsigned char hash_bit = 0x0f;
+
+        #pragma unroll
+        for (int i = 0; i < 20; i += 4) {
+            hash_bit &= (hv >> i);
+        }
+
+        unsigned char hash_bit_next = __shfl_down_sync(0xffffffff, hash_bit, 1);
+        if (tid % 2 == 0) {
+            hash_bit |= hash_bit_next << 4;
+            hash_mask[tid/2] = hash_bit;
+        }
+
+        if (tid == 0) {
+            Hashed_T hv_mask = hv % 124;
+            hash_mask[hv_mask/8] |= 1 << (hv_mask % 8);
+            hash_mask[15] &= 0b00001111;
+        }
+
+        unsigned int warp_mask_id = tid/8;
+        unsigned char warp_mask = 1u << (tid % 8);
+        if (htl_31) {
+        // if (htl[31] != 0) {
+        // if (false) {
+            // insert_high();
+            // printf("err\n");
+            Count_T *hth = hash_table_high + htl[31];
+            
+            atomicAdd(hth + 124, 1);
+            #pragma unroll
+            for (int i = 0; i < 4; ++i) {
+                if (hash_mask[i * 4 + warp_mask_id] & warp_mask) {
+                    atomicAdd(hth + i * WARP_SIZE + tid, 1);
+                }
+            }
+            atomicSub(hth + 124, 1);
+            
+
+        } else {
+            // max_count = insert_low();
+            // printf("eles\n");
+            Count_T max_count = 0;
+            Count_T add = 0;
+            Count_T cv = htl[tid];
+            unsigned char thm = (hash_mask[tid/2]);
+            thm = thm >> ((tid % 2) * 4);
+            // if (tid == 31 && thm != 0)
+            //     printf("%u\n", thm & 0b00001111);
+            if (thm & 0b00000001) {
+                add |= (1u);
+                max_count = max(max_count, (cv & 0x000000ffu));
+            }
+
+            if (thm & 0b00000010) {
+                add |= (1u << 8);
+                max_count = max(max_count, (cv & 0x0000ff00u) >> 8);
+            }
+
+            if (thm & 0b00000100) {
+                add |= (1u << 16);
+                max_count = max(max_count, (cv & 0x00ff0000u) >> 16);
+            }
+
+            if (thm & 0b00001000) {
+                add |= (1u << 24);
+                max_count = max(max_count, (cv & 0xff000000u) >> 24);
+            }
+            // if (tid == 31 && add != 0) {
+            //     printf("err2\n");
+            // }
+            if (add != 0)
+                atomicAdd(htl + tid, add);
+
+            for (int j = 16; j >= 1; j = j >> 1) {
+                // Count_T t_min = __shfl_down_sync(0xffffffff, thread_min, j);
+                Count_T t_max = __shfl_down_sync(0xffffffff, max_count, j);
+                if (tid < j) {
+                    // thread_min = min(thread_min, t_min);
+                    max_count = max(max_count, t_max);
+                }
+            }
+
+            __shared__ unsigned int old_id;
+            __shared__ unsigned int new_id;
+
+            if (tid == 0) {
+                new_id = 0;
+                old_id = 0;
+                // printf("%u\n", max_count);
+                if (max_count > 128) {
+                    // upgrade
+                    new_id = atomicAdd(mem_id, 1);
+                    // printf("new_id: %u\n", new_id);
+                    old_id = atomicMax(htl + 31, new_id);
+                    if (old_id != 0) {
+                        while (hash_table_high[old_id * 128 + 124] != 0) {}
+                    }
+                }
+            }
+            __threadfence_block();
+            if (old_id != 0) {
+                for (int i = tid; i < 128; i += WARP_SIZE) {
+                    atomicAdd(hash_table_high + new_id * 128 + i, hash_table_high[old_id * 128 + i]);
+                }
+            }
+
+            // if (max_count > 128) {
+            //     new_id = atomicAdd(mem_id, 1);
+            //     old_id = atomicMax(htl[j] + 31, new_id);
+            //     if (old_id != 0) {
+            //         while ( hash_table_high[old_idd * 128 + 31] != 0) {}
+            //         for (int i = 0; i < 128; ++i) {
+            //             atomicAdd(hash_table_high + new_id * 128 + i, hash_table_high[old_id * 128 + i]);
+            //         }
+            //     }
+            // }
+        }
+    }

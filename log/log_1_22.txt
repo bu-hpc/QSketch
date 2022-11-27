@@ -1,0 +1,166 @@
+1.
+base version: Count_T == unsigned int
+max: 38 ave: 1.01873
+maxp: 3900% avep: 193.398%
+
+version 1: Count T == Byte
+max: 18 ave: 0.0782137
+maxp: 1900% avep: 107.164%
+
+versio 2: low level table and high level table
+max: 4294967295 ave: 0.158974
+maxp: 6500% avep: 108.358%
+it has bugs while move the elements from low level tbale to high level table. 
+
+2. SlabHash (IPDPS 2018)
+            (num keys,      num buckets,    load factor)    insert rate(M/s)    search rate(M/s)    
+===============================================================================================
+SlabHash    (134217728,     14913081,       0.55)           1105.320            2581.558            
+
+134217728 = 128 * 1024 * 1024 = 2^27
+
+base insert perf: 1.184467 Gops/s
+byte insert perf: 1.175305 Gops/s
+
+base search perf: 1.107433 Gops/s
+byte search perf: 1.029362 Gops/s
+
+a. the insert perf is peak perf while each insertion only needs one memory access.
+b. search perf is higher than mine, 
+
+c. For a hash table, (Key_T is uint, Hashed_T is uint), each key-value pair is 8 bytes.
+If the GPU memory size is 16GB, it can store 2^31 pairs at most. My GPU has 11G memory and SlabHash 
+can successfully insert 2^27 pairs but it fails when I try to insert 2^28 pairs. And it only needs 2 seconds
+to insert 2^27 pairs. But skecth doesn't have this limition.
+
+It needs about 2 seconds to generate and insert 2^27 pairs.
+In theory, it only needs 2 seconds to isnert 2^21 pairs. 
+    16GB / (8Bytes * 1G/s) = 2s
+
+3. 
+
+version 2:
+
+low level table:        [][][][] [][][][] [][][][] [][][][]
+high level table:       {}{}{}{} {}{}{}{} {}{}{}{} {}{}{}{}
+
+[] is 32 uints, {} is 4 x 32 uints. 
+The size of high level table can be 4 times larger than low level table.
+
+
+version 3:
+
+low level table:        [][][][0] [][][1][2] [][][][] [3][][][]
+high level tbale:       {0}{1}{2}{3} 
+
+
+insert(key) :
+    lt <- low_level_table[hash(key) % n_low]
+    if (lt[31] != 0) :
+        ht <- high_level_table[lt[31] * 128]
+        insert_high()
+    else 
+        if (max_count(lt, key) > 128) 
+            lt[31] = atomicAdd(mem_id, 1)                           : l0
+            insert_low()
+            high_level_table[hash(key) % n_high] <- uint array(lt)  : l1
+        else 
+            insert_low()                                            : l2
+
+
+race 1:
+    l1, it is possible that two warps try to allocate at the same time.
+race 2:
+    l1 and l2, 
+
+
+test 1:
+insert(key) :
+    lt <- low_level_table[hash(key) % n_low]
+    if (lt[31] != 0) :
+        ht <- high_level_table[lt[31] * 128]
+        insert_high()
+    else 
+        atomicAdd(lt[29], 1)
+        if (lt[29] == 0 && max_count(lt, key) > 128) 
+            lt[31] = atomicAdd(mem_id, 1)                           : l0
+            insert_low()
+            while(lt[30] == 0) {}
+            high_level_table[hash(key) % n_high] <- uint array(lt)  : l1
+            atomicSub(lt[29], 1)
+        else 
+            atomicSub(lt[29], 1)
+            atomicAdd(lt[30], 1)
+            insert_low()                                            : l2
+            atomicSub(lt[30], 1)
+
+
+
+
+/*
+
+insert_low()
+insert_high()
+malloc_high()
+upgrade()
+
+
+test 2:
+insert(key) :
+    lt <- low_level_table[hash(key) % n_low]
+    if (lt[31] != 0) :
+        insert_high(high_level_table[lt[31] * 128])
+    else 
+        atomicAdd(lt[29], 1)
+        if (lt[29] == 0 && max_count(lt, key) > 128) 
+            lt[31] = atomicAdd(mem_id, 1)                           : l0
+            insert_low()
+            while(lt[30] == 0) {}
+            high_level_table[hash(key) % n_high] <- uint array(lt)  : l1
+            atomicSub(lt[29], 1)
+        else 
+            atomicSub(lt[29], 1)
+            atomicAdd(lt[30], 1)
+            insert_low()                                            : l2
+            atomicSub(lt[30], 1)
+
+
+
+*/
+
+
+test 3:
+
+insert(key)
+    lt <- low_level_table
+    if (lt[31] == 0)
+        insert_low
+        if (max_count > 128)
+            atomicMax(llt[31], 1)
+
+    else if (lt[31] == 1)
+        insert_low
+        lt[31]
+
+    else 
+        insert_high
+
+
+
+test 4:
+insert(key) :
+    lt <- low_level_table[hash(key) % n_low]
+    if (lt[31] != 0) :
+        insert_high(high_level_table[lt[31] * 128])
+    else 
+        if (max_count(lt, key) > 128) 
+            new_id = atomicAdd(mem_id, 1)
+            old = atomicMax(llt[31], new_id)                           : l0
+            if (old != 0) 
+                while hlt_old[0][31] != 0 {}
+                hlt_new = add(hlt_new, htl_old)
+            insert_high()
+        else 
+            insert_low()                                            : l2
+
+

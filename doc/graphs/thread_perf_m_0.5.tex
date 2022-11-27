@@ -1,0 +1,50 @@
+\begin{figure}
+    \centering
+    \subfloat[Insert Performance for Different m\label{1i}]{
+        \resizebox{0.48\columnwidth}{!}{
+            \begin{tikzpicture}%[scale = 0.48]
+                % \label{fig:thread_perf_m_0.5}
+                \begin{semilogxaxis}[
+                    % title={Insert Performance for Different m},
+                    xlabel={Work Load},
+                    ylabel={Insert Performance (M operations/s)},
+                    legend pos=north east,
+                    xmajorgrids=true,
+                    ymajorgrids=true,
+                ]
+                    \addplot table[x = WorkLoad, y = m1_insert] {data/qsketch/perf_m_0.5_r.dat};
+                    \addlegendentry{m == 1}
+                    \addplot table[x = WorkLoad, y = m2_insert] {data/qsketch/perf_m_0.5_r.dat};
+                    \addlegendentry{m == 2}
+                    \addplot table[x = WorkLoad, y = m3_insert] {data/qsketch/perf_m_0.5_r.dat};
+                    \addlegendentry{m == 3}
+                \end{semilogxaxis}
+            \end{tikzpicture}
+        }
+    }
+    ~
+    \hfill
+    \subfloat[Search Performance for Different m\label{1s}]{
+        \resizebox{0.48\columnwidth}{!}{
+            \begin{tikzpicture}%[scale = 0.48]
+            \begin{semilogxaxis}[
+                % title={Search Performance for Different m},
+                xlabel={Work Load},
+                ylabel={Search Performance (M operations/s)},
+                legend pos=north east,
+                xmajorgrids=true,
+                ymajorgrids=true,
+            ]
+                \addplot table[x = WorkLoad, y = m1_search] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 1}
+                \addplot table[x = WorkLoad, y = m2_search] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 2}
+                \addplot table[x = WorkLoad, y = m3_search] {data/qsketch/perf_m_0.5_r.dat};
+                \addlegendentry{m == 3}
+            \end{semilogxaxis}
+        \end{tikzpicture}
+        }
+    }
+    \caption{Performance for Different m}
+    \label{fig:thread_perf_m_0.5}
+\end{figure}

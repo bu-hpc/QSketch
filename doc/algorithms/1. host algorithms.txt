@@ -1,0 +1,41 @@
+1. sketch algorithm
+
+// A sketch is a data structure which can record the frequencies of elements. 
+
+sketch algorithm:
+int table[n][m];
+insert(key):
+    for i = 1 : m    
+        id = hash(i, key) % n;
+        table[id][i]++;
+search(key):
+    result = MAX_INT;
+    for i = 1 : m
+        id = hash(i, key) % n;
+        result = min(result, table[id][i]);
+    return result;
+
+// Since the sketch doesn't need to store the element itself, it can receive elements as many as possible without increasing the memory usage.  
+
+2. Parallel sketch
+
+parallel sketch algorithm:
+int table[n][m];
+parallel_insert(keys):
+    parallel_for_each(key : keys)
+        for i = 1 : m    
+            id = hash(i, key) % n;
+            atomic_add(table[id][i], 1);
+parallel_search(keys, counts):
+    parallel_for_each(key : keys, count : counts)
+        result = MAX_INT;
+        for i = 1 : m
+            id = hash(i, key) % n;
+            result = min(result, table[id][i]);
+        count = result;
+
+// In order to improve the performance of insert() and search(), it is not odd to implement a parallel version of sketch. However the parallel sketch is still limited by the low computer power of CPU and narrow memory bandwidth of host memory. 
+
+
+3. Hash table
+

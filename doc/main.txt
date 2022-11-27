@@ -1,0 +1,277 @@
+0. abstract
+1. introduction
+1.1 background
+1.1.1 GPU and CUDA
+
+/*
+Graphics Processing Unit (GPU): GPUs are massively parallel processors with thousands of parallel active threads. Threads are grouped into SIMD units of width 32—a warp—and each warp executes instructions in lockstep. As a result, any branch statements that cause threads to run different instructions are serialized (branch divergence). A group of threads (multiple warps) are called a thread block and are scheduled to be run on different streaming processors (SMs) on the GPU. The memory hierarchy of GPUs is organized into a large global memory accessible by all threads within the device (e.g., 12 GB on the Tesla K40c), smaller but faster shared memory for each thread block (48 KB per SM on the Tesla K40c), and local registers for each thread in the thread block (64 KB per SM on the Tesla K40c). Maximizing achieved memory bandwidth requires accessing consecutive memory indices within a warp (coalesced access). NVIDIA GPUs support a set of warp-wide instructions (e.g., shuffles and ballots) so that all threads within a warp can communicate with each other.
+*/
+
+
+// q1
+1.1.2 Global Memory
+// large, high bandwidth for coalesced accesses, low bandwidth for random accesses.
+The largest device memory is global memory, which has high memory throughput when the warps can coalesce the adjacent memory accesses. Because one physical memory transaction can actually access a tile of data. And when an instruction tries to access the global memory, if the physical addresses of different data are close enough that some transactions can actually access several addresses. For example, if a warp plans to load a sequence of 32 4-byte integers, it may only need one memory transaction on a GPU with 1024-bit memory bus width, and the 32 memory accesses are coalesced into one. However, if the 32 integers are stored on the random places among a large memory area, they are unlikely to be close to each other and can not be coalesced, so the 32 accesses may need 32 physical memory transaction. In this situation, each transaction transfers 128 bytes data and only 4 bytes are useful, the throughput is divided by 32.
+CUDA assumes that the device memories are weakly-ordered, that is the order of one thread writes data to memory is not guaranteed to be the same as the order in which the data is observed by another thread. For example, if thread A writes 1, 2, 3 to the global memory one by one, thread B may observes that A writes 2 at first. A memory function is needed to enforce the ordering. 
+
+
+/*
+it will actually access the
+The size of data dependents on the memory bus width and may vary for different GPUs, for example, the bus width of Tesla P100-12GB is 3072-bit and it can 
+    When a warp executes an instruction that accesses global memory[], it can coalesce t the one memory transactions into  if 
+And it has to transfer more unused words if it fails to coalesce, reducing the overall throughput.
+*/
+//coalesced memory accesses
+//weakly-ordered
+
+
+
+the threads within a warp access the  
+stride memory access, weak ordered.
+/*
+When a warp executes an instruction that accesses global memory, it coalesces the memory accesses of the threads within the warp into one or more of these memory transactions depending on the size of the word accessed by each thread and the distribution of the memory addresses across the threads. In general, the more transactions are necessary, the more unused words are transferred in addition to the words accessed by the threads, reducing the instruction throughput accordingly. For example, if a 32-byte memory transaction is generated for each thread's 4-byte access, throughput is divided by 8.
+
+To maximize global memory throughput, it is therefore important to maximize coalescing
+
+A naive heterogeneous sketch implementation may not fully take advantage of high memory bandwidth. The main reason is that the sketch tries to increase the counts of several random places, which suffers a low memory throughout due to the underlying CUDA memory architecture. [to do :show the comparison of performance between random access and sequential access]
+Things can be more serious while comparing sketch with Hash Map, because Hash Map usually only needs one memory access, but the sketch needs 3 or more memory accesses. That's why the sketch libraries are often slower than Hash Map libraries. This feature of the sketch greatly drops the performance, especially for the heterogeneous implementation. [to do : show the comparison of m = 3 and m = 1]
+
+The CUDA programming model assumes a device with a weakly-ordered memory model, that is the order in which a CUDA thread writes data to shared memory, global memory, page-locked host memory, or the memory of a peer device is not necessarily the order in which the data is observed being written by another CUDA or host thread. It is undefined behaviour for two threads read from or write to the same memory location without synchronization.
+
+1.1.3 Hash Function
+
+*/
+
+qsketch assumes that there is already a hash function that can map the input data to uniform distribution. It has a default hash function and several build-in hash functions, and the users can also define their own hash functions if it is necessary. Some user-defined hash functions may be slow or can not execute on GPU, but this won't reduce the performance. Because hash functions usually are independent and can execute simultaneously, so the time complexity of hash is still O(1).
+
+
+1.2 related work
+
+1.2.1 Sketch
+
+1. sketch algorithm
+
+sketch algorithm:
+integer table[n][m];
+insert(key):
+    for i = 1 : m    
+        id = hash(i, key) % n;
+        table[id][i]++;
+search(key):
+    result = MAX_INT;
+    for i = 1 : m
+        id = hash(i, key) % n;
+        result = min(result, table[id][i]);
+    return result;
+A sketch is a data structure which can record the frequencies of elements. In the algorithm, n is a large number and the specific value of n is dependent on the input data size. The larger n will consume more memories and it should be more accuracy. However, m is a small number and should not be changed. 
+Since the sketch doesn't need to store the element itself, it can receive elements as many as possible without increasing the memory usage.  
+
+2. Parallel sketch
+
+parallel sketch algorithm:
+int table[n][m];
+parallel_insert(keys):
+    parallel_for_each(key : keys)
+        for i = 1 : m    
+            id = hash(i, key) % n;
+            atomic_add(table[id][i], 1);
+parallel_search(keys, counts):
+    parallel_for_each(key : keys, count : counts)
+        result = MAX_INT;
+        for i = 1 : m
+            id = hash(i, key) % n;
+            result = min(result, table[id][i]);
+        count = result;
+
+// In order to improve the performance of insert() and search(), it is not odd to implement a parallel version of sketch. However the parallel sketch is still limited by the low computer power of CPU and narrow memory bandwidth of host memory. 
+
+A naive heterogeneous sketch implementation may not fully take advantage of high memory bandwidth. The main reason is that the sketch tries to increase the counts of several random places, which suffers a low memory throughout due to the underlying CUDA memory architecture. [to do :show the comparison of performance between random access and sequential access]
+Things can be more serious while comparing sketch with Hash Map, because Hash Map usually only needs one memory access, but the sketch needs 3 or more memory accesses. That's why the sketch libraries are often slower than Hash Map libraries. This feature of the sketch greatly drops the performance, especially for the heterogeneous implementation. [to do : show the comparison of m = 3 and m = 1]
+
+
+SF-Sketch
+1.2.2 Hash table //q2
+SlabHash
+
+// q3 references
+1.3 contribution
+
+We propose a new heterogeneous sketch, q-sketch, which has higher performance than other sketches and can still achieve the same accuracy. We implement the q-sketch and compare the performance and accuracy with other sketches. 
+
+2. qsketch
+
+3. Heterogeneous sketch
+
+heterogeneous sketch algorithm:
+
+a, naive implementation, sketch_thread, v0
+integer table[n * m];
+parallel_insert(keys):
+    parallel_for_each(key : keys)
+        for i = 1 : m    
+            id = hash(i, key) % n;
+            atomic_add(table[i * n + id], 1);
+parallel_search(keys, counts):
+    parallel_for_each(key : keys, count : counts)
+        result = MAX_INTEGER;
+        for i = 1 : m
+            id = hash(i, key) % n;
+            result = min(result, table[i * n + id]);
+        count = result;
+
+Naive implementation (sketch v0)
+In this implementation, each thread loads a group of keys and it will handle them one by one. However, this sketch implementation may not fully take advantage of high memory bandwidth. The main reason is that the sketch tries to increase the counts of m random places, which suffers a low memory throughout due to the underlying CUDA memory architecture. [to do :show the comparison of performance between random access and sequential access]
+Things can be more serious while comparing sketch with Hash Map, because Hash Map usually only needs one memory access, but the sketch needs 3 or more memory accesses. That's why the sketch libraries are often slower than Hash Map libraries. This feature of the sketch greatly drops the performance, especially for the heterogeneous implementation. [to do : show the comparison of m = 3 and m = 1]
+
+
+b, sketch_warp, v1
+
+integer table[p * w];
+hash_mask m_table[H];
+
+warp_insert(key):
+    hv = hash(key);
+    id = hv % p;
+    hash_mask hm = m_table[hv % H];
+    for i = thread_index : warp_size : w
+        if hm[i]
+            atomic_add(table[id * w + i], 1);
+
+parallel_warp_insert(keys):
+    parallel_for_each(key : keys)
+        warp_insert(key);
+
+warp_search(key, count):
+    result = MAX_INTEGER;
+    hv = hash(key);
+    id = hv % p;
+    hash_mask hm = m_table[hv % H];
+    for i = thread_index : warp_size : w
+        if hm[i]
+            result = min(result, table[id * w + i]);
+    result = warp_min(result);
+    if thread_index == 0
+        count = result;
+parallel_warp_search(keys, counts):
+    parallel_warp_for_each(key : keys, count : counts)
+        warp_search(key, count);
+
+Warp implementation (qsketch v1)
+We propose a novel sketch which can overcome the stride memory access. The traditional sketch has m hash tables and each table has n count variables and n is much larger than m. However the qsketch has only one hash table and split it into lots of buckets, each bucket contains a specific number of count variables. In this algorithm, p is the number of buckets, w is the size of each bucket. Each hash_mask is a w-bits bitset and there are m bits are 1. It will generate H hash_masks before the first insertion happens, and stores them in the hash_mask table(m_table). Note that different sketch objects may share the same hash_mask table.  
+Each warp loads a group of keys and handles them one by one. When performing insertion, it first select a bucket and load a specific hash_mask, then increase the count variables if the the corresponding bits in the hash_mask are 1. Those memory accesses are guaranteed to access the variables in the same bucket, and the size of bucket is very small so the memory addresses are close to each other. This will help more memory accesses to be coalesced. 
+For searching, it will not increase the count variables, instead of calculating the minimal value and write it back to the output. Note that CUDA 11 introduces some new warp reduce functions, __reduce_min_sync() may help to improve the searching performance.
+
+The size of the bucket(w) will influence both the performance and accuracy. [to do: show the influence of w].
+
+c, sketch_sub_warp, v2
+
+integer table[p * w];
+hash_mask m_table[H];
+
+sub_warp_insert(key):
+    hv = hash(key);
+    id = hv % p;
+    hash_mask hm = m_table[hv % H];
+    for i = thread_index : warp_size : w
+        if hm[i]
+            atomic_add(table[id * w + i], 1);
+
+parallel_sub_warp_insert(keys):
+    parallel_for_each(key : keys)
+        warp_insert(key);
+
+warp_search(key, count):
+    result = MAX_INTEGER;
+    hv = hash(key);
+    id = hv % p;
+    hash_mask hm = m_table[hv % H];
+    for i = thread_index : warp_size : w
+        if hm[i]
+            result = min(result, table[id * w + i]);
+    result = warp_min(result);
+    if thread_index == 0
+        count = result;
+parallel_warp_search(keys, counts):
+    parallel_warp_for_each(key : keys, count : counts)
+        warp_search(key, count);
+
+sub warp
+[to do, bit-width(bus bandwidth), w]
+/*
+    // it can help to find out why qsketch is faster, and determine what is the best sub warp size. 
+
+    //performance
+    1. select m unique numbers from 0~(w - 1). And a0 < a1 < ... < am.
+    2. dis = am - a0; // wiki only has probability density function
+                      // I also need the cumulative distribution function.
+    3. E(bw, dis). // Expectation of the number of physical memory accesses per insertion.
+
+    //accuracy
+*/
+
+The smaller w will lead to higher performance because the memory accesses are more likely to be coalesced. However, if w is smaller than warp_size, there will be some idle threads, which will decrease the performance. The version 2 of qsketch solves the problem and increases the performance compared with version 1. 
+
+The qsketch_v2 divides a warp(32 threads) into several sub warps. Each sub warp will handle one insertion or searching. It means that the whole warp will execute several insertion simultaneously and there won’t be any idle threads while there are enough work load. In order to achieve the best performance, and balance the work load among sub warps, the size of the sub warp should be a factor of warpSize(32). 
+
+
+
+/*
+n is the number of buckets, s is the size of the bucket, and m is the number of count variables which one insertion needs to increase. There are two different cases because CUDA schedules threads by dividing them into warps. If s is smaller than warpSize, it means that a warp can handle one or more operation(insert, search, or delete). And if s is not less than warpSize, one warp can only handle one operation. 
+*/
+
+two levels
+
+The accuracy of sketch is limited by the size of hash tables. But a larger hash table will use larger memory while the device memory is usually smaller than the host memory. Some sketches supports to use unsigned character as count variable.However, the maximum value of unsigned character is 255, and it is easy to overflow even the input data is uniform distribution.
+[to do:  prove]
+
+// But this kind of overflow won’t happen frequently, because the input data is uniform distribution.
+// And if one count variable is going to overflow, the nearby variables are also likely to overflow. 
+
+/*
+low_frequency_table: [7 x uint, uint]...
+*/
+
+
+The qsketch_v3 uses two hash tables to handle the integer overflow problem. The first hash table is low_frequency_table, which can store a large number of different elements. And the second hash table is high_frequency_table, which is much smaller than low_frequency_table. If one count variable is going to overflow While perform insertion, it will request an available bucket(high_bucket) in the high_frequency_table and insert the element to the newly allocated bucket. It will also store the index of the new bucket to the last 32-bits of low_bucket(high_bucket_index). The following insertion will first load the low_bucket and check if high_bucket_index is pointed to a valid high_bucket. If so, it will load the high_bucket and finish the insertion. 
+For searching, it will add the result of high_bucket and low_bucket together and it won't modify anything. 
+
+The time complexity is still O(1) and the performance is closed to the qsketch_v2, which only has one hash table. Because the overflow won’t happen frequently and the high_frequency_table will be relative small and the accesses of high_frequency_table are well cached.
+
+[todo : show the performance ]
+The accuracy is greatly improved because it can use much more count variables.
+[todo : show the accuracy]
+
+
+high_bucket_index:
+Each bucket will not use the last 32-bits, and convert it to a 32-bit unsigned integer(high_bucket_index), which is the next level index, 0 ~ 1023 are reserved and 1024 ~ 2 ^ 32 - 1 are indices. 
+The 32-bit unsigned integer are enough, it can support a 2 TB high_frequency_table.
+ 
+atomic_allocate:
+
+atomic_allocate_v1(uint *high_bucket_index, uint *global_index):
+    uint id = 0;
+    uint old = atomicCAS(high_bucket_index, 0, 1);
+    if (old == 0) 
+        id = atomicAdd(global_index, 1);
+        *high_bucket_index = id;
+    else
+        while (id <= 1)
+            id = max(id, __ldcv(high_bucket_index));
+            __threadfence_block();// weak ordered // ? q4
+        // bug: id == 0 after the while loop
+        
+        id = 1
+        id = 2
+        id = 3
+    
+    return id;
+
+The whole high_frequency_table will be allocated in the constructor of sketch. When it needs to allocate a new high_bucket, several threads may try to upgrade the low_bucket at the same time, the first thread will read (old == 0) and it will finish the real allocation and other threads are waiting in a busy loop. The busy loop won't wait for a long time.
+
+__ldcv() will force the thread to load data from global memory.
+weak ordered:
+
+
+
+3. results
+4. conclusion

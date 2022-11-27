@@ -1,0 +1,117 @@
+warm
+32768			:	
+32768,insert perf: 480.252036 Mops/s
+16384,insert perf: 859.933957 Mops/s
+8192,insert perf: 1412.748644 Mops/s
+4096,insert perf: 2059.986816 Mops/s
+2048,insert perf: 2817.853922 Mops/s
+1024,insert perf: 3404.139434 Mops/s
+512,insert perf: 3600.230415 Mops/s
+256,insert perf: 3783.292978 Mops/s
+128,insert perf: 3872.366791 Mops/s
+64,insert perf: 3881.987578 Mops/s
+32,insert perf: 3867.574257 Mops/s
+65536			:	
+65536,insert perf: 521.180787 Mops/s
+32768,insert perf: 971.100062 Mops/s
+16384,insert perf: 1702.069717 Mops/s
+8192,insert perf: 2781.486426 Mops/s
+4096,insert perf: 4079.634465 Mops/s
+2048,insert perf: 5530.973451 Mops/s
+1024,insert perf: 6663.113006 Mops/s
+512,insert perf: 7054.176072 Mops/s
+256,insert perf: 7183.908046 Mops/s
+128,insert perf: 7640.586797 Mops/s
+64,insert perf: 7557.436518 Mops/s
+131072			:	
+131072,insert perf: 733.826465 Mops/s
+65536,insert perf: 1040.886002 Mops/s
+32768,insert perf: 1933.787129 Mops/s
+16384,insert perf: 3383.865728 Mops/s
+8192,insert perf: 5565.449688 Mops/s
+4096,insert perf: 8159.268930 Mops/s
+2048,insert perf: 9266.123054 Mops/s
+1024,insert perf: 13340.448239 Mops/s
+512,insert perf: 13781.697905 Mops/s
+256,insert perf: 14060.742407 Mops/s
+128,insert perf: 14568.764569 Mops/s
+262144			:	
+262144,insert perf: 516.025694 Mops/s
+131072,insert perf: 647.750621 Mops/s
+65536,insert perf: 740.146431 Mops/s
+32768,insert perf: 1477.882018 Mops/s
+16384,insert perf: 2824.220515 Mops/s
+8192,insert perf: 5208.333333 Mops/s
+4096,insert perf: 9221.689414 Mops/s
+2048,insert perf: 15299.877601 Mops/s
+1024,insert perf: 19470.404984 Mops/s
+512,insert perf: 26260.504202 Mops/s
+256,insert perf: 27716.186253 Mops/s
+524288			:	
+524288,insert perf: 381.847286 Mops/s
+262144,insert perf: 449.001107 Mops/s
+131072,insert perf: 492.434725 Mops/s
+65536,insert perf: 507.123565 Mops/s
+32768,insert perf: 1001.177385 Mops/s
+16384,insert perf: 2003.437899 Mops/s
+8192,insert perf: 3851.753703 Mops/s
+4096,insert perf: 7748.334108 Mops/s
+2048,insert perf: 13973.896761 Mops/s
+1024,insert perf: 27085.590466 Mops/s
+512,insert perf: 37707.390649 Mops/s
+1048576			:	
+1048576,insert perf: 307.908317 Mops/s
+524288,insert perf: 382.639200 Mops/s
+262144,insert perf: 413.743397 Mops/s
+131072,insert perf: 386.155849 Mops/s
+65536,insert perf: 437.714152 Mops/s
+32768,insert perf: 861.204791 Mops/s
+16384,insert perf: 1732.795936 Mops/s
+8192,insert perf: 3454.338822 Mops/s
+4096,insert perf: 6947.339169 Mops/s
+2048,insert perf: 13285.329011 Mops/s
+1024,insert perf: 27700.831025 Mops/s
+2097152			:	
+2097152,insert perf: 251.075167 Mops/s
+1048576,insert perf: 314.040319 Mops/s
+524288,insert perf: 362.094041 Mops/s
+262144,insert perf: 386.578310 Mops/s
+131072,insert perf: 405.162992 Mops/s
+65536,insert perf: 404.065383 Mops/s
+32768,insert perf: 802.510896 Mops/s
+16384,insert perf: 1630.147292 Mops/s
+8192,insert perf: 3203.069822 Mops/s
+4096,insert perf: 6360.898286 Mops/s
+2048,insert perf: 12811.397019 Mops/s
+4194304			:	
+4194304,insert perf: 175.775824 Mops/s
+2097152,insert perf: 244.932365 Mops/s
+1048576,insert perf: 337.049415 Mops/s
+524288,insert perf: 388.861075 Mops/s
+262144,insert perf: 409.841105 Mops/s
+131072,insert perf: 423.751752 Mops/s
+65536,insert perf: 423.327056 Mops/s
+32768,insert perf: 844.551083 Mops/s
+16384,insert perf: 1699.698898 Mops/s
+8192,insert perf: 3263.752843 Mops/s
+4096,insert perf: 6678.554494 Mops/s
+8388608			:	
+8388608,insert perf: 149.599767 Mops/s
+4194304,insert perf: 222.052494 Mops/s
+2097152,insert perf: 295.105154 Mops/s
+1048576,insert perf: 349.892614 Mops/s
+524288,insert perf: 388.168959 Mops/s
+262144,insert perf: 407.505913 Mops/s
+131072,insert perf: 422.497015 Mops/s
+65536,insert perf: 419.232347 Mops/s
+32768,insert perf: 834.035400 Mops/s
+16384,insert perf: 1630.419054 Mops/s
+8192,insert perf: 3301.900615 Mops/s
+16777216			:	
+16777216,insert perf: 89.993681 Mops/s
+8388608,insert perf: 149.071505 Mops/s
+4194304,insert perf: 222.040008 Mops/s
+2097152,insert perf: 293.011668 Mops/s
+1048576,insert perf: 349.052650 Mops/s
+524288,insert perf: 384.950597 Mops/s
+262144,insert perf: 405.823270 Mops/s

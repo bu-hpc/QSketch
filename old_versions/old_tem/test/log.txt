@@ -1,0 +1,20 @@
+0.483653
+tm: 1	rm: 0	perf: 8.270396 Gops/s
+0.516398
+tm: 2	rm: 0	perf: 7.745963 Gops/s
+0.521624
+tm: 3	rm: 0	perf: 7.668358 Gops/s
+0.542099
+tm: 4	rm: 0	perf: 7.378722 Gops/s
+0.564356
+tm: 5	rm: 0	perf: 7.087729 Gops/s
+0.586662
+tm: 6	rm: 0	perf: 6.818235 Gops/s
+0.608484
+tm: 7	rm: 0	perf: 6.573710 Gops/s
+0.631889
+tm: 8	rm: 0	perf: 6.330224 Gops/s
+0.638784
+tm: 9	rm: 0	perf: 6.261894 Gops/s
+0.645832
+tm: 10	rm: 0	perf: 6.193566 Gops/s

@@ -1,0 +1,51 @@
+
+--------------------------------------------------
+small data size
+size_t insert_keys_sz = 1024 * 1024;
+
+insert perf: 2191.526245 Mops/s
+search perf: 3025.608752 Mops/s
+insert perf: 3571.785750 Mops/s
+search perf: 3462.100387 Mops/s
+SlabHash:
+insert perf: 1557.414  Mops/s
+search perf: 3005.136 Mops/s
+--------------------------------------------------
+1. sketch insert is faster than SlabHash. 
+SlabHash needs to read the whole bucket, which is 128 Byte.
+Sketch doesn't need to read the whole bucket.
+
+
+--------------------------------------------------
+medium data size
+size_t insert_keys_sz = 32 * 1024 * 1024;
+
+insert perf: 1101.425868 Mops/s
+search perf: 2410.262899 Mops/s
+insert perf: 1275.296655 Mops/s
+search perf: 2452.550994 Mops/s
+SlabHash:
+insert perf: 1111.706  Mops/s
+search perf: 2487.241 Mops/s
+--------------------------------------------------
+2. sketch may be slower.
+
+--------------------------------------------------
+large data size
+insert_keys_sz = 128 * 1024 * 1024;
+
+test data 1:
+insert perf: 1144.925871 Mops/s
+search perf: 2414.166844 Mops/s
+test data 2:
+insert perf: 1103.501139 Mops/s
+search perf: 2313.517269 Mops/s
+SlabHash:
+insert perf: 1118.441 Mops/s
+search perf: 2582.513 Mops/s
+--------------------------------------------------
+
+TO DO:
+
+1. combine sub_warp and pre_load.
+2. test them with the same data.

@@ -1,0 +1,92 @@
+performance
+
+g++ version 7.5
+-O3
+
+insert_keys_size = 32 * 1024 * 1024
+search_keys_size = 32 * 1024 * 1024
+std::unordered_map
+insert perf: 2.422472 Mops/s
+search perf: 23.592765 Mops/s
+madoka:
+insert perf: 6.872905 Mops/s
+search perf: 12.651103 Mops/s
+
+
+std::unordered_map 
+insert performance:
+insert_keys_size : performance
+1024 : 27.917739 Mops/s
+2048 : 29.291017 Mops/s
+4096 : 28.640086 Mops/s
+8192 : 29.971879 Mops/s
+16384 : 27.887692 Mops/s
+32768 : 25.766714 Mops/s
+65536 : 23.900290 Mops/s
+131072 : 22.807959 Mops/s
+262144 : 22.015554 Mops/s
+524288 : 16.744974 Mops/s
+1048576 : 10.400765 Mops/s
+2097152 : 7.502165 Mops/s
+4194304 : 6.360106 Mops/s
+8388608 : 6.183076 Mops/s
+16777216 : 5.773001 Mops/s
+33554432 : 5.425996 Mops/s
+
+search performance:
+1024 : 96.023845 Mops/s
+2048 : 93.183445 Mops/s
+4096 : 94.101563 Mops/s
+8192 : 91.825341 Mops/s
+16384 : 83.270714 Mops/s
+32768 : 79.647867 Mops/s
+65536 : 80.105201 Mops/s
+131072 : 76.946848 Mops/s
+262144 : 68.142562 Mops/s
+524288 : 38.910121 Mops/s
+1048576 : 30.863913 Mops/s
+2097152 : 30.970920 Mops/s
+4194304 : 29.552080 Mops/s
+8388608 : 26.307784 Mops/s
+16777216 : 24.800833 Mops/s
+33554432 : 25.935530 Mops/s
+
+madoka::sketch
+insert performance:
+1024 : 21.861708 Mops/s
+2048 : 22.600120 Mops/s
+4096 : 21.766689 Mops/s
+8192 : 22.836089 Mops/s
+16384 : 22.808121 Mops/s
+32768 : 22.804293 Mops/s
+65536 : 22.732877 Mops/s
+131072 : 22.757631 Mops/s
+262144 : 21.954458 Mops/s
+524288 : 20.843206 Mops/s
+1048576 : 20.344788 Mops/s
+2097152 : 20.115697 Mops/s
+4194304 : 19.791885 Mops/s
+8388608 : 13.362428 Mops/s
+16777216 : 8.627371 Mops/s
+33554432 : 7.790796 Mops/s
+
+search performance:
+1024 : 44.348887 Mops/s
+2048 : 46.558403 Mops/s
+4096 : 46.831915 Mops/s
+8192 : 46.186816 Mops/s
+16384 : 48.343033 Mops/s
+32768 : 49.165910 Mops/s
+65536 : 50.047806 Mops/s
+131072 : 50.272052 Mops/s
+262144 : 46.749218 Mops/s
+524288 : 43.941836 Mops/s
+1048576 : 43.089689 Mops/s
+2097152 : 42.773879 Mops/s
+4194304 : 41.686291 Mops/s
+8388608 : 24.824354 Mops/s
+16777216 : 16.584581 Mops/s
+33554432 : 15.408694 Mops/s
+
+parallel_hasp
+30000000 : 21.58 Mops/s

@@ -1,0 +1,18 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{axis}
+    \addplot [mark = none,blue]
+    table {../data/perf_thread_vs_warp.txt};
+    
+    % \addplot [col sep=comma]
+    % table {example_data_1_um.txt};
+\end{axis}
+\end{tikzpicture}
+% table {example_data_1_um.txt};
+\end{document}

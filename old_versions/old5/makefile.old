@@ -1,0 +1,51 @@
+# CUDA= -lcurand
+# CXX = nvcc
+
+# HEADER_FILES = $(wildcard lib/*.h)
+# TEST_FILES = $(wildcard *.cu)
+# NAMES = $(patsubst %.cu, %, $(TEST_FILES))
+
+
+# all: $(HEADER_FILES) $(TEST_FILES)
+# 	CXX TEST_FILES CPPFLAGS -o main
+# clean:
+# 	-rm $(NAMES)
+CUDA_ROOT_DIR = /usr/local/cuda
+
+CC = g++
+NVCC = nvcc
+CUDA_LINK_LIBS = -lcurand
+
+SRC_DIR = src
+OBJ_DIR = bin
+INC_DIR = include
+
+EXE = run
+
+# Object files:
+# OBJS = $(OBJ_DIR)/main.o 
+
+##########################################################
+
+## Compile ##
+
+# Link c++ and CUDA compiled object files to target executable:
+$(EXE) : $(OBJS)
+	$(CC) $(CC_FLAGS) $(OBJS) -o $@ $(CUDA_INC_DIR) $(CUDA_LIB_DIR) $(CUDA_LINK_LIBS)
+
+# Compile main .cpp file to object files:
+$(OBJ_DIR)/%.o : %.cpp
+	$(CC) $(CC_FLAGS) -c $< -o $@
+
+# Compile C++ source files to object files:
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.cpp include/%.h
+	$(CC) $(CC_FLAGS) -c $< -o $@
+
+# Compile CUDA source files to object files:
+$(OBJ_DIR)/%.o : $(SRC_DIR)/%.cu $(INC_DIR)/%.cuh
+	$(NVCC) $(NVCC_FLAGS) -c $< -o $@ $(NVCC_LIBS)
+
+# Clean objects in object directory.
+clean:
+	$(RM) bin/* *.o $(EXE)
+

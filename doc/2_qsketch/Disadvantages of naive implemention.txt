@@ -1,0 +1,5 @@
+Disadvantages of naive implementation
+
+A naive heterogeneous sketch implementation may not fully take advantage of high memory bandwidth. The main reason is that the sketch tries to increase the counts of several random places, which suffers a low memory throughout due to the underlying CUDA memory architecture. [to do :show the comparison of performance between random access and sequential access]
+Things can be more serious while comparing sketch with Hash Map, because Hash Map usually only needs one memory access, but the sketch needs 3 or more memory accesses. That's why the sketch libraries are often slower than Hash Map libraries. This feature of the sketch greatly drops the performance, especially for the heterogeneous implementation. [to do : show the comparison of m = 3 and m = 1]
+

@@ -1,0 +1,559 @@
+n: 65521, m: 1, seed_sz: 4
+==PROF== Connected to process 10801 (/home/hqin/git/Count-Min-Sketch/bin/run)
+==PROF== Profiling "gen_quasi" - 1: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 2: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 3: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 4: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 5: 0%....50%....100%2.038395 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 6: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 7: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 8: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 9: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 10: 0%....50%....100%1.978040 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 11: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 12: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 13: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 14: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 15: 0%....50%....100%1.829046 Mops/s
+n: 65521, m: 2, seed_sz: 4
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 16: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 17: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 18: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 19: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 20: 0%....50%....100%2.025978 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 21: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 22: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 23: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 24: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 25: 0%....50%....100%1.967128 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 26: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 27: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 28: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 29: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 30: 0%....50%....100%1.921740 Mops/s
+n: 65521, m: 4, seed_sz: 4
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 31: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 32: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 33: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 34: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 35: 0%....50%....100%2.003986 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 36: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 37: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 38: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 39: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 40: 0%....50%....100%1.828546 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 41: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 42: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 43: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 44: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 45: 0%....50%....100%1.993438 Mops/s
+n: 65521, m: 8, seed_sz: 4
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 46: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 47: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 48: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 49: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp" - 50: 0%....50%....100%1.938634 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 51: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 52: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 53: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 54: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_1" - 55: 0%....50%....100%1.962809 Mops/s
+ - 1 pass
+==PROF== Profiling "gen_quasi" - 56: 0%....50%....100% - 1 pass
+==PROF== Profiling "gen_quasi" - 57: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 58: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 59: 0%....50%....100% - 1 pass
+==PROF== Profiling "insert_warp_test_2" - 60: 0%....50%....100%2.027212 Mops/s
+ - 1 pass
+==PROF== Disconnected from process 10801
+[10801] run@127.0.0.1
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         299.15
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                          80.37
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.07
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         406.18
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.07
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         442.08
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.06
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         359.73
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         287.19
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                          82.36
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.70
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         347.12
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.70
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         353.40
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.70
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         355.89
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         296.07
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                          76.38
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.73
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         356.61
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.73
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         374.47
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           1.73
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         369.77
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         291.77
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                          77.09
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           2.02
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         400.90
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           2.02
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         364.84
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           2.02
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         446.82
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         369.79
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         180.10
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.32
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         405.40
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.32
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         394.68
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.32
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         402.92
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         314.67
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                          85.46
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           2.04
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         423.80
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           2.03
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         419.35
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           2.04
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         339.15
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         298.24
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:49, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         112.65
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.18
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         379.48
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.18
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         355.14
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.18
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         333.52
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         323.22
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         162.95
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           6.13
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         405.00
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           6.12
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         364.91
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           6.14
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         365.37
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         357.54
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         169.02
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.79
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         364.89
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.78
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         395.71
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           3.77
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         342.80
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         290.56
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         156.42
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           4.82
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         268.59
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           4.79
+    lts__t_sectors_op_read.sum.per_second                                   sector/nsecond                           1.05
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           4.80
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         242.30
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         299.70
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                          77.71
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           9.73
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         427.85
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           9.71
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         356.83
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_1<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           9.73
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         380.60
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         437.20
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void gen_quasi<__curandStateSharedSobol<unsigned int>, unsigned int, int, &(pass_bits(unsigned int, int)), rng_config<__curandStateSharedSobol<unsigned int>, (curandOrdering)101> >(unsigned int*, unsigned long, unsigned int, unsigned int, unsigned long long, __curandStateSharedSobol<unsigned int>::value_type const*, int), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                    sector/second                              0
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         883.18
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           6.59
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         342.71
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           6.57
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         277.53
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+
+  void insert_warp_test_2<unsigned int, unsigned int, unsigned int, unsigned int, hash_mul_add<unsigned int, unsigned int, unsigned int> >(unsigned int*, unsigned long, unsigned int*, unsigned long, unsigned long, hash_mul_add<unsigned int, unsigned int, unsigned int> const&, unsigned int*, unsigned long, unsigned long, void*), 2020-Dec-16 14:30:50, Context 1, Stream 7
+    Section: Command line profiler metrics
+    ---------------------------------------------------------------------- --------------- ------------------------------
+    lts__t_sectors_op_atom.sum.per_second                                   sector/nsecond                           6.56
+    lts__t_sectors_op_read.sum.per_second                                   sector/usecond                         273.49
+    lts__t_sectors_op_red.sum.per_second                                     sector/second                              0
+    ---------------------------------------------------------------------- --------------- ------------------------------
+

@@ -1,0 +1,300 @@
+i: 0
+max: 6	ave: 0.0954056
+maxp: 700%	avep: 109.539%
+i: 1
+max: 6	ave: 0.0943842
+maxp: 700%	avep: 109.437%
+i: 2
+max: 7	ave: 0.0951223
+maxp: 800%	avep: 109.511%
+i: 3
+max: 7	ave: 0.0950708
+maxp: 800%	avep: 109.506%
+i: 4
+max: 6	ave: 0.0948639
+maxp: 700%	avep: 109.486%
+i: 5
+max: 8	ave: 0.0951557
+maxp: 900%	avep: 109.514%
+i: 6
+max: 6	ave: 0.0946674
+maxp: 700%	avep: 109.466%
+i: 7
+max: 6	ave: 0.0952978
+maxp: 700%	avep: 109.528%
+i: 8
+max: 6	ave: 0.0946674
+maxp: 700%	avep: 109.465%
+i: 9
+max: 6	ave: 0.0948591
+maxp: 700%	avep: 109.485%
+i: 10
+max: 7	ave: 0.0944395
+maxp: 800%	avep: 109.443%
+i: 11
+max: 6	ave: 0.0948048
+maxp: 700%	avep: 109.479%
+i: 12
+max: 6	ave: 0.095006
+maxp: 700%	avep: 109.5%
+i: 13
+max: 6	ave: 0.0948162
+maxp: 700%	avep: 109.48%
+i: 14
+max: 6	ave: 0.0948353
+maxp: 700%	avep: 109.482%
+i: 15
+max: 6	ave: 0.0951376
+maxp: 700%	avep: 109.513%
+i: 16
+max: 7	ave: 0.0949154
+maxp: 800%	avep: 109.49%
+i: 17
+max: 6	ave: 0.0949965
+maxp: 700%	avep: 109.499%
+i: 18
+max: 7	ave: 0.0948257
+maxp: 800%	avep: 109.482%
+i: 19
+max: 7	ave: 0.0945721
+maxp: 800%	avep: 109.456%
+i: 20
+max: 6	ave: 0.0945063
+maxp: 700%	avep: 109.45%
+i: 21
+max: 6	ave: 0.0946522
+maxp: 700%	avep: 109.464%
+i: 22
+max: 6	ave: 0.0948391
+maxp: 700%	avep: 109.482%
+i: 23
+max: 6	ave: 0.0948725
+maxp: 700%	avep: 109.485%
+i: 24
+max: 6	ave: 0.0944529
+maxp: 700%	avep: 109.445%
+i: 25
+max: 6	ave: 0.0947399
+maxp: 700%	avep: 109.473%
+i: 26
+max: 6	ave: 0.0941858
+maxp: 700%	avep: 109.417%
+i: 27
+max: 7	ave: 0.0951223
+maxp: 800%	avep: 109.511%
+i: 28
+max: 5	ave: 0.0955324
+maxp: 600%	avep: 109.552%
+i: 29
+max: 7	ave: 0.0954523
+maxp: 800%	avep: 109.544%
+i: 30
+max: 6	ave: 0.0950975
+maxp: 700%	avep: 109.509%
+i: 31
+max: 6	ave: 0.0949287
+maxp: 700%	avep: 109.492%
+i: 32
+max: 6	ave: 0.0947609
+maxp: 700%	avep: 109.475%
+i: 33
+max: 7	ave: 0.0942354
+maxp: 800%	avep: 109.423%
+i: 34
+max: 6	ave: 0.0952034
+maxp: 700%	avep: 109.519%
+i: 35
+max: 7	ave: 0.0949707
+maxp: 800%	avep: 109.496%
+i: 36
+max: 6	ave: 0.0943842
+maxp: 700%	avep: 109.437%
+i: 37
+max: 6	ave: 0.0952053
+maxp: 700%	avep: 109.519%
+i: 38
+max: 6	ave: 0.0944691
+maxp: 700%	avep: 109.446%
+i: 39
+max: 7	ave: 0.094636
+maxp: 800%	avep: 109.462%
+i: 40
+max: 6	ave: 0.0952139
+maxp: 700%	avep: 109.52%
+i: 41
+max: 6	ave: 0.0943804
+maxp: 700%	avep: 109.437%
+i: 42
+max: 6	ave: 0.0948982
+maxp: 700%	avep: 109.489%
+i: 43
+max: 5	ave: 0.0949717
+maxp: 600%	avep: 109.496%
+i: 44
+max: 7	ave: 0.0953169
+maxp: 800%	avep: 109.53%
+i: 45
+max: 7	ave: 0.0947275
+maxp: 800%	avep: 109.472%
+i: 46
+max: 6	ave: 0.0950251
+maxp: 700%	avep: 109.502%
+i: 47
+max: 6	ave: 0.0944672
+maxp: 700%	avep: 109.446%
+i: 48
+max: 6	ave: 0.0947371
+maxp: 700%	avep: 109.473%
+i: 49
+max: 7	ave: 0.0948591
+maxp: 800%	avep: 109.484%
+i: 50
+max: 7	ave: 0.0948277
+maxp: 800%	avep: 109.482%
+i: 51
+max: 6	ave: 0.0946646
+maxp: 700%	avep: 109.466%
+i: 52
+max: 6	ave: 0.0941143
+maxp: 700%	avep: 109.411%
+i: 53
+max: 6	ave: 0.0944862
+maxp: 700%	avep: 109.448%
+i: 54
+max: 6	ave: 0.0943975
+maxp: 700%	avep: 109.438%
+i: 55
+max: 7	ave: 0.0948706
+maxp: 800%	avep: 109.486%
+i: 56
+max: 6	ave: 0.095048
+maxp: 700%	avep: 109.504%
+i: 57
+max: 6	ave: 0.0943346
+maxp: 700%	avep: 109.431%
+i: 58
+max: 6	ave: 0.0943727
+maxp: 700%	avep: 109.437%
+i: 59
+max: 6	ave: 0.0950346
+maxp: 700%	avep: 109.503%
+i: 60
+max: 6	ave: 0.0946999
+maxp: 700%	avep: 109.469%
+i: 61
+max: 6	ave: 0.0954657
+maxp: 700%	avep: 109.545%
+i: 62
+max: 6	ave: 0.0949841
+maxp: 700%	avep: 109.497%
+i: 63
+max: 6	ave: 0.0948162
+maxp: 700%	avep: 109.48%
+i: 64
+max: 7	ave: 0.0945425
+maxp: 800%	avep: 109.453%
+i: 65
+max: 6	ave: 0.0949726
+maxp: 700%	avep: 109.496%
+i: 66
+max: 5	ave: 0.0944338
+maxp: 600%	avep: 109.442%
+i: 67
+max: 7	ave: 0.0951023
+maxp: 800%	avep: 109.509%
+i: 68
+max: 6	ave: 0.0944414
+maxp: 700%	avep: 109.442%
+i: 69
+max: 6	ave: 0.0946074
+maxp: 700%	avep: 109.46%
+i: 70
+max: 7	ave: 0.0944166
+maxp: 800%	avep: 109.44%
+i: 71
+max: 6	ave: 0.0943098
+maxp: 700%	avep: 109.43%
+i: 72
+max: 6	ave: 0.0951614
+maxp: 700%	avep: 109.515%
+i: 73
+max: 6	ave: 0.0952883
+maxp: 700%	avep: 109.528%
+i: 74
+max: 6	ave: 0.0946531
+maxp: 700%	avep: 109.464%
+i: 75
+max: 7	ave: 0.0947819
+maxp: 800%	avep: 109.476%
+i: 76
+max: 6	ave: 0.0955858
+maxp: 700%	avep: 109.557%
+i: 77
+max: 6	ave: 0.0949326
+maxp: 700%	avep: 109.492%
+i: 78
+max: 6	ave: 0.0949669
+maxp: 700%	avep: 109.496%
+i: 79
+max: 6	ave: 0.0950699
+maxp: 700%	avep: 109.506%
+i: 80
+max: 6	ave: 0.0945597
+maxp: 700%	avep: 109.454%
+i: 81
+max: 6	ave: 0.0954714
+maxp: 700%	avep: 109.546%
+i: 82
+max: 6	ave: 0.0950422
+maxp: 700%	avep: 109.503%
+i: 83
+max: 6	ave: 0.0946569
+maxp: 700%	avep: 109.465%
+i: 84
+max: 7	ave: 0.0942183
+maxp: 800%	avep: 109.421%
+i: 85
+max: 6	ave: 0.0946865
+maxp: 700%	avep: 109.468%
+i: 86
+max: 6	ave: 0.095645
+maxp: 700%	avep: 109.563%
+i: 87
+max: 8	ave: 0.0943966
+maxp: 900%	avep: 109.439%
+i: 88
+max: 6	ave: 0.0949793
+maxp: 700%	avep: 109.496%
+i: 89
+max: 6	ave: 0.094614
+maxp: 700%	avep: 109.46%
+i: 90
+max: 6	ave: 0.0951605
+maxp: 700%	avep: 109.515%
+i: 91
+max: 6	ave: 0.0948095
+maxp: 700%	avep: 109.481%
+i: 92
+max: 6	ave: 0.0951147
+maxp: 700%	avep: 109.51%
+i: 93
+max: 7	ave: 0.0950308
+maxp: 800%	avep: 109.502%
+i: 94
+max: 6	ave: 0.0947762
+maxp: 700%	avep: 109.476%
+i: 95
+max: 6	ave: 0.0948057
+maxp: 700%	avep: 109.48%
+i: 96
+max: 7	ave: 0.0943594
+maxp: 800%	avep: 109.435%
+i: 97
+max: 6	ave: 0.094408
+maxp: 700%	avep: 109.44%
+i: 98
+max: 6	ave: 0.0953035
+maxp: 700%	avep: 109.529%
+i: 99
+max: 6	ave: 0.0945711
+maxp: 700%	avep: 109.456%

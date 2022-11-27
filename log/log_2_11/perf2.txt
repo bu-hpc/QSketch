@@ -1,0 +1,100 @@
+max: 6	ave: 0.108605
+maxp: 700%	avep: 110.86%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 87	ave: 0.0487175
+maxp: 8800%	avep: 100.55%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.108528
+maxp: 700%	avep: 110.851%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.062499
+maxp: 6500%	avep: 100.585%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.109199
+maxp: 700%	avep: 110.919%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0500669
+maxp: 6500%	avep: 100.517%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.107784
+maxp: 700%	avep: 110.777%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 4294967295	ave: 0.0704536
+maxp: 6500%	avep: 100.542%
+greater_counts: 52
+----------------------------------
+max: 7	ave: 0.108947
+maxp: 800%	avep: 110.893%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0417709
+maxp: 6500%	avep: 100.499%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.109099
+maxp: 700%	avep: 110.909%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 85	ave: 0.0349808
+maxp: 8600%	avep: 100.546%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.109395
+maxp: 700%	avep: 110.938%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0624905
+maxp: 6500%	avep: 100.562%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.109569
+maxp: 700%	avep: 110.956%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 65	ave: 0.0668364
+maxp: 6400%	avep: 100.52%
+greater_counts: 0
+----------------------------------
+max: 7	ave: 0.108727
+maxp: 800%	avep: 110.87%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 107	ave: 0.0564041
+maxp: 10800%	avep: 100.486%
+greater_counts: 0
+----------------------------------
+max: 6	ave: 0.108902
+maxp: 700%	avep: 110.889%
+high_freq_min: 32
+high_freq_max: 64
+random_freq
+64
+max: 64	ave: 0.0384531
+maxp: 6500%	avep: 100.489%
+greater_counts: 0
+----------------------------------

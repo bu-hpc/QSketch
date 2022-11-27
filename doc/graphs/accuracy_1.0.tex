@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale = 0.48]
+    \begin{semilogxaxis}[
+        % title={Accuracy (Load Factor = 1.0)},
+        xlabel={Memory Usage},
+        ylabel={Accuracy (\%)},
+        legend pos=north east,
+        xmajorgrids=true,
+        ymajorgrids=true,
+    ]
+
+        \addplot table[x = ThreadMemoryUsage, y = Thread] {data/qsketch/accuracy_1.0.dat};
+        \addlegendentry{Thread}
+        \addplot table[x = WarpMemoryUsage, y = Warp] {data/qsketch/accuracy_1.0.dat};
+        \addlegendentry{Warp}
+        \addplot table[x = Sub_WarpMemoryUsage, y = Sub_Warp] {data/qsketch/accuracy_1.0.dat};
+        \addlegendentry{Sub\_Warp}
+        \addplot table[x = Sub_Warp_LevelMemoryUsage, y = Sub_Warp_Level] {data/qsketch/accuracy_1.0.dat};
+        \addlegendentry{Level}
+    \end{semilogxaxis}
+\end{tikzpicture}

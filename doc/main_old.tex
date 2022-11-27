@@ -1,0 +1,370 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+% my packages
+\usepackage{algorithm}
+% \usepackage[ruled,vlined]{algorithm2e}
+
+%old
+% \documentclass{article}
+% \usepackage[utf8]{inputenc}
+% \usepackage{blindtext}
+% \usepackage{multicol}
+% \usepackage[ruled,vlined]{algorithm2e}
+
+
+\title{gpupaper}
+\author{kchiu }
+\date{May 2021}
+
+\begin{document}
+
+\maketitle
+% \begin{multicols}{2}
+\section{Introduction}
+[to do]
+\section{Background}
+\subsection{GPU}
+The Graphics Processing Unit (GPU) provides much higher instruction throughput and memory bandwidth than the CPU within a similar price and power envelope\cite{b1}. While the CPU is designed to excel at executing a few tens of these threads in parallel, the GPU is designed to excel at executing thousands of them in parallel\cite{b1}\cite{b2}. Threads are grouped into blocks(1, 2 or 3 dimensional), and blocks are organized into a grid(also 1, 2 or 3 dimensional). A thread block may contain up to 1024 threads and the GPU schedules and executes threads of the same block in groups of 32 parallel threads called warps\cite{b1}. Threads of a warp can only run in the same Streaming Multiprocessor (SM) and they must execute one common instruction in lockstep. Branch divergence occurs if the threads of a warp execute disjoint code paths, which will reduce the overall throughput, but different warps are free to execute common or disjoint code paths. 
+
+
+\subsection{Global Memory}
+ 
+
+The largest device memory is global memory, which has high memory throughput when the warps can coalesce the adjacent memory accesses.Because one physical memory transaction can actually access a tile of data. And when an instruction tries to access the global memory, if the physical addresses of different data are close enough that some transactions can actually access several addresses. [For devices of compute capability 6.0 or higher, the concurrent accesses of the threads of a warp will coalesce into a number of transactions equal to the number of 32-byte transactions necessary to service all of the threads of the warp.]  For example, if a warp plans to load a sequence of 32 4-byte integers, it may only need 4 32-byte memory transactions. However, if the 32 integers are stored on the random places among a large memory area, they are unlikely to be close to each other and can not be coalesced, so the 32 accesses may need 32 memory transactions. In this situation, each transaction transfers 32 bytes data and only 4 bytes are useful, the throughput is divided by 8. In order to achieve the peak performance, the data should also be at least 32-byte aligned[add more here]. 
+% on a GPU with 1024-bit memory bus width, and the 32 memory accesses are coalesced into one. 
+CUDA assumes that the device memories are weakly-ordered, that is the order of one thread writes data to memory is not guaranteed to be the same as the order in which the data is observed by another thread. For example, if thread A writes 1, 2, 3 to the global memory one by one, thread B may observes that A writes 2 at first. A memory function is needed to enforce the ordering. 
+\subsection{Hash Function}
+QSketch[to do] assumes that there is already a hash function that can map the input data to uniform distribution. It has a default hash function and several build-in hash functions, and the users can also define their own hash functions if it is necessary. Some user-defined hash functions may be slow or can not execute on GPU, but this won't reduce the performance. Because hash functions usually are independent and can execute simultaneously, so the time complexity of hash is still O(1).
+% \begin{algorithmic}[1]
+%     \STATE Function
+%     {Increment}{$b1$}
+%      1111
+%     \STATE EndFunction
+% \end{algorithmic}
+\subsection{Sketch}
+\begin{algorithm}[H]
+\DontPrintSemicolon
+\caption{Sketch algorithm}
+\SetKwProg{Fn}{Function}{}{end}
+\SetKw{KwRet}{return}
+\SetKwFunction{FnInsert}{insert}
+\SetKwFunction{FnSearch}{search}
+% \SetKwArray{HashTable}{table}
+$table[n][m] \longleftarrow 0$\;
+\HashTable{n}{m}$ \longleftarrow 0$\;
+\Fn()
+{\FnInsert{key}}
+{
+    \For{$i\leftarrow 0$ \KwTo $m$}{
+        $id \leftarrow hash(i, key) \% n$
+        $table[id][i]$++
+    }
+}
+
+\Fn()
+{\FnSearch{key}}
+{
+    $count \leftarrow MAX_INTEGER$\;
+    \For{$i\leftarrow 0$ \KwTo $m$}{
+        $id \leftarrow hash(i, key) \% n$
+        % table[id][i]++
+        $count \leftarrow min(count, table[id][i])$
+    }
+    \KwRet $count$\;
+}
+\end{algorithm}
+
+A sketch is a data structure which can record the frequencies of elements. In the algorithm, n is a large number and the specific value of n is dependent on the input data size. The larger n will consume more memories and it should be more accuracy. However, m is a small number and should not be changed. 
+Since the sketch doesn't need to store the element itself, it can receive elements as many as possible without increasing the memory usage.  
+% Parallel sketch
+In order to improve the performance of insert() and search(), it is not odd to implement a parallel version of sketch. However the parallel sketch is still limited by the low computer power of CPU and narrow memory bandwidth of host memory. 
+
+\subsection{Related Work}
+\subsection{contribution}
+We propose a new heterogeneous sketch, q-sketch, which has higher performance than other sketches and can still achieve the same accuracy. We implement the q-sketch and compare the performance and accuracy with other sketches. 
+\section{QSketch}
+\subsection{Thread Sketch}
+\begin{algorithm}[H]
+    \DontPrintSemicolon
+    \caption{Thread Sketch algorithm}
+    \SetKwProg{Fn}{Function}{}{end}
+    \SetKw{KwRet}{return}
+    \SetKw{Kwin}{in}
+    \SetKwFunction{FnInsert}{insert}
+    \SetKwFunction{FnSearch}{search}
+    % \SetKwArray{HashTable}{table}
+    $table[n * m] \longleftarrow 0$\;
+    % \HashTable{n}{m}$ \longleftarrow 0$\;
+    \SetKwFor{ParallelForEach}{parallel for each}{do}{endfor}
+\Fn(){\FnInsert{keys}}
+{
+    \ParallelForEach{$key$ \Kwin $keys$}
+    {
+      \For{$i\leftarrow 0$ \KwTo $m$} 
+        {
+            $id \leftarrow hash(i, key) \% n$\;
+            atomic\_add($table[i * n + id]$, 1)\;
+        }
+    }
+}
+\Fn(){\FnSearch{keys, counts}}
+{
+    \ParallelForEach{$key$ \Kwin $keys$, $count$ \Kwin $counts$, }
+    {
+        $count \leftarrow MAX_INTEGER$\;
+      \For{$i\leftarrow 0$ \KwTo $m$}{
+            $id \leftarrow hash(i, key) \% n$
+            % table[id][i]++
+            $count \leftarrow min(count, table[i * n + id]$
+        }
+    }
+}
+
+\end{algorithm}
+
+% Naive implementation (sketch v0)
+In this implementation, each thread loads a group of keys and it will handle them one by one. However, this sketch implementation may not fully take advantage of high memory bandwidth. The main reason is that the sketch tries to increase the counts of m random places, which suffers a low memory throughout due to the underlying CUDA memory architecture. In each warp, it will need about $m$ 32-byte memory transactions for every searching operation. If the count variables are 4-byte integers, there are only 4 useful bytes for each 32-byte memory transaction, and the throughput is divided by 8 in theory. 
+[to do :show the comparison of performance between random access and sequential access]
+Things can be more serious while comparing sketch with Hash Map, because Hash Map usually only needs one memory access, but the sketch needs 3 or more memory accesses. That's why the sketch libraries are often slower than Hash Map libraries. This feature of the sketch greatly drops the performance, especially for the heterogeneous implementation. [to do : show the comparison of m = 3 and m = 1]
+And it is hard to cache the random accesses in l2 cache[to do]
+\subsection{Warp Sketch}
+
+\begin{algorithm}[H]
+    \DontPrintSemicolon
+    \caption{Warp Sketch algorithm}
+    \SetKwProg{Fn}{Function}{}{end}
+    \SetKw{KwRet}{return}
+    \SetKw{Kwin}{in}
+    \SetKw{KwStep}{step}
+    \SetKwFunction{FnInsert}{insert}
+    \SetKwFunction{FnSearch}{search}
+    $table[p * w] \longleftarrow 0$\;
+    $\_shared\_ mask\_table[H] \longleftarrow generate\_hash\_mask(H)$\;
+    \SetKwFor{ParallelForEach}{parallel for each}{do}{endfor}
+\Fn(){\FnInsert{keys}}
+{
+    \ParallelForEach{$key$ \Kwin $keys$}
+    {
+    %   \For{$i\leftarrow 0$ \KwTo $m$} 
+    %     {
+            \If{$thread_index == 0$}{
+                $hv \leftarrow hash(key)$\;
+                $id \leftarrow hv \% p$\;
+                $hash\_mask \leftarrow$\; $mask\_table[hv \% H]$\;
+            }
+            $id, hash_mask \leftarrow broadcast(id, hash\_mask)$\;
+            \For{$i\leftarrow thread\_index$ \KwTo $w$, \KwStep $warp\_size$}
+            {
+                \If {$hash\_mask[i]$}
+                {
+                    $atomic\_add(table[id * w + i], 1)$
+                }
+            }
+        % }
+    }
+}
+\Fn(){\FnSearch{keys, counts}}
+{
+    \ParallelForEach{$key$ \Kwin $keys$, $count$ \Kwin $counts$, }
+    {
+        $result \leftarrow MAX_INTEGER$\;
+    %   \For{$i\leftarrow 0$ \KwTo $m$} 
+    %     {
+            \If{$thread_index == 0$}{
+                $hv \leftarrow hash(key)$\;
+                $id \leftarrow hv \% p$\;
+                $hash\_mask \leftarrow$\; $mask\_table[hv \% H]$\;
+            }
+            $id, hash_mask \leftarrow broadcast(id, hash\_mask)$\;
+            \For{$i\leftarrow thread\_index$ \KwTo $w$, \KwStep $warp\_size$}
+            {
+                \If {$hash\_mask[i]$}
+                {
+                    % $atomic\_add(table[id * w + i], 1)$
+                    $result \leftarrow min(count, table[i * n + id]$
+                }
+            }
+        % }
+        $result \leftarrow warp\_reduce\_min(result)$\;
+        \If{$thread\_index == 0$}
+        {
+            $count \leftarrow result$
+        }
+    }
+}
+
+\end{algorithm}
+
+We propose a novel sketch which can overcome the stride memory access. The traditional sketch has m hash tables and each table has n count variables where n is much larger than m. However the qsketch has only one hash table and splits it into lots of buckets, each bucket contains a relative smaller number of count variables. In this algorithm, $p$ is the number of buckets, $s$ is the size of each bucket(in byte) and $w$ is the number of count variables in a bucket. $s$ must be a multiple of 128 bytes and $w$ should be a multiple of 32(warp\_size), so the memory accesses are alignment of 128 bytes for all buckets and the work loads are balanced among all threads of a warp. Each hash\_mask is a w\-bits bitset and there are m random bits are 1.
+% test m random numbers, not use hash\_mask
+In the initialization of qsketch, it will allocate a fixed size table on global memory and set the initial value to 0. It will also check if there is already an available hash\_mask table, if not, it will generate H hash\_masks and store them in the hash\_mask table(m\_table). The different sketch objects may share the same hash\_mask table. And the hash mask table is much smaller than the sketch hash table, for example, a hash mask table which stores 1024 128-bits hash masks will only need 16 KB memory and it is easy to be cached in the l2 cache or other fast memories. So the accesses of hash mask table should not be calculated as global memory accesses for insertion, searching, or deletion operations.
+For insertion and deletion, each warp will be allocated a batch of keys and it will handle them one by one. When performing the operation, the first thread of each warp will calculate a hash value of the key, and select a random bucket and load a specific hash\_mask by using the hash value. The hash\_mask is stored in shared memory while can be accessed by all threads in the same block. But the bucket id needs to be broadcast to the warp, then all threads in this warp will increase or decrease the count variables if the the corresponding bits in the hash\_mask are 1. The increasing or decreasing function must be atomic because different warps may access the same count variable simultaneously although they might have different keys. Those memory accesses are guaranteed to access the variables in the same bucket, and the size of bucket is very small so the memory addresses are close to each other. This will help more memory accesses to be coalesced, which will increase the insertion performance. 
+For searching, it will not modify the count variables, instead of calculating the minimal value and write it back to the output. And CUDA 11 introduces some new warp reduce functions, \_\_reduce\_min\_sync() may help to improve the searching performance. But those functions are only supported by devices of compute capability 8.x or higher, so their performance are not included in this paper.
+The order of insertion, deletion and searching are arbitrary for the keys of the same batch. And an explicit synchronization such as cudaDeviceSynchronize() must be called between different batches if they must run in order. 
+The warp will process 32 bits of hash\_mask and 32 count variables in each loop. The size of the bucket(w) will influence both the performance and accuracy. [to do: show the influence of w]. The smaller w will lead to higher performance because the memory accesses are more likely to be coalesced. If w is greater than warp\_size, each warp will execute several loops, which reducing the throughput. If w is equal to warp\_size, the warp will need to access 32 4-byte integers, which are coalesced into at most 4 32-byte memory accesses. The number of actual memory accesses for each operation are the minimum value of $m$ and coalesced memory accesses. For example, there can be only one 32-byte memory access if all bits that are set(equal to one) are in one quarter of a 32-bit hash\_mask. However, there will be $min(m, 4)$ memory accesses for most operations, because all bits of a hash\_mask have equal possibility to be set and they should be discrete and appear in multiple quarters of a 32-bit hash\_mask.
+
+\subsection{Sub-Warp Sketch}
+
+\begin{algorithm}[H]
+    \DontPrintSemicolon
+    \caption{Sub-Warp Sketch algorithm}
+    \SetKwProg{Fn}{Function}{}{end}
+    \SetKw{KwRet}{return}
+    \SetKw{Kwin}{in}
+    \SetKw{KwStep}{step}
+    \SetKwFunction{FnInsert}{insert}
+    \SetKwFunction{FnSearch}{search}
+    $table[p * w] \longleftarrow 0$\;
+    $mask\_table[H]$\;
+    % s : the elements each warp loads
+    $s \longleftarrow the elements each warp loads$\;
+    $sub\_warp\_size = warp\_size / s $\;
+    \SetKwFor{ParallelForEach}{parallel for each}{do}{endfor}
+\Fn(){\FnInsert{keys}}
+{
+    \ParallelForEach{$key[s]$ \Kwin $keys$}
+    {
+    %   \For{$i\leftarrow 0$ \KwTo $m$} 
+    %     {
+            \If{$thread_index \% sub\_warp\_size == 0$}{
+                $hv \leftarrow hash(key)$\;
+                $id \leftarrow hv \% p$\;
+                $hash\_mask \leftarrow$\; $mask\_table[hv \% H]$\;
+            }
+            $id[s], hash_mask[s] \leftarrow broadcast(id, hash\_mask)$\;
+            % \For{$i\leftarrow thread\_index \% sub\_warp\_size$ \KwTo $w$, \KwStep $warp\_size$}
+            {
+                \If {$hash\_mask[thread\_index / sub\_warp\_size][thread\_index \% sub\_warp\_size]$}
+                {
+                    $atomic\_add(table[id[thread\_index / sub\_warp\_size] * w + thread\_index], 1)$
+                }
+            }
+        % }
+    }
+}
+
+\Fn(){\FnSearch{keys, counts}}
+{%to do
+    \ParallelForEach{$key$ \Kwin $keys$, $count$ \Kwin $counts$, }
+    {
+        $result \leftarrow MAX_INTEGER$\;
+    %   \For{$i\leftarrow 0$ \KwTo $m$} 
+    %     {
+            $hv \leftarrow hash(key)$\;
+            $id \leftarrow hv \% p$
+            $hash\_mask \leftarrow$ $mask\_table[hv \% H]$
+            \For{$i\leftarrow thread\_index$ \KwTo $w$, \KwStep $warp\_size$}
+            {
+                \If {$hash\_mask[i]$}
+                {
+                    % $atomic\_add(table[id * w + i], 1)$
+                    $result \leftarrow min(count, table[i * n + id]$
+                }
+            }
+        % }
+        $result \leftarrow warp\_reduce\_min(result)$\;
+        \If{$thread\_index == 0$}
+        {
+            $count \leftarrow result$
+        }
+    }
+}
+
+\end{algorithm}
+
+The smaller w will lead to higher performance because the memory accesses are more likely to be coalesced. However, if w is smaller than warp\_size, there will be some idle threads, which will decrease the performance. The version 2 of qsketch solves the problem and increases the performance compared with version 1. The qsketch\_v2 divides a warp(32 threads) into several sub warps. In order to achieve the best performance, and balance the work load among sub warps, the size of the sub warp should be a factor of warp\_size(32). Then w can be smaller than warp\_size and it should be equal to the sub warp size. If $w$ is greater than sub warp size, a larger sub warp size should be more efficient, because there is no need for an extra loop. The sub warp can be a half-warp or a quarter-warp if the count variables are 4-byte integers. If the sub warp is a half-warp, the 16 threads of the half-warp will operate up to 16 4-byte adjacent integers, and they can be coalesced into one or two 32-byte memory transactions because the hash table are aligned to a multiple of 32-byte(128-byte or more). When $m$ equals to 3, $1/4$ of operations need one memory transaction, because all 3 bits that are set(equal to one) are in one half of the hash\_mask and they are close enough so they can be coalesced. And $3/4$ of operations need two, so $1.75$ memory transactions are needed for each operation on average. Similarly, if the sub warp is a quarter-warp, the 8 threads of the quarter-warp will operate up to 8 4-byte integers but they are guaranteed to be coalesced into one 32-byte memory transaction.
+The sub warp can't be smaller than a quarter-warp if the count variables are 4-byte integers. Because the CUDA's memory transactions for global memory are 32-byte, which can , and the two adjacent one eights of a warp may not load the adjacent buckets since they have the different keys. Both of them will need a 32-byte transaction and only half of the data is useful, the overall performance is divided by 2.
+% if all bits that are set(equal to one) are in one quarter of a 32-bit hash\_mask.
+Each sub warp will handle one insertion or searching. In other words, the whole warp will execute several insertion simultaneously and there won’t be any idle threads while there are enough work loads. For example, if the sub warp size and w are 8, and each warp contains 4 sub warps. The warp will first load 4 elements, if there are not enough elements for the last load operation, it will pad some elements. The host will calculate the work load for each warp before the kernel starts, and it will make sure the work load are divisible by 4 for as many warps as possible. For the worst case, there will only be one warp that will execute the padding operation and it will insert no more than 3 padding elements, which is much less than the millions of real elements. So the accuracy will remain basically unchanged. 
+The first threads of each sub warp will calculate 4 hash values, then load the selected hash masks. The 4 hash masks are stored in the shared memory, and each sub warp will operate on their own area. However, while broadcasting the bucket id to other threads in the same sub warp, the 4 broadcasting must be processed in one warp shuffle function, \_\_shfl\_sync(). And 4 special masks are needed, the bits are one for all the threads in the same sub warp, the bits are zero for the threads in the same warp but in the different sub warp. For example, 0x000000ff, 0x0000ff00, 0x00ff0000, 0xff000000 are the masks of 4 sub warps, and all threads within the warp have the same mask. Similar masks are also used while calculating the minimum values of each sub warp. After the loading of hash masks, each sub warp will read or modify the 4-byte integers if the corresponding bits of hash masks are 1. Those memory accesses are guaranteed to be coalesced into one 32-byte memory transaction because the size of each bucket(w) is 8 4-byte integers and all the buckets are at least 32-byte aligned.
+
+
+% After the loading of hash masks, it also needs to broadcast 
+
+% While broadcasting the hash mask to other threads in the same sub warp,  corresponding
+% Warp Shuffle Functions
+% padding,
+
+%Each sub warp will operate 
+\subsection{Pre-load}
+
+\subsection{Multi-levels Sketch}
+The accuracy of sketch is limited by the size of hash tables. But a larger hash table will use larger memory while the device memory is usually smaller than the host memory. Some sketches supports to use unsigned character as count variable.However, the maximum value of unsigned character is 255, and it is easy to overflow even the input data is uniform distribution.
+[to do:  prove]
+The qsketch\_v3 uses two hash tables to handle the integer overflow problem. The first hash table is low\_frequency\_table, which can store a large number of different elements, and it will use 1-byte unsigned integer as its count variable. And the second hash table is high\_frequency\_table, which is much smaller than low\_frequency\_table, but it can use 4-byte or 8-byte unsigned integer. For each insertion, it will first try to insert the element to the low\_frequency\_table by using atomic\_add(). And then it will calculate the maximum value of the old count variable values within a warp or sub warp, if it is greater than some limits(eg. 128) and is going to overflow, it will recall the insertion from the low\_frequency\_table and insert it to high\_frequency\_table. 
+% For the warp sketch, the smallest size of bucket is 32
+The last 4-byte(high\_bucket\_index) of each bucket in the low\_frequency\_table can be used to store an index to the high\_frequency\_table. $0 \sim 1023$ are reserved and $1024 \sim 2 ^ {32} - 1$ are indices. The 4-byte unsigned integer is enough, it can support a 2 TB high\_frequency\_table. When the warp or sub warp need to insert the element to high\_frequency\_table, it will first use an atomic compare and swap function(atomicCAS()). If the old value of high\_bucket\_index is 0, this warp or sub warp will set the high\_bucket\_index to 1 and it will request an available bucket(high\_bucket) in the high\_frequency\_table and insert the element to the newly allocated bucket. The requesting operation will also store the index of the new bucket to the high\_bucket\_index of corresponding low\_bucket(high\_bucket\_index). 
+If the old value of high\_bucket\_index is 1, there must be another thread working on the allocation, those warps only need to wait in a busy loop, and they won't wait for a long time because the atomic allocation only needs to invoke an atomic increase function and write the data to global memory, and there is no real memory allocation. Those allocations won't happen frequently for most situation, eg. It only invokes 3 or 5 atomic allocations while inserting 1 million elements to a sketch.  % to do
+If the old value is greater than high\_bucket\_index\_start(the default value is 1024), this value is guaranteed to point to a valid high\_bucket. And it will load the high\_bucket and finish the insertion. 
+CUDA doesn't support atomic functions for byte, so 4 increment bytes are combined to a 4-byte integer and the 4 atomic adding are finished together. 
+Each unsigned byte in low\_bucket is expended to 4-byte or 8-byte unsigned integers in high\_bucket.
+The following insertion will first load the low\_bucket and check if high\_bucket\_index is pointed to a valid high\_bucket. If so, it will load the high\_bucket and finish the insertion. 
+For searching, if the low\_bucket is not linked to any high\_bucket, it only need to calculate and return the minimum value of low\_bucket. Or it must calculate the minimum values for both high\_bucket and low\_bucket separately and then add the two minimum values together. If a low frequency element($L$) and a high frequency element($H$) are inserted to the same low\_bucket by accidentally and the low\_bucket has already been connected to a high\_bucket, it seems that the accuracy of $L$ may be much greater than the real value due to the influence of $H$, although the frequency of $L$ is low and it has never been inserted to high\_bucket. However this can be prevent because they usually have different hash\_masks and there is at least one bit is different, and the smallest value of count variables in high\_bucket for $L$ is still 0. But if they select the same low\_bucket and hash mask, the estimate value of $H$ will be much greater than the real value. So, users should carefully chose the hash functions of for bucket and mask so that they are independent. And they can also increase the size of hash table so it can store enough hash masks, especially when the sketches are running on device with large l2 cache or fast caches. For a fixed size hash table, it will reuse the high\_buckets when it runs out of high\_frequency\_table by calculating the remainder of hash value. It can also increase the size of high\_frequency\_table by reallocating but it will greatly reduce the performance and should only be used for debugging or detecting a suitable size of high\_frequency\_table. If the overflow happens frequently and the high\_frequency\_table is much larger than expected, then the high\_frequency\_table may not be well cached and it will reduce the performance. At this situation, users can chose one level sketch instead.
+
+% it will add the result of high\_bucket and low\_bucket together and it won't modify anything. 
+
+The time complexity is still O(1) and the performance is closed to the qsketch\_v2, which only has one hash table. Because the overflow won’t happen frequently and the high\_frequency\_table will be relative small and the accesses of high\_frequency\_table are well cached.
+
+high\_bucket\_index:
+Each bucket will not use the last 32-bits, and convert it to a 32-bit unsigned integer(high\_bucket\_index), which is the next level index, $0 \sim 1023$ are reserved and 
+$1024 \sim 2 ^ {32} - 1$
+are indices. 
+The 32-bit unsigned integer are enough, it can support a 2 TB high\_frequency\_table.
+
+\begin{algorithm}[H]
+    \DontPrintSemicolon
+    \caption{atomic allocate algorithm}
+    \SetKwProg{Fn}{Function}{}{end}
+    \SetKw{KwRet}{return}
+    \SetKw{Kwin}{in}
+    \SetKw{KwStep}{step}
+    \SetKwFunction{FnInsert}{insert}
+    \SetKwFunction{FnSearch}{search}
+    $table[p * w] \longleftarrow 0$\;
+    $mask\_table[H]$\;
+    % s : the elements each warp loads
+    $s \longleftarrow the elements each warp loads$\;
+    $sub\_warp\_size = warp\_size / s $\;
+    \SetKwFor{ParallelForEach}{parallel for each}{do}{endfor}
+    \SetKwFunction{FnAtomicAllocate}{atomicAllocate}
+\Fn(){\FnAtomicAllocate{high\_bucket\_index, global\_index}}
+{
+    $id \leftarrow 0$\;
+    $old \leftarrow atomicCAS(high\_bucket\_index, 0, 1)$\;
+    \If{$old == 0$}{
+        $id \leftarrow atomicAdd(global\_index, 1)$\;
+        $high\_bucket\_index \leftarrow id\;$
+    }
+    \Else {
+        \While{$id <= 1$}{
+            $id \leftarrow max(id, \_\_ldcv(high_bucket_index))\;
+            \_\_threadfence_block()$\;
+        }
+    }
+    \KwRet id\;
+}
+\end{algorithm}
+
+
+The whole high\_frequency\_table will be allocated in the constructor of sketch. When it needs to allocate a new high\_bucket, several threads may try to upgrade the low\_bucket at the same time, the first thread will read $(old == 0)$ and it will finish the real allocation and other threads are waiting in a busy loop. The busy loop won't wait for a long time.
+A lock free allocate, it can efficiently handle the request of high\_bucket. [todo: show the performance].
+Multiple low\_buckets can connect to the same high\_bucket, so when it runs out of the high\_frequency\_table, it can reuse the buckets on the front of table.
+\section{results}
+\section{conclusion}
+
+\begin{thebibliography}{00}
+\bibitem{b1} NVIDIA Corporation, “NVIDIA CUDA C++ programming guide,” 2021, version 11.0.
+
+\end{thebibliography}
+
+\end{document}

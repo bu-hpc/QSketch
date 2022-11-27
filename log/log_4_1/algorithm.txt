@@ -1,0 +1,47 @@
+1. base version
+for (size_t i = b; i < e; ++i) {
+
+    Key_T v = keys[i]; // load 1
+
+    hash_table_low, hash_mask <- cal1(...) // calculation 1
+    
+    Count_T htl_31 = htl[31]; // load 2
+
+    cal2(...) // calculation 2
+} 
+
+
+2. new algorithm
+
+uchar hash_mask_table[16 * HASH_MASK_TABLE_SIZE];
+hash_mask_table <- random(); // generate random bits, 1 / 32 bits are 1, 31/32 bits are 0.
+
+for (size_t i = b; i < e; ++i) {
+    
+    Key_T v = keys[i]; // load 1
+    uchar hash_mask[16] <- hash_mask_table[i % HASH_MASK_TABLE_SIZE]; 
+    /*
+        HASH_MASK_TABLE_SIZE is a small number, such as 1024. 
+        each hash_mask is 128-bit.
+
+        A hash_mask_table which has 1024 masks only needs 32KB memory.
+    */
+
+    hash_table_low <- cal1(...) // calculation 1
+    
+    Count_T htl_31 = htl[31]; // load 2
+
+    cal2(...) // calculation 2
+        
+} 
+
+3. perf
+
+insert perf without pre-load
+800 Mops -> 850 Mops.
+
+
+4. Bug:
+1M insertion
+1M search
+There are about 250 elements which are smaller than the real value.

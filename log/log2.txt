@@ -1,0 +1,20 @@
+n: 65521, m: 1, seed_sz: 16
+1.118705 Gops/s
+1.119327 Gops/s
+1.577555 Gops/s
+n: 65521, m: 2, seed_sz: 16
+842.819185 Mops/s
+1023.923668 Mops/s
+1.444499 Gops/s
+n: 65521, m: 4, seed_sz: 16
+523.400321 Mops/s
+787.560385 Mops/s
+1.308485 Gops/s
+n: 65521, m: 8, seed_sz: 16
+271.373188 Mops/s
+456.133093 Mops/s
+1.095021 Gops/s
+n: 65521, m: 16, seed_sz: 16
+145.191141 Mops/s
+266.910769 Mops/s
+848.805401 Mops/s

@@ -1,0 +1,92 @@
+accuracy_imp.txt
+
+sec1
+
+insert_keys_size = 1024 * 1024
+search_keys_size = 1024 * 1024
+
+host version
+insert_warp_min_host: 
+cpu memory: 2096672Bytes
+seed_num: 33
+max: 4  ave: 0.407029
+maxp: 500%  avep: 140.703%
+insert_warp_host: 
+cpu memory: 2096672Bytes
+seed_num: 33
+max: 10 ave: 1.02802
+maxp: 1100% avep: 202.802%
+
+device version
+insert_warp_min: 
+gpu memory: 2096672Bytes
+max: 4  ave: 0.402165
+maxp: 500%  avep: 140.215%
+insert_warp: 
+gpu memory: 2096672Bytes
+max: 13 ave: 1.06769
+maxp: 1400% avep: 206.757%
+
+base version
+insert_cpu: 
+cpu memory: 2096670Bytes
+max: 3  ave: 0.471749
+maxp: 400%  avep: 147.175%
+
+
+sec2
+
+{
+    insert_keys_size = 1024 * 1024
+    search_keys_size = 1024 * 1024
+    n = 65521
+    m = 1
+    warp_size = 32
+
+    insert_base: 200%
+    insert_min: 130%
+}
+
+{
+    insert_keys_size = 1024 * 1024
+    search_keys_size = 1024 * 1024
+    n = 65521 * 4
+    m = 1
+    warp_size = 32
+
+    insert_base: 114%
+    insert_min: 113%
+}
+
+
+// w * d = n * m * warp_size
+madoka:
+w = 698890
+d = 3
+accu: 105%
+
+w = 174722 // 174722 = 698890 / 4
+d = 3
+accu: 213%
+
+imp2:
+w : 524168
+d : 4
+185.257%
+
+w : 698890
+d : 3
+175.25%
+
+imp3:
+w : 698890
+d : 3
+157.349%
+
+w : 524168
+d : 4
+621.09%
+
+w : 524167
+d : 4
+170.444%

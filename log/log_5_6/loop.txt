@@ -1,0 +1,45 @@
+size_t sz = 128 * 1024 * 1024;
+size_t buf_sz = 128 * 1024 * 1024;
+
+template <typename T>
+__global__ void trans(T *keys, size_t sz, size_t work_load_per_warp,
+    unsigned int *buf, size_t buf_sz) {
+    size_t wid = (blockIdx.x * blockDim.x + threadIdx.x) / WARP_SIZE;
+    size_t tid = threadIdx.x % WARP_SIZE;
+    size_t b = wid * work_load_per_warp;
+    size_t e = (wid + 1) * work_load_per_warp;
+    if (e >= sz) {
+        e = sz;
+    }
+
+    for (size_t i = b; i < e; i += WARP_SIZE) {
+        T v = keys[i + tid] % buf_sz;
+        atomicAdd(buf + v, 1);
+    }
+}
+
+perf: 1.185774 Gops/s
+
+template <typename T>
+__global__ void trans_loop(T *keys, size_t sz, size_t work_load_per_warp,
+    unsigned int *buf, size_t buf_sz) {
+    size_t wid = (blockIdx.x * blockDim.x + threadIdx.x) / WARP_SIZE;
+    size_t tid = threadIdx.x % WARP_SIZE;
+    size_t b = wid * work_load_per_warp;
+    size_t e = (wid + 1) * work_load_per_warp;
+    if (e >= sz) {
+        e = sz;
+    }
+
+    for (size_t j = 1; j <= 32; ++j) {
+        for (size_t i = b; i < e; i += WARP_SIZE) {
+            T v = keys[i + tid] % buf_sz;
+            T t = v / (4 * 1024 * 1024);
+            if ((t > j - 1) && (t < j)) {
+                atomicAdd(buf + (v % buf_sz), 1);
+            }
+        }
+    } 
+}
+
+perf: 2.205502 Gops/s

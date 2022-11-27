@@ -1,0 +1,48 @@
+example1
+work_load_per_warp: 16
+insert perf: 3.771094 Gops/s
+work_load_per_warp: 16
+insert perf: 2.644640 Gops/s
+work_load_per_warp: 16
+search perf time: 0.0010275
+search perf: 973.233168 Mops/s
+work_load_per_warp: 16
+max: 4294967295	ave: 0.169451
+maxp: 12000%	avep: 21.7739%
+work_load_per_warp: 16
+max: 4294967295	ave: 0.0523081
+maxp: 25200%	avep: 0.881577%
+greater_counts: 1047801
+----------------------------------
+without_preload
+work_load_per_warp: 16
+insert perf: 649.964739 Mops/s
+work_load_per_warp: 16
+insert perf: 865.761138 Mops/s
+work_load_per_warp: 16
+search perf time: 0.00148146
+search perf: 675.012066 Mops/s
+work_load_per_warp: 16
+max: 6	ave: 0.118564
+maxp: 700%	avep: 111.855%
+work_load_per_warp: 16
+max: 128	ave: 0.0512686
+maxp: 12900%	avep: 100.48%
+greater_counts: 0
+----------------------------------
+preload
+work_load_per_warp: 16
+insert perf: 823.449198 Mops/s
+work_load_per_warp: 16
+insert perf: 910.585926 Mops/s
+work_load_per_warp: 16
+search perf time: 0.000954783
+search perf: 1.022811 Gops/s
+work_load_per_warp: 16
+max: 7	ave: 0.112126
+maxp: 800%	avep: 111.211%
+work_load_per_warp: 16
+max: 127	ave: 0.0412207
+maxp: 12800%	avep: 100.432%
+greater_counts: 0
+------------------------------

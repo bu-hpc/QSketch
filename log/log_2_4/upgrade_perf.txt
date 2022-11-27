@@ -1,0 +1,7 @@
+with upgrade
+insert perf: 664.657628 Mops/s
+search perf: 667.149683 Mops/s
+
+without upgrade
+insert perf: 1.033265 Gops/s
+search perf: 731.398346 Mops/s

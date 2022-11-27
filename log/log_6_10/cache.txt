@@ -1,0 +1,81 @@
+
+1. algorithm 1
+
+    for (size_t j = 1; j <= 32; ++j) {
+        for (size_t i = b + tid; i < e; i += WARP_SIZE) {
+            Key_T v = keys[i];
+            Hashed_T hv0 = hash(seed, s_sz, v);
+            size_t iv0 = hv0 % (n_low * WARP_SIZE);
+
+            size_t t0 = iv0 / (4 * 1024 * 1024);
+            if (t0 >= j - 1 && t0 < j) {
+                atomicAdd(hash_table_low + iv0, 1);    
+            }
+            
+        } 
+    }
+
+    // not much improvement
+
+2. algorithm 2
+
+__device__ int j;
+
+__global__ void kernel(int *j) {
+    for (size_t i = b + tid; i < e; i += WARP_SIZE) {
+
+        Key_T v = keys[i];
+        Hashed_T hv0 = hash(seed, s_sz, v);
+        size_t iv0 = hv0 % (n_low * WARP_SIZE);
+
+        size_t t0 = iv0 / (4 * 1024 * 1024);
+        if (t0 >= j - 1 && t0 < j) {
+            atomicAdd(hash_table_low + iv0, 1);    
+        }
+        // it is hard to update the value j
+    } 
+}
+
+3. algorithm 3
+
+__global__ void kernel(int j) {
+    for (size_t i = b + tid; i < e; i += WARP_SIZE) {
+
+        Key_T v = keys[i];
+        Hashed_T hv0 = hash(seed, s_sz, v);
+        size_t iv0 = hv0 % (n_low * WARP_SIZE);
+
+        size_t t0 = iv0 / (4 * 1024 * 1024);
+        if (t0 >= j - 1 && t0 < j) {
+            atomicAdd(hash_table_low + iv0, 1);    
+        }
+        // it is hard to update the value j
+    } 
+}
+
+void insert() {
+    for (int j = 1; i < 32; ++j) {
+        kernel(j, ...); // it will only write to the jth memory block.
+    }
+}
+
+
+example:
+insert perf: 399.508324 Mops/s
+----------------------------------
+algorithm 1
+insert perf: 663.482731 Mops/s
+----------------------------------
+algorithm 3
+insert perf: 815.095513 Mops/s
+
+
+==================================================
+sub warp
+insert perf: 1148.983502 Mops/s
+----------------------------------
+algorithm 1 
+insert perf: 824.349252 Mops/s
+----------------------------------
+algorithm 3
+insert perf: 230.003625 Mops/s

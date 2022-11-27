@@ -1,0 +1,30 @@
+@inproceedings{10.1145/3295500.3356141,
+author = {Li, Lingda and Chapman, Barbara},
+title = {Compiler Assisted Hybrid Implicit and Explicit GPU Memory Management under Unified Address Space},
+year = {2019},
+isbn = {9781450362290},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3295500.3356141},
+doi = {10.1145/3295500.3356141},
+abstract = {To improve programmability and productivity, recent GPUs adopt a virtual memory address
+space shared with CPUs (e.g., NVIDIA's unified memory). Unified memory migrates the
+data management burden from programmers to system software and hardware, and enables
+GPUs to address datasets that exceed their memory capacity. Our experiments show that
+while the implicit data transfer of unified memory may bring better data movement
+efficiency, page fault overhead and data thrashing can erase its benefits. In this
+paper, we propose several user-transparent unified memory management schemes to 1)
+achieve adaptive implicit and explicit data transfer and 2) prevent data thrashing.
+Unlike previous approaches which mostly rely on the runtime and thus suffer from large
+overhead, we demonstrate the benefits of exploiting key information from compiler
+analyses, including data locality, access density, and target reuse distance, to accomplish
+our goal. We implement the proposed schemes to improve OpenMP GPU offloading performance.
+Our evaluation shows that our schemes improve the GPU performance and memory efficiency
+significantly.},
+booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+articleno = {51},
+numpages = {16},
+keywords = {unified memory management, GPU, runtime, reuse distance, compiler analysis, OpenMP, implicit and explicit data transfer},
+location = {Denver, Colorado},
+series = {SC '19}
+}

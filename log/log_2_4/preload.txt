@@ -1,0 +1,170 @@
+TSMM paper:
+
+algorithm:
+
+for i from 0 to n - 1
+    result <-   load(i)
+                cal(i, result)
+
+before overlap:
+    load(0) cal(0) load(1) cal(1) load(2) cal(2) ... load(n - 1) cal(n - 1)
+
+after overlap:
+    load(0) load(1) cal(0) load(2) cal(1) cal(2) ... load(n - 1) cal(n - 2) cal(n - 1)
+
+overlap 
+    load(0) cal(0)  cal(1)  cal(2)  ...  cal(n - 2) cal(n - 1)
+            load(1) load(2) load(3) ...  load(n - 2)
+
+l0c0 l1c1 l2c2 ... -> l0 l1c0 l2c1 l3c2 ...
+
+overlap algorithm:
+
+rp <- load(0)
+for i from 1 to n - 1
+    result  <-   load(i)
+                cal(i - 1, rp)
+    rp      <- result
+cal(n - 1, rp)
+
+
+
+
+Sketch:
+
+
+algorithm:
+
+for i from 0 to n - 1, setp = 1
+    result_0 <-     load1(i)
+    result_1 <-     cal1(i, result_0)
+    result_2 <-     load2(i, result_1)
+                    cal2(i, result_2)
+
+
+
+before overlap:
+    load1(0) cal1(0) load2(0) cal2(0) load1(1) cal1(1) load2(1) cal2(1) load1(2) cal1(2) load2(2) cal2(2) ... load1(n - 1) cal1(n - 1) load2(n - 1) cal2(n - 1)
+
+after overlap:
+    load1(0) load1(1) cal1(0) load2(0) cal1(1) load2(1) cal2(0) load1(2) cal2(1) load1(3) cal1(2) load2(2) cal1(3) load2(3) cal2(2) ... 
+
+    load2(n - 2) cal1(n - 1) load2(n - 1)  cal2(n - 2) cal2(n - 1)
+
+
+
+overlap algorithm:
+
+preload_result <- load1(0)
+
+if (n % 2 == 1) {
+    for i = 1; i < n; i += 2 
+        result_0 <-     load1(i)
+        result_1 <-     cal1 (i - 1,    preload_result)
+        result_2 <-     load2(i - 1,    result_1)
+        result_3 <-     cal1 (i,        result_0)
+        result_4 <-     load2(i,        result_3)
+                        cal2 (i - 1,    result_2)
+        preload_result<-load1(i + 1)
+                        cal2 (i,        result_4)
+    // "i + 1" equals to "n - 1" in the last loop
+    result_1 <-         cal1(n - 1, preload_result)
+    result_2 <-         load2(n - 1, result_1)
+                        cal2(n - 1, result_2)
+} else {
+    for i = 1; i < n - 2; i += 2 
+        result_0 <-     load1(i)
+        result_1 <-     cal1 (i - 1,    preload_result)
+        result_2 <-     load2(i - 1,    result_1)
+        result_3 <-     cal1 (i,        result_0)
+        result_4 <-     load2(i,        result_3)
+                        cal2 (i - 1,    result_2)
+        preload_result<-load1(i + 1)
+                        cal2 (i,        result_4)
+
+    // no need for preload in the last loop
+    result_0 <-     load1(i)
+    result_1 <-     cal1 (i - 1,    preload_result)
+    result_2 <-     load2(i - 1,    result_1)
+    result_3 <-     cal1 (i,        result_0)
+    result_4 <-     load2(i,        result_3)
+                    cal2 (i - 1,    result_2)
+                    cal2 (i,        result_4)
+}
+
+
+
+algorithm:
+
+for i from 0 to n - 1, setp = 1
+    result_0 <-     load1(i)
+    result_1 <-     cal1(i, result_0)
+    result_2 <-     load2(i, result_1)
+    if (compare(result_2))
+        insert_high()
+    else 
+        insert_low()
+                    cal2(i, result_2)
+
+Sketch:
+
+
+algorithm:
+
+for i from 0 to n - 1, setp = 1
+    result_0 <-     load1(i)
+    result_1 <-     cal1(i, result_0)
+    result_2 <-     load2(i, result_1)
+                    cal2(i, result_2)
+
+
+
+before overlap:
+    load1(0) cal1(0) load2(0) cal2(0) load1(1) cal1(1) load2(1) cal2(1) load1(2) cal1(2) load2(2) cal2(2) ... load1(n - 1) cal1(n - 1) load2(n - 1) cal2(n - 1)
+
+after overlap:
+    load1(0) load1(1) cal1(0) load2(0) cal1(1) load2(1) cal2(0) load1(2) cal2(1) load1(3) cal1(2) load2(2) cal1(3) load2(3) cal2(2) ... 
+
+    load2(n - 2) cal1(n - 1) load2(n - 1)  cal2(n - 2) cal2(n - 1)
+
+
+
+overlap algorithm:
+
+preload_result <- load1(0)
+
+if (n % 2 == 1) {
+    for i = 1; i < n; i += 2 
+        result_0 <-     load1(i)
+        result_1 <-     cal1 (i - 1,    preload_result)
+        result_2 <-     load2(i - 1,    result_1)
+        result_3 <-     cal1 (i,        result_0)
+        result_4 <-     load2(i,        result_3)
+                        cal2 (i - 1,    result_2)
+        preload_result<-load1(i + 1)
+                        cal2 (i,        result_4)
+    // "i + 1" equals to "n - 1" in the last loop
+    result_1 <-         cal1(n - 1, preload_result)
+    result_2 <-         load2(n - 1, result_1)
+                        cal2(n - 1, result_2)
+} else {
+    for i = 1; i < n - 2; i += 2 
+        result_0 <-     load1(i)
+        result_1 <-     cal1 (i - 1,    preload_result)
+        result_2 <-     load2(i - 1,    result_1)
+        result_3 <-     cal1 (i,        result_0)
+        result_4 <-     load2(i,        result_3)
+                        cal2 (i - 1,    result_2)
+        preload_result<-load1(i + 1)
+                        cal2 (i,        result_4)
+
+    // no need for preload in the last loop
+    result_0 <-     load1(i)
+    result_1 <-     cal1 (i - 1,    preload_result)
+    result_2 <-     load2(i - 1,    result_1)
+    result_3 <-     cal1 (i,        result_0)
+    result_4 <-     load2(i,        result_3)
+                    cal2 (i - 1,    result_2)
+                    cal2 (i,        result_4)
+}
+

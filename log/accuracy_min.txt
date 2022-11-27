@@ -1,0 +1,21 @@
+search_keys_size: 1073741824
+insert_warp_min: 
+gpu memory: 127999072Bytes
+insert perf: 796.187559 Mops/s
+search perf: 1.045905 Gops/s
+insert_warp: 
+gpu memory: 127999072Bytes
+insert perf: 1.180271 Gops/s
+search perf: 1.048618 Gops/s
+
+
+search_keys_size: 1048576
+insert_warp_min: 
+gpu memory: 2096672Bytes
+max: 4294967295 ave: 0.380157
+maxp: 500%  avep: 138.013%
+insert_warp: 
+gpu memory: 2096672Bytes
+max: 11 ave: 1.08264
+maxp: 1200% avep: 208.25%
+

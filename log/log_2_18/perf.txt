@@ -1,0 +1,13 @@
+two_levels:
+insert perf: 213.274549 Mops/s
+search perf time: 0.00107704
+search perf: 928.469761 Mops/s
+max: 7  ave: 0.111768
+maxp: 800%  avep: 111.176%
+
+low_level_table:
+insert perf: 1.037031 Gops/s
+search perf time: 0.00136122
+search perf: 734.635107 Mops/s
+max: 7  ave: 0.0885086
+maxp: 800%  avep: 108.85%

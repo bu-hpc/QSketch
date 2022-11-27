@@ -1,0 +1,10 @@
+old_key_value_pair =
+            atomicCAS((unsigned long long int*)p,
+                      EMPTY_PAIR_64,
+                      ((uint64_t)(*reinterpret_cast<const uint32_t*>(
+                           reinterpret_cast<const unsigned char*>(&myValue)))
+                       << 32) |
+                          *reinterpret_cast<const uint32_t*>(
+                              reinterpret_cast<const unsigned char*>(&myKey)));
+        if (old_key_value_pair == EMPTY_PAIR_64)
+          to_be_inserted = false;  // succesfful insertion
